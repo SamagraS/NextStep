@@ -1,0 +1,115 @@
+"Median annual full-time salaries ($), 2022-2024, with 90% confidence intervals among postgraduate coursework students from non-university higher education institutes (NUHEIs) by institution",Unnamed: 1,Unnamed: 2
+Back to INDEX,,
+,,
+,,Median annual full-time salaries ($)
+,Governance Institute of Australia,"168,000 (151,200, 184,800)"
+,Australian Institute of Management Education & Training,"135,000 (129,500, 140,500)"
+,Australian Institute of Business Pty Ltd,"120,000 (116,100, 123,900)"
+,The Institute of Internal Auditors - Australia,"120,000 (105,000, 135,000)"
+,HEPCO The Tax Institute Higher Education,"118,000 (100,900, 135,100)"
+,Kaplan Business School,"117,000 (96,400, 137,600)"
+,BBI - The Australian Institute of Theological Education,"110,000 (103,700, 116,300)"
+,Engineering Institute of Technology,"110,000 (95,600, 124,400)"
+,Kaplan Higher Education Pty Ltd,"107,000 (102,300, 111,700)"
+,Health Education & Training Institute,"101,100 (95,900, 106,200)"
+,The Cairnmillar Institute,"100,000 (92,200, 107,800)"
+,Christian Heritage College,"96,000 (86,900, 105,100)"
+,Melbourne Institute of Technology,"96,000 (90,900, 101,100)"
+,Australian College of Nursing,"95,000 (92,500, 97,500)"
+,Chisholm Institute,"93,700 (89,200, 98,200)"
+,All NUHEIs,"93,000 (91,700, 94,300)"
+,Excelsia University College,"90,700 (79,900, 101,500)"
+,ACAP University College,"90,000 (87,000, 93,000)"
+,Chartered Accountants Australia and New Zealand,"90,000 (88,700, 91,300)"
+,ISN Psychology Pty Ltd,"90,000 (87,000, 93,000)"
+,Sydney College of Divinity,"88,000 (81,400, 94,600)"
+,Alphacrucis University College,"83,300 (71,600, 95,000)"
+,The College of Law Limited,"80,900 (79,700, 82,100)"
+,Tabor College of Higher Education,"79,000 (67,400, 90,600)"
+,Australian University of Theology*,"77,000 (72,700, 81,300)"
+,Leo Cussen Centre for Law,"70,000 (66,500, 73,500)"
+,Academies Australasia Polytechnic Pty Limited,
+,Academy of Interactive Technology,
+,Acknowledge Education,
+,Adelaide Central School of Art,
+,Adelaide Institute of Higher Education,
+,Asia Pacific International College,
+,Australasian College of Health and Wellness,
+,Australia Advance Education Group Pty Ltd,
+,Australian Academy of Music and Performing Arts,
+,Australian College of Christian Studies,
+,Australian Institute of Higher Education,
+,Australian Institute of Professional Counsellors,
+,Box Hill Institute,
+,CIC Higher Education,
+,Campion College Australia,
+,Collarts (Australian College of the Arts),
+,Crown Institute of Higher Education Pty Ltd,
+,Eastern College Australia,
+,Endeavour College of Natural Health,
+,Gestalt Therapy Brisbane,
+,Holmes Institute,
+,Holmesglen Institute,
+,ICHM,
+,Ikon Institute of Australia,
+,Institute of Health & Management Pty Ltd,
+,"International College of Management, Sydney",
+,Jazz Music Institute,
+,King's Own Institute,
+,LCI Melbourne,
+,Le Cordon Bleu Australia,
+,Leaders Institute,
+,Lyons College,
+,Marcus Oldham College,
+,Melbourne Polytechnic,
+,Montessori World Educational Institute (Australia),
+,Moore Theological College,
+,Morling College,
+,Nan Tien Institute,
+,National Art School,
+,National Institute of Organisation Dynamics Aust,
+,Ozford Institute of Higher Education,
+,Performing Arts Education,
+,Perth Bible College,
+,Polytechnic Institute Australia Pty Ltd,
+,SAE University College,
+,SP Jain School of Management,
+,Sheridan Institute of Higher Education,
+,Southern Cross Education Institute (Higher Education),
+,Stanley College,
+,TAFE NSW,
+,TAFE Queensland,
+,TAFE South Australia,
+,The Australian College of Physical Education,
+,The Australian Institute of Music,
+,The Institute of Creative Arts and Technology,
+,The MIECAT Institute,
+,UOW College,
+,UTS College,
+,VIT (Victorian Institute of Technology),
+,Wentworth Institute of Higher Education,
+,"Whitehouse Institute of Design, Australia",
+,William Angliss Institute,
+,,
+Column variables:,,
+FULLEMP,,
+SALARYA,,
+TRIMSAL_ALL,,
+YEAR,,
+,,
+Column filters:,,
+FULLEMP = 1,,
+TRIMSAL_ALL = 1,,
+,,
+Column notes:,,
+The Agresti-Coull method is used to calculate 90% confidence intervals for proportions.,,
+Estimates and confidence intervals (CIs) may become unreliable for very small sample sizes and proportions close to 0% or 100%.,,
+CIs are not displayed when estimates are 0% or 100% or fall outside the CI range. Exercise caution when reporting and comparing proportions in these cases.,,
+Bootstrapping on the median is used to estimate 90% confidence intervals for median salary.,,
+"Data for all columns is filtered to: ANALYSIS = 1, Postgraduate coursework: LEVEL = 2, NUHEI: HEPTYPE = 2, e942 = 0",,
+,,
+Row variables:,,
+E306,,
+,,
+Row notes:,,
+"* The Australian University of Theology was awarded university status in December 2024. Prior to this, the institution was known as the Australian College of Theology and was classified as a non-university higher education institution (NUHEI). Data for the 2024 GOS was collected when the institution was a NUHEI.",,

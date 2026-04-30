@@ -1,0 +1,69 @@
+"Median annual full-time salaries ($), 2024, with 90% confidence intervals among postgraduate coursework students from universities by institution",Unnamed: 1,Unnamed: 2
+Back to INDEX,,
+,,
+,,Median annual full-time salaries ($)
+,University of New South Wales,"128,600 (125,000, 132,100)"
+,Southern Cross University,"116,700 (109,800, 123,500)"
+,James Cook University,"114,500 (108,200, 120,800)"
+,Queensland University of Technology,"112,900 (109,300, 116,400)"
+,University of Newcastle,"112,000 (108,100, 115,900)"
+,University of the Sunshine Coast,"110,000 (97,500, 122,500)"
+,University of Wollongong,"109,000 (101,800, 116,200)"
+,Charles Darwin University,"107,200 (100,200, 114,300)"
+,Charles Sturt University,"107,200 (103,800, 110,700)"
+,Edith Cowan University,"105,700 (100,000, 111,400)"
+,Central Queensland University,"105,000 (97,100, 112,800)"
+,Federation University Australia,"104,200 (99,400, 109,000)"
+,Deakin University,"104,000 (100,200, 107,800)"
+,The University of Notre Dame Australia,"102,100 (95,400, 108,800)"
+,The University of Sydney,"102,000 (97,800, 106,200)"
+,Australian Catholic University,"101,700 (97,000, 106,500)"
+,Griffith University,"101,600 (98,200, 105,100)"
+,University of Southern Queensland,"101,400 (95,700, 107,200)"
+,University of Tasmania,"101,100 (99,300, 102,900)"
+,All universities,"101,000 (100,000, 102,000)"
+,RMIT University,"100,000 (97,900, 102,100)"
+,The Australian National University,"100,000 (95,900, 104,100)"
+,University of New England,"100,000 (95,200, 104,800)"
+,University of Technology Sydney,"100,000 (95,300, 104,700)"
+,Macquarie University,"99,100 (93,200, 105,100)"
+,Torrens University,"99,100 (90,400, 107,900)"
+,The University of Queensland,"98,000 (91,700, 104,300)"
+,Victoria University,"98,000 (92,700, 103,300)"
+,The University of South Australia,"97,900 (94,200, 101,600)"
+,La Trobe University,"96,500 (92,100, 100,900)"
+,University of Canberra,"96,100 (91,900, 100,200)"
+,Monash University,"96,100 (92,900, 99,200)"
+,The University of Adelaide,"96,000 (91,300, 100,700)"
+,Flinders University,"96,000 (92,300, 99,700)"
+,Murdoch University,"96,000 (87,300, 104,700)"
+,The University of Melbourne,"94,000 (91,600, 96,300)"
+,The University of Western Australia,"93,900 (88,100, 99,700)"
+,Curtin University,"91,500 (87,300, 95,600)"
+,Western Sydney University,"90,500 (86,000, 95,000)"
+,University of Divinity,"90,000 (77,200, 102,800)"
+,Bond University,"85,500 (80,700, 90,300)"
+,Swinburne University of Technology,"85,000 (80,800, 89,200)"
+,Avondale University,
+,,
+Column variables:,,
+E942,,
+FULLEMP,,
+SALARYA,,
+TRIMSAL_ALL,,
+YEAR,,
+,,
+Column filters:,,
+E942 = 0,,
+FULLEMP = 1,,
+TRIMSAL_ALL = 1,,
+,,
+Column notes:,,
+The Agresti-Coull method is used to calculate 90% confidence intervals for proportions.,,
+Estimates and confidence intervals (CIs) may become unreliable for very small sample sizes and proportions close to 0% or 100%.,,
+CIs are not displayed when estimates are 0% or 100% or fall outside the CI range. Exercise caution when reporting and comparing proportions in these cases.,,
+Bootstrapping on the median is used to estimate 90% confidence intervals for median salary.,,
+"Data for all columns is filtered to: ANALYSIS = 1, Postgraduate coursework: LEVEL = 2, University: HEPTYPE = 1, e942 = 0",,
+,,
+Row variables:,,
+E306,,

@@ -1,0 +1,40 @@
+Satisfaction (% agreement) 2023-2024 among undergraduates from universities by study area,Unnamed: 1,Unnamed: 2,Unnamed: 3
+Back to INDEX,,,
+,,,
+,,Overall satisfaction 2023,Overall satisfaction 2024
+,Agriculture and environmental studies,86.1,84.4
+,Architecture and built environment,70.6,69.4
+,Business and management,74.9,73.3
+,Communications,73.7,76.8
+,Computing and information systems,70.9,69.6
+,Creative arts,72.6,72.0
+,Dentistry,60.6,68.9
+,Engineering,72.1,70.5
+,Health services and support,75.3,75.7
+,"Humanities, culture and social sciences",79.7,80.2
+,Law and paralegal studies,82.1,80.5
+,Medicine,83.5,81.9
+,Nursing,70.4,70.2
+,Pharmacy,81.3,82.1
+,Psychology,79.8,78.6
+,Rehabilitation,79.0,79.5
+,Science and mathematics,79.9,80.0
+,Social work,82.1,78.5
+,Teacher education,71.8,70.9
+,"Tourism, hospitality, personal services, sport and recreation",77.2,77.4
+,Veterinary science,72.0,72.7
+,Total,75.9,75.1
+,,,
+Column variables:,,,
+CEQ_OSI,,,
+YEAR,,,
+,,,
+Column filters:,,,
+"CEQOSI != (NA, 995, 999)",,,
+"Data for all columns is filtered to: ANALYSIS = (1:2), Undergraduate: LEVEL = 1, University: HEPTYPE = 1",,,
+,,,
+Row variables:,,,
+AREA,,,
+,,,
+Row notes:,,,
+"Where a student completes a second course in a double degree in a different study area, the outcomes are included in both study areas.",,,

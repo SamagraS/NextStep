@@ -1,0 +1,62 @@
+Satisfaction (% agreement) 2023-2024 among postgraduate research students from all provider types by demographic group,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13,Unnamed: 14,Unnamed: 15,Unnamed: 16,Unnamed: 17
+Back to INDEX,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,Overall satisfaction 2023,Overall satisfaction 2024,Supervision 2023,Supervision 2024,Intellectual climate 2023,Intellectual climate 2024,Skills development 2023,Skills development 2024,Infrastructure 2023,Infrastructure 2024,Thesis examination 2023,Thesis examination 2024,Goals and expectations 2023,Goals and expectations 2024,Industry engagement 2023,Industry engagement 2024
+Gender,Male,86.6,85.8,86.0,86.2,65.4,64.7,94.3,94.5,79.2,77.9,81.7,81.5,93.5,93.1,59.8,59.7
+Gender,Female,81.8,83.7,81.1,81.5,58.4,58.4,93.8,94.0,72.1,70.5,80.4,81.4,92.0,92.2,52.6,53.2
+Age group,30 years or under,84.1,84.0,83.5,83.0,63.6,63.7,95.5,96.1,78.3,75.8,80.6,81.1,92.5,91.9,52.4,54.0
+Age group,Over 30 years,84.0,84.9,83.4,84.1,60.8,60.3,93.4,93.3,74.1,73.1,81.2,81.5,92.9,92.8,57.8,57.3
+Indigenous,Indigenous,70.7,78.6,85.4,76.2,48.8,54.8,90.2,88.1,58.5,69.0,75.6,78.6,90.5,88.1,57.1,64.3
+Indigenous,Non-Indigenous,84.2,84.7,83.4,83.8,61.8,61.4,94.1,94.2,75.6,74.0,81.1,81.4,92.8,92.6,56.0,56.2
+Home language,English,82.6,83.9,82.1,83.6,58.0,58.4,93.6,94.0,72.0,70.4,79.7,81.0,91.6,92.2,54.3,54.6
+Home language,Language other than English,88.0,86.4,87.0,84.2,71.4,69.1,95.3,94.6,84.6,83.1,84.5,82.3,95.7,93.5,60.4,60.3
+Disability,Disability reported,78.0,81.3,83.7,82.7,47.7,46.4,92.0,93.5,64.8,60.4,77.7,78.4,87.5,91.0,44.3,39.6
+Disability,No disability reported,84.4,84.8,83.4,83.8,62.4,62.2,94.1,94.2,76.0,74.7,81.2,81.5,93.0,92.6,56.6,57.1
+Study mode,Internal/Mixed study mode,84.5,84.7,83.5,83.7,62.2,62.6,94.3,94.4,76.0,74.7,81.6,81.7,93.1,92.7,56.2,56.3
+Study mode,External study mode,84.3,90.3,86.9,88.9,57.3,50.0,91.4,93.3,72.3,66.7,82.4,86.6,89.1,94.3,58.8,59.4
+First in family,First in family,84.3,84.4,83.9,84.3,62.0,63.2,95.0,94.7,75.9,74.4,80.3,82.1,93.6,92.8,57.4,56.6
+First in family,Not first in family,83.7,85.5,82.8,83.6,61.0,60.5,93.8,94.8,74.4,72.5,81.0,81.8,91.9,92.4,53.2,54.7
+Socio-economic status,High*,85.2,84.6,84.7,84.6,57.6,55.6,93.2,94.2,69.4,67.0,83.9,84.0,92.6,91.7,55.5,52.9
+Socio-economic status,Medium*,82.7,84.9,83.3,85.4,54.4,57.8,94.5,94.5,72.0,69.2,84.2,84.3,91.8,92.0,53.0,54.5
+Socio-economic status,Low*,79.8,81.3,84.5,80.1,50.0,46.9,92.9,95.6,69.0,61.3,79.8,85.1,88.1,87.6,51.2,52.2
+Locality,Metro* †,83.7,83.6,84.6,84.9,55.7,55.9,94.1,94.5,70.1,66.7,84.1,84.5,92.1,91.5,53.7,53.2
+Locality,Regional/Remote* †,83.0,88.8,82.1,83.2,53.4,54.4,91.8,95.4,71.3,70.7,80.6,81.8,90.5,91.0,55.1,54.7
+Total,Total,84.1,84.6,83.4,83.7,61.7,61.4,94.0,94.2,75.5,74.0,81.0,81.4,92.7,92.6,56.0,56.2
+,,,,,,,,,,,,,,,,,
+Column variables:,,,,,,,,,,,,,,,,,
+PREQ__SS,,,,,,,,,,,,,,,,,
+PREQ_GES,,,,,,,,,,,,,,,,,
+PREQ_ICS,,,,,,,,,,,,,,,,,
+PREQ_IES,,,,,,,,,,,,,,,,,
+PREQ_IS,,,,,,,,,,,,,,,,,
+PREQ_OSI,,,,,,,,,,,,,,,,,
+PREQ_SDS,,,,,,,,,,,,,,,,,
+PREQ_TES,,,,,,,,,,,,,,,,,
+YEAR,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Column filters:,,,,,,,,,,,,,,,,,
+"PREQ_(*) != (NA, 995, 999)",,,,,,,,,,,,,,,,,
+"Data for all columns is filtered to: ANALYSIS = (1:2), Postgraduate research: LEVEL = 3",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Row variables:,,,,,,,,,,,,,,,,,
+Gender: E315,,,,,,,,,,,,,,,,,
+Mode of attendance: E329,,,,,,,,,,,,,,,,,
+Indigenous indicator: E940,,,,,,,,,,,,,,,,,
+English speaking indicator: E941,,,,,,,,,,,,,,,,,
+Citizenship indicator: E942,,,,,,,,,,,,,,,,,
+Disability indicator: E943,,,,,,,,,,,,,,,,,
+FAMILYED,,,,,,,,,,,,,,,,,
+FIRST_ASGS_METRO,,,,,,,,,,,,,,,,,
+FIRST_ASGS_REGIONAL,,,,,,,,,,,,,,,,,
+FIRST_ASGS_REMOTE,,,,,,,,,,,,,,,,,
+FIRST_SES_SA1,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Row notes:,,,,,,,,,,,,,,,,,
+30 years or under: e913 > 0 & e913 <= 30,,,,,,,,,,,,,,,,,
+Over 30 years: e913 > 30,,,,,,,,,,,,,,,,,
+"Internal/Mixed study mode: E329  = (1,3)",,,,,,,,,,,,,,,,,
+"External study mode: E329  = (2,4,5)",,,,,,,,,,,,,,,,,
+* Socio-economic status data for 2022 and 2023 has been updated in 2024 to reflect revised information in the 2022 Higher Education student statistics collection (HESSC). Note that student completion data from 2021 and 2022 form the population data for GOS 2022 and 2023 respectively.,,,,,,,,,,,,,,,,,
+† Locality statistics are calculated according to proportion for both metro and regional/remote categories.,,,,,,,,,,,,,,,,,
+"† Location data are only reported for Commonwealth assisted students, which excludes international and domestic full fee paying students.",,,,,,,,,,,,,,,,,
+†† Some subgroups may not add to 100 per cent due to rounding.,,,,,,,,,,,,,,,,,

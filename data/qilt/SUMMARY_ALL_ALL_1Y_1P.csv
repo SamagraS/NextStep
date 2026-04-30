@@ -1,0 +1,41 @@
+"Collection summary among all course levels from all provider types by GOS collection period, 2023",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+Back to INDEX,,,,,,
+,,,,,,
+,,No. of participating institutions,No. of approached graduates,No. of in-scope graduates,No. of completed surveys,Overall response rate (%)
+2022,November - University,42,99152,90403,33202,36.7
+2022,November - NUHEIs,64,11976,10638,3766,35.4
+2022,November - Total,106,111128,101041,36968,36.6
+2023,February - University,33,21691,19901,8042,40.4
+2023,February - NUHEIs,45,5169,4564,1619,35.5
+2023,February - Total,78,26860,24465,9661,39.5
+2023,May - University,42,182534,166641,66206,39.7
+2023,May - NUHEIs,71,8954,7941,3415,43.0
+2023,May - Total,113,191488,174582,69621,39.9
+Total collection,University,42,303377,276945,107450,38.8
+Total collection,NUHEIs,84,26099,23143,8800,38.0
+Total collection,Total,126,329476,300088,116250,38.7
+,,,,,,
+Column variables:,,,,,,
+E306,,,,,,
+NATAPPROACH,,,,,,
+NATCOMPLETE,,,,,,
+NATINSCOPE,,,,,,
+,,,,,,
+Column filters:,,,,,,
+NATAPPROACH = 1,,,,,,
+NATCOMPLETE = 1,,,,,,
+NATINSCOPE = 1,,,,,,
+,,,,,,
+Column notes:,,,,,,
+This table is constructed from the GOS operational file.,,,,,,
+"In-scope graduates excludes opt-outs, disqualified or out-of-scope surveys.",,,,,,
+Data for all columns is filtered to: ANALYSIS = 1,,,,,,
+,,,,,,
+Row variables:,,,,,,
+HEPTYPE,,,,,,
+PERIOD,,,,,,
+YEAR,,,,,,
+,,,,,,
+Row notes:,,,,,,
+Universites: HEPTYPE = 1,,,,,,
+NUHEIs: HEPTYPE = 2,,,,,,

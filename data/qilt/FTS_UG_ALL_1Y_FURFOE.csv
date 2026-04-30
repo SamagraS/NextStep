@@ -1,0 +1,30 @@
+"Current further study: field of education among undergraduates and all provider types by further full-time study, 2024",Unnamed: 1,Unnamed: 2
+Back to INDEX,,
+,,
+,,In full-time study in 2024
+,"Agriculture, environmental & related studies",1.7
+,Architecture & building,2.2
+,Creative arts,5.9
+,Education,9.2
+,Engineering & related technologies,4.8
+,"Food, hospitality & personal services",0.4
+,Health,22.7
+,Information technology,3.6
+,Management & commerce,5.3
+,Mixed field programmes,2.0
+,Natural & physical sciences,15.6
+,Society & culture,26.3
+,Other (please specify),0.3
+,All,100.0
+,,
+Column variables:,,
+FURFOE,,
+FURSTUD,,
+YEAR,,
+,,
+Column filters:,,
+"FURFOE != (NA, 95, 99)",,
+"Data for all columns is filtered to: ANALYSIS = 1, Undergraduate: LEVEL = 1, e942 = 0",,
+,,
+Row variables:,,
+FURFOE,,

@@ -1,0 +1,162 @@
+"Broad field of education among postgraduate research students and all provider types by further full-time study, 2024",Unnamed: 1,Unnamed: 2
+Back to INDEX,,
+,,
+,,In full-time study in 2024
+"Agriculture, environmental & related studies","Agriculture, environmental & related studies",
+"Agriculture, environmental & related studies",Architecture & building,
+"Agriculture, environmental & related studies",Creative arts,
+"Agriculture, environmental & related studies",Education,
+"Agriculture, environmental & related studies",Engineering & related technologies,
+"Agriculture, environmental & related studies","Food, hospitality & personal services",
+"Agriculture, environmental & related studies",Health,
+"Agriculture, environmental & related studies",Information technology,
+"Agriculture, environmental & related studies",Management & commerce,
+"Agriculture, environmental & related studies",Mixed field programmes,
+"Agriculture, environmental & related studies",Natural & physical sciences,
+"Agriculture, environmental & related studies",Society & culture,
+Architecture & building,"Agriculture, environmental & related studies",
+Architecture & building,Architecture & building,
+Architecture & building,Creative arts,
+Architecture & building,Education,
+Architecture & building,Engineering & related technologies,
+Architecture & building,"Food, hospitality & personal services",
+Architecture & building,Health,
+Architecture & building,Information technology,
+Architecture & building,Management & commerce,
+Architecture & building,Mixed field programmes,
+Architecture & building,Natural & physical sciences,
+Architecture & building,Society & culture,
+Creative arts,"Agriculture, environmental & related studies",
+Creative arts,Architecture & building,
+Creative arts,Creative arts,
+Creative arts,Education,
+Creative arts,Engineering & related technologies,
+Creative arts,"Food, hospitality & personal services",
+Creative arts,Health,
+Creative arts,Information technology,
+Creative arts,Management & commerce,
+Creative arts,Mixed field programmes,
+Creative arts,Natural & physical sciences,
+Creative arts,Society & culture,
+Education,"Agriculture, environmental & related studies",
+Education,Architecture & building,
+Education,Creative arts,
+Education,Education,
+Education,Engineering & related technologies,
+Education,"Food, hospitality & personal services",
+Education,Health,
+Education,Information technology,
+Education,Management & commerce,
+Education,Mixed field programmes,
+Education,Natural & physical sciences,
+Education,Society & culture,
+Engineering & related technologies,"Agriculture, environmental & related studies",
+Engineering & related technologies,Architecture & building,
+Engineering & related technologies,Creative arts,
+Engineering & related technologies,Education,
+Engineering & related technologies,Engineering & related technologies,
+Engineering & related technologies,"Food, hospitality & personal services",
+Engineering & related technologies,Health,
+Engineering & related technologies,Information technology,
+Engineering & related technologies,Management & commerce,
+Engineering & related technologies,Mixed field programmes,
+Engineering & related technologies,Natural & physical sciences,
+Engineering & related technologies,Society & culture,
+"Food, hospitality & personal services","Agriculture, environmental & related studies",
+"Food, hospitality & personal services",Architecture & building,
+"Food, hospitality & personal services",Creative arts,
+"Food, hospitality & personal services",Education,
+"Food, hospitality & personal services",Engineering & related technologies,
+"Food, hospitality & personal services","Food, hospitality & personal services",
+"Food, hospitality & personal services",Health,
+"Food, hospitality & personal services",Information technology,
+"Food, hospitality & personal services",Management & commerce,
+"Food, hospitality & personal services",Mixed field programmes,
+"Food, hospitality & personal services",Natural & physical sciences,
+"Food, hospitality & personal services",Society & culture,
+Health,"Agriculture, environmental & related studies",0.0
+Health,Architecture & building,0.0
+Health,Creative arts,0.0
+Health,Education,0.0
+Health,Engineering & related technologies,0.0
+Health,"Food, hospitality & personal services",0.0
+Health,Health,48.1
+Health,Information technology,0.0
+Health,Management & commerce,0.0
+Health,Mixed field programmes,0.0
+Health,Natural & physical sciences,29.6
+Health,Society & culture,22.2
+Information technology,"Agriculture, environmental & related studies",
+Information technology,Architecture & building,
+Information technology,Creative arts,
+Information technology,Education,
+Information technology,Engineering & related technologies,
+Information technology,"Food, hospitality & personal services",
+Information technology,Health,
+Information technology,Information technology,
+Information technology,Management & commerce,
+Information technology,Mixed field programmes,
+Information technology,Natural & physical sciences,
+Information technology,Society & culture,
+Management & commerce,"Agriculture, environmental & related studies",
+Management & commerce,Architecture & building,
+Management & commerce,Creative arts,
+Management & commerce,Education,
+Management & commerce,Engineering & related technologies,
+Management & commerce,"Food, hospitality & personal services",
+Management & commerce,Health,
+Management & commerce,Information technology,
+Management & commerce,Management & commerce,
+Management & commerce,Mixed field programmes,
+Management & commerce,Natural & physical sciences,
+Management & commerce,Society & culture,
+Mixed field programmes,"Agriculture, environmental & related studies",
+Mixed field programmes,Architecture & building,
+Mixed field programmes,Creative arts,
+Mixed field programmes,Education,
+Mixed field programmes,Engineering & related technologies,
+Mixed field programmes,"Food, hospitality & personal services",
+Mixed field programmes,Health,
+Mixed field programmes,Information technology,
+Mixed field programmes,Management & commerce,
+Mixed field programmes,Mixed field programmes,
+Mixed field programmes,Natural & physical sciences,
+Mixed field programmes,Society & culture,
+Natural & physical sciences,"Agriculture, environmental & related studies",8.3
+Natural & physical sciences,Architecture & building,0.0
+Natural & physical sciences,Creative arts,2.8
+Natural & physical sciences,Education,0.0
+Natural & physical sciences,Engineering & related technologies,0.0
+Natural & physical sciences,"Food, hospitality & personal services",0.0
+Natural & physical sciences,Health,11.1
+Natural & physical sciences,Information technology,2.8
+Natural & physical sciences,Management & commerce,0.0
+Natural & physical sciences,Mixed field programmes,2.8
+Natural & physical sciences,Natural & physical sciences,58.3
+Natural & physical sciences,Society & culture,11.1
+Society & culture,"Agriculture, environmental & related studies",0.0
+Society & culture,Architecture & building,0.0
+Society & culture,Creative arts,12.5
+Society & culture,Education,12.5
+Society & culture,Engineering & related technologies,0.0
+Society & culture,"Food, hospitality & personal services",0.0
+Society & culture,Health,12.5
+Society & culture,Information technology,6.3
+Society & culture,Management & commerce,3.1
+Society & culture,Mixed field programmes,0.0
+Society & culture,Natural & physical sciences,0.0
+Society & culture,Society & culture,53.1
+,All,100.0
+,,
+Column variables:,,
+FURFOE,,
+FURSTUD,,
+YEAR,,
+,,
+Column filters:,,
+"FURFOE != (NA, 95, 99)",,
+"Data for all columns is filtered to: ANALYS12 = (1:2), Postgraduate research: LEVEL = 3, e942 = 0",,
+,,
+Row variables:,,
+BROADFOE,,
+FURFOE,,

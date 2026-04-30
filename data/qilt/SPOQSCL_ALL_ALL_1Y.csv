@@ -1,0 +1,23 @@
+"Occupation does not fully use skills or education among all course levels and all provider types by employment outcomes (FTE, OE) 2024",Unnamed: 1,Unnamed: 2,Unnamed: 3
+Back to INDEX,,,
+,,,
+,,Full-time employment,Overall employment
+Undergraduate,Undergraduate,28.3,39.3
+Postgraduate,Postgraduate coursework,28.3,30.2
+Postgraduate,Postgraduate research,29.7,31.5
+Postgraduate,All postgraduate,28.5,30.3
+All graduate,,28.4,35.4
+,,,
+Column variables:,,,
+FULLEMP,,,
+GENEMP,,,
+YEAR,,,
+,,,
+Column filters:,,,
+FT: FULLEMP = 1,,,
+OE: GENEMP = 1,,,
+"Data for all columns is filtered to: ANALYSIS = 1, e942 = 0",,,
+,,,
+Row variables:,,,
+LEVEL,,,
+SPOQSCL,,,

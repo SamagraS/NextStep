@@ -1,0 +1,27 @@
+"Response rates Nov 2023, Feb and May 2024 collections among undergraduates from all provider types by provider types",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+Back to INDEX,,,,,
+,,,,,
+,,Nov '2023,Feb '2024,May '2024,Total
+,Universities,34.5,36.0,38.7,37.4
+,NUHEIs,35.0,36.1,39.3,37.1
+,All institutions,34.5,36.0,38.8,37.4
+,,,,,
+Column variables:,,,,,
+NATCOMPLETE,,,,,
+NATINSCOPE,,,,,
+PERIOD,,,,,
+YEAR,,,,,
+,,,,,
+Column filters:,,,,,
+NATINSCOPE = 1,,,,,
+,,,,,
+Column notes:,,,,,
+This table is constructed from the GOS operational file.,,,,,
+Undergraduate: LEVEL = 1,,,,,
+,,,,,
+Row variables:,,,,,
+HEPTYPE,,,,,
+,,,,,
+Row notes:,,,,,
+Universites: HEPTYPE = 1,,,,,
+NUHEIs: HEPTYPE = 2,,,,,

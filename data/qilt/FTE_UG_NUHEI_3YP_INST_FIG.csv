@@ -1,0 +1,113 @@
+"Proportion employed full-time, 2022-2024, with 90% confidence intervals among undergraduates from non-university higher education institutes (NUHEIs) by institution",Unnamed: 1,Unnamed: 2
+Back to INDEX,,
+,,
+,,Full-time employment rate
+,Engineering Institute of Technology,"96.9 (88.6, 97.9)"
+,Marcus Oldham College,"96.5 (92.9, 97.9)"
+,Moore Theological College,"90.7 (84.8, 93.7)"
+,TAFE Queensland,"90.0 (80.5, 94.5)"
+,Christian Heritage College,"81.3 (69.1, 88.5)"
+,Holmesglen Institute,"78.6 (70.1, 84.9)"
+,Australian University of Theology*,"78.5 (73.0, 83.0)"
+,Alphacrucis University College,"77.4 (71.8, 82.0)"
+,Australasian College of Health and Wellness,"76.4 (68.9, 82.3)"
+,Melbourne Institute of Technology,"75.9 (66.8, 82.6)"
+,William Angliss Institute,"74.3 (62.3, 82.8)"
+,ACAP University College,"73.9 (69.4, 77.9)"
+,"International College of Management, Sydney","73.4 (65.9, 79.6)"
+,Endeavour College of Natural Health,"72.2 (67.6, 76.3)"
+,Tabor College of Higher Education,"69.7 (61.1, 76.8)"
+,Sydney College of Divinity,"68.8 (55.0, 79.6)"
+,TAFE NSW,"68.7 (63.7, 73.1)"
+,The Australian College of Physical Education,"67.2 (57.7, 75.3)"
+,Campion College Australia,"66.7 (52.6, 77.7)"
+,All NUHEIs,"64.9 (63.7, 66.1)"
+,The Institute of Creative Arts and Technology,"64.7 (51.6, 75.6)"
+,Academy of Interactive Technology,"63.6 (58.1, 68.6)"
+,LCI Melbourne,"61.8 (49.6, 72.1)"
+,Box Hill Institute,"61.2 (50.3, 70.9)"
+,ISN Psychology Pty Ltd,"58.8 (45.8, 70.5)"
+,"Whitehouse Institute of Design, Australia","53.6 (45.8, 61.1)"
+,Ikon Institute of Australia,"52.0 (41.9, 61.9)"
+,Collarts (Australian College of the Arts),"50.6 (44.9, 56.3)"
+,The Australian Institute of Music,"50.0 (42.3, 57.7)"
+,SAE University College,"42.9 (39.8, 46.0)"
+,UTS College,"37.3 (29.4, 46.1)"
+,Melbourne Polytechnic,"36.4 (25.2, 49.6)"
+,National Art School,"33.3 (23.9, 45.1)"
+,Academies Australasia Polytechnic Pty Limited,
+,Acknowledge Education,
+,Adelaide Central School of Art,
+,Adelaide Institute of Higher Education,
+,Asia Pacific International College,
+,Australia Advance Education Group Pty Ltd,
+,Australian Academy of Music and Performing Arts,
+,Australian College of Christian Studies,
+,Australian College of Nursing,
+,Australian Institute of Business Pty Ltd,
+,Australian Institute of Higher Education,
+,Australian Institute of Management Education & Training,
+,Australian Institute of Professional Counsellors,
+,BBI - The Australian Institute of Theological Education,
+,CIC Higher Education,
+,Chartered Accountants Australia and New Zealand,
+,Chisholm Institute,
+,Crown Institute of Higher Education Pty Ltd,
+,Eastern College Australia,
+,Excelsia University College,
+,Gestalt Therapy Brisbane,
+,Governance Institute of Australia,
+,HEPCO The Tax Institute Higher Education,
+,Health Education & Training Institute,
+,Holmes Institute,
+,ICHM,
+,Institute of Health & Management Pty Ltd,
+,Jazz Music Institute,
+,Kaplan Business School,
+,Kaplan Higher Education Pty Ltd,
+,King's Own Institute,
+,Le Cordon Bleu Australia,
+,Leaders Institute,
+,Leo Cussen Centre for Law,
+,Lyons College,
+,Montessori World Educational Institute (Australia),
+,Morling College,
+,Nan Tien Institute,
+,National Institute of Organisation Dynamics Aust,
+,Ozford Institute of Higher Education,
+,Performing Arts Education,
+,Perth Bible College,
+,Polytechnic Institute Australia Pty Ltd,
+,SP Jain School of Management,
+,Sheridan Institute of Higher Education,
+,Southern Cross Education Institute (Higher Education),
+,Stanley College,
+,TAFE South Australia,
+,The Cairnmillar Institute,
+,The College of Law Limited,
+,The Institute of Internal Auditors - Australia,
+,The MIECAT Institute,
+,UOW College,
+,VIT (Victorian Institute of Technology),
+,Wentworth Institute of Higher Education,
+,,
+Column variables:,,
+AVAILFT,,
+FULLEMP,,
+YEAR,,
+,,
+Column filters:,,
+AVAILFT =1,,
+,,
+Column notes:,,
+The Agresti-Coull method is used to calculate 90% confidence intervals for proportions.,,
+Estimates and confidence intervals (CIs) may become unreliable for very small sample sizes and proportions close to 0% or 100%.,,
+CIs are not displayed when estimates are 0% or 100% or fall outside the CI range. Exercise caution when reporting and comparing proportions in these cases.,,
+Bootstrapping on the median is used to estimate 90% confidence intervals for median salary.,,
+"Data for all columns is filtered to: ANALYSIS = 1, Undergraduate: LEVEL = 1, NUHEI: HEPTYPE = 2, e942 = 0",,
+,,
+Row variables:,,
+E306,,
+,,
+Row notes:,,
+"* The Australian University of Theology was awarded university status in December 2024. Prior to this, the institution was known as the Australian College of Theology and was classified as a non-university higher education institution (NUHEI). Data for the 2024 GOS was collected when the institution was a NUHEI.",,

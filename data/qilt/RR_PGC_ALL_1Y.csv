@@ -1,0 +1,27 @@
+"Response rates Nov 2023, Feb and May 2024 collections among postgraduate coursework students from all provider types by provider types",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+Back to INDEX,,,,,
+,,,,,
+,,Nov '2023,Feb '2024,May '2024,Total
+,Universities,37.4,37.7,38.9,38.3
+,NUHEIs,35.5,34.4,37.6,36.1
+,All institutions,37.2,36.8,38.7,38.0
+,,,,,
+Column variables:,,,,,
+NATCOMPLETE,,,,,
+NATINSCOPE,,,,,
+PERIOD,,,,,
+YEAR,,,,,
+,,,,,
+Column filters:,,,,,
+NATINSCOPE = 1,,,,,
+,,,,,
+Column notes:,,,,,
+This table is constructed from the GOS operational file.,,,,,
+Postgraduate coursework: LEVEL = 2,,,,,
+,,,,,
+Row variables:,,,,,
+HEPTYPE,,,,,
+,,,,,
+Row notes:,,,,,
+Universites: HEPTYPE = 1,,,,,
+NUHEIs: HEPTYPE = 2,,,,,

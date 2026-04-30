@@ -1,0 +1,161 @@
+GOS 2024 Tables and Figures,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+,,,,,,
+Sheet,Report,PowerBI,Title,Course level,Provider type,Category
+OVERALL_ALL_ALL_2Y_HEPTYPE,Table 08,Report 1,"Employment (FTE, OE, LF, SAL) and study outcomes among all course levels from all provider types by provider type, 2023 - 2024 ",ALL,ALL,Labour force outcomes
+EMP_UG_ALL_2Y_AREA,Table 06,Report 2,"Employment outcomes (FTE, OE, LF), 2023-2024 among undergraduates from all provider types by study area",UG,ALL,Occupation
+EMP_PGC_ALL_2Y_AREA,,Report 2,"Employment outcomes (FTE, OE, LF), 2023-2024 among postgraduate coursework students from all provider types by study area",PGC,ALL,Occupation
+EMP_PGR_ALL_2Y_AREA,,Report 2,"Employment outcomes (FTE, OE, LF), 2023-2024 among postgraduate research students from all provider types by study area",PGR,ALL,Occupation
+EMP_UG_ALL_2Y_E315,,Report 1,"Employment outcomes (FTE, OE, LF) among undergraduates and all provider types by gender, 2023-2024",UG,ALL,Occupation
+EMP_PGC_ALL_2Y_E315,,Report 1,"Employment outcomes (FTE, OE, LF) among postgraduate coursework students and all provider types by gender, 2023-2024",PGC,ALL,Occupation
+EMP_PGR_ALL_2Y_E315,,Report 1,"Employment outcomes (FTE, OE, LF) among postgraduate research students and all provider types by gender, 2023-2024",PGR,ALL,Occupation
+EMP_UG_ALL_2Y_DG,Figure 07/Table 04,Report 1,"Employment outcomes (FTE, OE, LF), 2023-2024 among undergraduates from all provider types by demographic group",UG,ALL,Occupation
+EMP_PGC_ALL_2Y_DG,Figure 08/Table 05,Report 1,"Employment outcomes (FTE, OE, LF), 2023-2024 among postgraduate coursework students from all provider types by demographic group",PGC,ALL,Occupation
+EMP_PGR_ALL_2Y_DG,,Report 1,"Employment outcomes (FTE, OE, LF), 2023-2024 among postgraduate research students from all provider types by demographic group",PGR,ALL,Occupation
+EMP_UG_ALL_1Y_FTS,,,"Employment outcomes (FTE, OE, LF, SAL) among undergraduates from all provider types by full-time study status by gender, 2024",UG,ALL,Occupation
+EMP_PGC_ALL_1Y_FTS,,,"Employment outcomes (FTE, OE, LF, SAL) among postgraduate coursework students from all provider types by full-time study status by gender, 2024",PGC,ALL,Occupation
+EMP_PGR_ALL_1Y_FTS,,,"Employment outcomes (FTE, OE, LF, SAL) among postgraduate research students from all provider types by full-time study status by gender, 2024",PGR,ALL,Occupation
+EMP_UG_ALL_2Y_AREA45,,Report 3,"Employment outcomes (FTE, OE, LF), 2023-2024 among undergraduates from all provider types by 45 study areas",UG,ALL,Occupation
+EMP_PGC_ALL_2Y_AREA45,,Report 3,"Employment outcomes (FTE, OE, LF), 2023-2024 among postgraduate coursework students from all provider types by 45 study areas",PGC,ALL,Occupation
+EMP_PGR_ALL_2Y_AREA45,,Report 3,"Employment outcomes (FTE, OE, LF), 2023-2024 among postgraduate research students from all provider types by 45 study areas",PGR,ALL,Occupation
+EMP_UG_UNI_2Y_AREA,,,"Employment outcomes (FTE, OE, LF), 2023-2024 among undergraduates from universities by study area",UG,UNI,Occupation
+EMP_UG_NUHEI_2Y_AREA,,,"Employment outcomes (FTE, OE, LF), 2023-2024 among undergraduates from non-university higher education institutes (NUHEIs) by study area",UG,NUHEI,Occupation
+EMP_UG_UNI_2Y_DG,,,"Employment outcomes (FTE, OE, LF), 2023-2024 among undergraduates from universities by demographic group",UG,UNI,Occupation
+EMP_UG_NUHEI_2Y_DG,,,"Employment outcomes (FTE, OE, LF), 2023-2024 among undergraduates from non-university higher education institutes (NUHEIs) by demographic group",UG,NUHEI,Occupation
+EMP_UG_ALL_3Y_PERIOD,Table 01/Figure 01-05,,"Employment outcomes (FTE, OE, LF, SAL) among undergraduates from all provider types by survey round, 2022-2024",UG,ALL,Occupation
+EMP_PGC_ALL_3Y_PERIOD,Figure 02-05,,"Employment outcomes (FTE, OE, LF, SAL) among postgraduate coursework students from all provider types by survey round, 2022-2024",PGC,ALL,Occupation
+EMP_PGR_ALL_3Y_PERIOD,Figure 02-05,,"Employment outcomes (FTE, OE, LF, SAL) among postgraduate research students from all provider types by survey round, 2022-2024",PGR,ALL,Occupation
+SAL_UG_ALL_2Y_AREA_E315,Table 07,Report 4,"Median annual full-time salaries ($) by gender, 2023 and 2024 among undergraduates from all provider types by study area",UG,ALL,Labour force outcomes
+SAL_PGC_ALL_2Y_AREA_E315,,Report 4,"Median annual full-time salaries ($) by gender, 2023 and 2024 among postgraduate coursework students from all provider types by study area",PGC,ALL,Labour force outcomes
+SAL_PGR_ALL_2Y_AREA_E315,,Report 4,"Median annual full-time salaries ($) by gender, 2023 and 2024 among postgraduate research students from all provider types by study area",PGR,ALL,Labour force outcomes
+SAL_UG_ALL_2Y_DG_E315,Figure 09,Report 1,"Median annual full-time salaries ($) by gender, 2023 and 2024 among undergraduates from all provider types by demographic group",UG,ALL,Labour force outcomes
+SAL_PGC_ALL_2Y_DG_E315,Figure 09,Report 1,"Median annual full-time salaries ($) by gender, 2023 and 2024 among postgraduate coursework students from all provider types by demographic group",PGC,ALL,Labour force outcomes
+SAL_PGR_ALL_2Y_DG_E315,Figure 09,Report 1,"Median annual full-time salaries ($) by gender, 2023 and 2024 among postgraduate research students from all provider types by demographic group",PGR,ALL,Labour force outcomes
+SAL_UG_ALL_2Y_AREA45_E315,,Report 5,"Median annual full-time salaries ($) by gender, 2023 and 2024 among undergraduates from all provider types by 45 study areas",UG,ALL,Labour force outcomes
+SAL_PGC_ALL_2Y_AREA45_E315,,Report 5,"Median annual full-time salaries ($) by gender, 2023 and 2024 among postgraduate coursework students from all provider types by 45 study areas",PGC,ALL,Labour force outcomes
+SAL_PGR_ALL_2Y_AREA45_E315,,Report 5,"Median annual full-time salaries ($) by gender, 2023 and 2024 among postgraduate research students from all provider types by 45 study areas",PGR,ALL,Labour force outcomes
+LF_UG_UNI_1Y_INST_CI,,,"Employment outcomes (FTE, OE, LF, SAL), 2024 among undergraduates from universities by institution",UG,UNI,Labour force outcomes
+LF_UG_UNI_3YP_INST_CI,,,"Employment outcomes (FTE, OE, LF, SAL), 2022-2024 among undergraduates from universities by institution",UG,UNI,Labour force outcomes
+LF_PGC_UNI_1Y_INST_CI,,,"Employment outcomes (FTE, OE, LF, SAL), 2024 among postgraduate coursework students from universities by institution",PGC,UNI,Labour force outcomes
+LF_PGC_UNI_3YP_INST_CI,,,"Employment outcomes (FTE, OE, LF, SAL), 2022-2024 among postgraduate coursework students from universities by institution",PGC,UNI,Labour force outcomes
+LF_PGR_UNI_3YP_INST_CI,,,"Employment outcomes (FTE, OE, LF, SAL), 2022-2024 among postgraduate research students from universities by institution",PGR,UNI,Labour force outcomes
+LF_UG_NUHEI_3YP_INST_CI,,,"Employment outcomes (FTE, OE, LF, SAL), 2022-2024 among undergraduates from non-university higher education institutes (NUHEIs) by institution",UG,NUHEI,Labour force outcomes
+LF_PGC_NUHEI_3YP_INST_CI,,,"Employment outcomes (FTE, OE, LF, SAL), 2022-2024 among postgraduate coursework students from non-university higher education institutes (NUHEIs) by institution",PGC,NUHEI,Labour force outcomes
+LF_UG_UNI_2Y_E315,,Report 6,"Employment outcomes (FTE, OE, LF, SAL) among undergraduates from universities by gender, 2023-2024",UG,UNI,Labour force outcomes
+LF_UG_NUHEI_2Y_E315,,Report 7,"Employment outcomes (FTE, OE, LF, SAL) among undergraduates from non-university higher education institutes (NUHEIs) by gender, 2023-2024",UG,NUHEI,Labour force outcomes
+PREFMHRS_UG_ALL_1Y_E315,Figure 06,,"Proportion of employed seeking or not seeking more hours among undergraduates and all provider types by gender, 2024",UG,ALL,Labour force outcomes
+PREFMHRS_PGC_ALL_1Y_E315,Figure 06,,"Proportion of employed seeking or not seeking more hours among postgraduate coursework students and all provider types by gender, 2024",PGC,ALL,Labour force outcomes
+PREFMHRS_PGR_ALL_1Y_E315,Figure 06,,"Proportion of employed seeking or not seeking more hours among postgraduate research students and all provider types by gender, 2024",PGR,ALL,Labour force outcomes
+PARTEMP_UG_ALL_1Y_AREA_E315,,,Part-time employment as a proportion of all employed graduates by gender 2024 among undergraduates from all provider types by study area,UG,ALL,Labour force outcomes
+RSNOMORE_UG_ALL_1Y_E315,Table 02,Report 8,Reason for not working more hours for part-time employed among undergraduates and all provider types by preference for more hours and gender 2024,UG,ALL,Reasons
+RSNOMORE_PGC_ALL_1Y_E315,,Report 8,Reason for not working more hours for part-time employed among postgraduate coursework students and all provider types by preference for more hours and gender 2024,PGC,ALL,Reasons
+RSNOMORE_PGR_ALL_1Y_E315,,Report 8,Reason for not working more hours for part-time employed among postgraduate research students and all provider types by preference for more hours and gender 2024,PGR,ALL,Reasons
+RSOVRQ_UG_ALL_1Y,Table 12,Report 9,"Reason working in a job that does not fully use skills and educations among undergraduates and all provider types by employment outcomes (FTE, OE) 2024",UG,ALL,Reasons
+RSOVRQ_PGC_ALL_1Y,,Report 9,"Reason working in a job that does not fully use skills and educations among postgraduate coursework students and all provider types by employment outcomes (FTE, OE) 2024",PGC,ALL,Reasons
+RSOVRQ_PGR_ALL_1Y,,Report 9,"Reason working in a job that does not fully use skills and educations among postgraduate research students and all provider types by employment outcomes (FTE, OE) 2024",PGR,ALL,Reasons
+RSOVRQ_UG_ALL_1Y_AREA,Table 13,,"Occupation does not fully use skills and education, and main reason for working in a job that doesn’t fully use skills and education, 2024 among undergraduates from all provider types by study area",UG,ALL,Reasons
+RSOVRQ_PGC_ALL_1Y_AREA,Table 13,,"Occupation does not fully use skills and education, and main reason for working in a job that doesn’t fully use skills and education, 2024 among postgraduate coursework students from all provider types by study area",PGC,ALL,Reasons
+RSOVRQ_PGR_ALL_1Y_AREA,Table 13,,"Occupation does not fully use skills and education, and main reason for working in a job that doesn’t fully use skills and education, 2024 among postgraduate research students from all provider types by study area",PGR,ALL,Reasons
+FTS_UG_ALL_1Y_AREA_E315,,Report 10,"Further full-time study by gender among undergraduates from all provider types by study area, 2024",UG,ALL,Further study
+FTS_PGC_ALL_1Y_AREA_E315,,Report 10,"Further full-time study by gender among postgraduate coursework students from all provider types by study area, 2024",PGC,ALL,Further study
+FTS_PGR_ALL_1Y_AREA_E315,,Report 10,"Further full-time study by gender among postgraduate research students from all provider types by study area, 2024",PGR,ALL,Further study
+FTS_UG_ALL_1Y_BFOE,Figure 20,,"Further full-time study among undergraduates from all provider types by broad field of education, 2024",UG,ALL,Further study
+FTS_PGC_ALL_1Y_BFOE,,,"Further full-time study among postgraduate coursework students from all provider types by broad field of education, 2024",PGC,ALL,Further study
+FTS_PGR_ALL_1Y_BFOE,,,"Further full-time study among postgraduate research students from all provider types by broad field of education, 2024",PGR,ALL,Further study
+FTS_UG_ALL_1Y_FURFOE,Figure 21,Report 10,"Current further study: field of education among undergraduates and all provider types by further full-time study, 2024",UG,ALL,Further study
+FTS_PGC_ALL_1Y_FURFOE,,Report 10,"Current further study: field of education among postgraduate coursework students and all provider types by further full-time study, 2024",PGC,ALL,Further study
+FTS_PGR_ALL_1Y_FURFOE,,Report 10,"Current further study: field of education among postgraduate research students and all provider types by further full-time study, 2024",PGR,ALL,Further study
+FTS_ALL_ALL_1Y_FURLEV,Figure 19,,"Further full-time study level among all course levels from all provider types by original study level,  2024",ALL,ALL,Further study
+FTS_UG_ALL_1Y_BFOE_FURFOE,Table 17,,"Broad field of education among undergraduates and all provider types by further full-time study, 2024",UG,ALL,Further study
+FTS_PGC_ALL_1Y_BFOE_FURFOE,,,"Broad field of education among postgraduate coursework students and all provider types by further full-time study, 2024",PGC,ALL,Further study
+FTS_PGR_ALL_1Y_BFOE_FURFOE,,,"Broad field of education among postgraduate research students and all provider types by further full-time study, 2024",PGR,ALL,Further study
+FTS_UG_ALL_1Y_DG,Figure 18,,"Further full-time study among undergraduates from all provider types by demographic group, 2024",UG,ALL,Further study
+FTS_PGC_ALL_1Y_DG,Figure 18,,"Further full-time study among postgraduate coursework students from all provider types by demographic group, 2024",PGC,ALL,Further study
+FTS_PGR_ALL_1Y_DG,Figure 18,,"Further full-time study among postgraduate research students from all provider types by demographic group, 2024",PGR,ALL,Further study
+SAT_UG_ALL_2Y,Figure 22,Report 11,Satisfaction (% agreement) among undergraduates and all provider types by year 2023-2024,UG,ALL,Graduate satisfaction
+SAT_PGC_ALL_2Y,Figure 22,Report 11,Satisfaction (% agreement) among postgraduate coursework students and all provider types by year 2023-2024,PGC,ALL,Graduate satisfaction
+SAT_PGR_ALL_2Y,Figure 23,Report 11,Satisfaction (% agreement) among postgraduate research students and all provider types by year 2023-2024,PGR,ALL,Graduate satisfaction
+SAT_UG_ALL_2Y_AREA,Table 18,Report 11,Satisfaction (% agreement) 2023-2024 among undergraduates from all provider types by study area,UG,ALL,Graduate satisfaction
+SAT_PGC_ALL_2Y_AREA,Table 18,Report 11,Satisfaction (% agreement) 2023-2024 among postgraduate coursework students from all provider types by study area,PGC,ALL,Graduate satisfaction
+SAT_PGR_ALL_2Y_AREA,Figure 24,Report 11,Satisfaction (% agreement) 2023-2024 among postgraduate research students from all provider types by study area,PGR,ALL,Graduate satisfaction
+SAT_UG_ALL_2Y_DG,,,Satisfaction (% agreement) 2023-2024 among undergraduates from all provider types by demographic group,UG,ALL,Graduate satisfaction
+SAT_PGC_ALL_2Y_DG,,,Satisfaction (% agreement) 2023-2024 among postgraduate coursework students from all provider types by demographic group,PGC,ALL,Graduate satisfaction
+SAT_PGR_ALL_2Y_DG,,,Satisfaction (% agreement) 2023-2024 among postgraduate research students from all provider types by demographic group,PGR,ALL,Graduate satisfaction
+SAT_UG_UNI_2Y_AREA,,,Satisfaction (% agreement) 2023-2024 among undergraduates from universities by study area,UG,UNI,Graduate satisfaction
+SAT_UG_NUHEI_2Y_AREA,,,Satisfaction (% agreement) 2023-2024 among undergraduates from non-university higher education institutes (NUHEIs) by study area,UG,NUHEI,Graduate satisfaction
+SUMMARY_ALL_ALL_1Y,Table 19,,"Collection summary among all course levels from all provider types by GOS collection period, 2024",ALL,ALL,Summary
+SUMMARY_ALL_ALL_1Y_1P,,,"Collection summary among all course levels from all provider types by GOS collection period, 2023",ALL,ALL,Summary
+SUMMARY_ALL_ALL_1Y_2P,,,"Collection summary among all course levels from all provider types by GOS collection period, 2022",ALL,ALL,Summary
+SUMMARY_ALL_ALL_1Y_3P,,,"Collection summary among all course levels from all provider types by GOS collection period, 2021",ALL,ALL,Summary
+RR_ALL_UNI_1Y_INST,Table 21,,"Response rates Nov 2023, Feb and May 2024 collections among all course levels from universities by institution",ALL,UNI,Operational
+RR_ALL_NUHEI_1Y_INST,Table 22,,"Response rates Nov 2023, Feb and May 2024 collections among all course levels from non-university higher education institutes (NUHEIs) by institution",ALL,NUHEI,Operational
+RR_UG_ALL_1Y,Table 20,,"Response rates Nov 2023, Feb and May 2024 collections among undergraduates from all provider types by provider types",UG,ALL,Operational
+RR_PGC_ALL_1Y,Table 20,,"Response rates Nov 2023, Feb and May 2024 collections among postgraduate coursework students from all provider types by provider types",PGC,ALL,Operational
+RR_PGR_ALL_1Y,Table 20,,"Response rates Nov 2023, Feb and May 2024 collections among postgraduate research students from all provider types by provider types",PGR,ALL,Operational
+CHAR_ALL_ALL_1Y_TYPE,,,"Respondent characteristics among all course levels and all provider types, 2024",ALL,ALL,Operational
+CHAR_ALL_ALL_1Y_DOM_TYPE,,,"Respondent characteristics among all course levels and all provider types, 2024",ALL,ALL,Operational
+CHAR_UG_ALL_1Y_DOM_TYPE,,,"Respondent characteristics among undergraduates and all provider types, 2024",UG,ALL,Operational
+CHAR_PGC_ALL_1Y_DOM_TYPE,,,"Respondent characteristics among postgraduate coursework students and all provider types, 2024",PGC,ALL,Operational
+CHAR_PGR_ALL_1Y_DOM_TYPE,,,"Respondent characteristics among postgraduate research students and all provider types, 2024",PGR,ALL,Operational
+CHAR_ALL_ALL_1Y_AREA,,,"Respondent characteristics among all course levels from all provider types by study area 21, 2024",ALL,ALL,Operational
+OCC_UG_ALL_1Y_EMPTYPE_E315,Table 09,,"Occupation level among undergraduates and all provider types by employment outcomes (FTE, OE) by gender, 2024",UG,ALL,Occupation
+OCC_PGC_ALL_1Y_EMPTYPE_E315,Table 09,,"Occupation level among postgraduate coursework students and all provider types by employment outcomes (FTE, OE) by gender, 2024",PGC,ALL,Occupation
+OCC_PGR_ALL_1Y_EMPTYPE_E315,Table 09,,"Occupation level among postgraduate research students and all provider types by employment outcomes (FTE, OE) by gender, 2024",PGR,ALL,Occupation
+OCCO_UG_ALL_1Y_AREA45,,,"Occupation level, overall employed, 2024, among undergraduates from all provider types by 45 study areas",UG,ALL,Occupation
+OCC_UG_UNI_1Y_EMPTYPE_E315,,,"Occupation level among undergraduates and universities by employment outcomes (FTE, OE) by gender, 2024",UG,UNI,Occupation
+OCC_UG_NUHEI_1Y_EMPTYPE_E315,,,"Occupation level among undergraduates and non-university higher education institutes (NUHEIs) by employment outcomes (FTE, OE) by gender, 2024",UG,NUHEI,Occupation
+OCCO_UG_UNI_1Y_AREA_EMPTYPE,,,"Occupation level, overall employed, 2024, among undergraduates from universities by study area",UG,UNI,Occupation
+OCCO_UG_ALL_1Y_AREA_EMPTYPE,,,"Occupation level, overall employed, 2024, among undergraduates from all provider types by study area",UG,ALL,Occupation
+QUALIMP_UG_ALL_1Y,,,"Importance of qualification among undergraduates and all provider types by employment outcomes (FTE, OE) 2024",UG,ALL,Qualification importance
+QUALIMP_PGC_ALL_1Y,,,"Importance of qualification among postgraduate coursework students and all provider types by employment outcomes (FTE, OE) 2024",PGC,ALL,Qualification importance
+QUALIMP_PGR_ALL_1Y,,,"Importance of qualification among postgraduate research students and all provider types by employment outcomes (FTE, OE) 2024",PGR,ALL,Qualification importance
+CRSPREP_UG_ALL_1Y,Table 14,,"Extent to which qualification prepared among undergraduates and all provider types by employment outcomes (FTE, OE) 2024",UG,ALL,Course preparedness
+CRSPREP_PGC_ALL_1Y,Table 14,,"Extent to which qualification prepared among postgraduate coursework students and all provider types by employment outcomes (FTE, OE) 2024",PGC,ALL,Course preparedness
+CRSPREP_PGR_ALL_1Y,Table 14,,"Extent to which qualification prepared among postgraduate research students and all provider types by employment outcomes (FTE, OE) 2024",PGR,ALL,Course preparedness
+SPOQSCL_ALL_ALL_1Y,Table 11,,"Occupation does not fully use skills or education among all course levels and all provider types by employment outcomes (FTE, OE) 2024",ALL,ALL,Perceived Over-qualification 
+HOURS_UG_ALL_3Y,,,"Employment outcomes (FTE, OE) among undergraduates from all provider types by average actual and usual hours worked per week 2022-2024",UG,ALL,Hours worked
+HOURS_PGC_ALL_3Y,,,"Employment outcomes (FTE, OE) among postgraduate coursework students from all provider types by average actual and usual hours worked per week 2022-2024",PGC,ALL,Hours worked
+HOURS_PGR_ALL_3Y,,,"Employment outcomes (FTE, OE) among postgraduate research students from all provider types by average actual and usual hours worked per week 2022-2024",PGR,ALL,Hours worked
+HOURS_UG_ALL_3Y_PERIOD,,,"Employment outcomes (FTE, OE) among undergraduates from all provider types by average actual and usual hours worked per week by survey round 2022-2024",UG,ALL,Hours worked
+HOURS_PGC_ALL_3Y_PERIOD,,,"Employment outcomes (FTE, OE) among postgraduate coursework students from all provider types by average actual and usual hours worked per week by survey round 2022-2024",PGC,ALL,Hours worked
+HOURS_PGR_ALL_3Y_PERIOD,,,"Employment outcomes (FTE, OE) among postgraduate research students from all provider types by average actual and usual hours worked per week by survey round 2022-2024",PGR,ALL,Hours worked
+AWAYWORK_UG_ALL_3Y,,,"Proportion of employed who were away from work (FTE, PTE, OE) among undergraduates from all provider types by year 2022 - 2024",UG,ALL,Away from work
+AWAYWORK_PGC_ALL_3Y,,,"Proportion of employed who were away from work (FTE, PTE, OE) among postgraduate coursework students from all provider types by year 2022 - 2024",PGC,ALL,Away from work
+AWAYWORK_PGR_ALL_3Y,,,"Proportion of employed who were away from work (FTE, PTE, OE) among postgraduate research students from all provider types by year 2022 - 2024",PGR,ALL,Away from work
+AWAYWORK_UG_ALL_3Y_PERIOD,,,"Proportion of employed who were away from work (FTE, PTE, OE) among undergraduates from all provider types by survey round, 2022-2024",UG,ALL,Away from work
+AWAYWORK_PGC_ALL_3Y_PERIOD,,,"Proportion of employed who were away from work (FTE, PTE, OE) among postgraduate coursework students from all provider types by survey round, 2022-2024",PGC,ALL,Away from work
+AWAYWORK_PGR_ALL_3Y_PERIOD,,,"Proportion of employed who were away from work (FTE, PTE, OE) among postgraduate research students from all provider types by survey round, 2022-2024",PGR,ALL,Away from work
+FTE_UG_UNI_1Y_INST_FIG,Figure 10,,"Proportion employed full-time, 2024, with 90% confidence intervals among undergraduates from universities by institution",UG,UNI,Labour force outcomes
+FTE_UG_UNI_3YP_INST_FIG,,,"Proportion employed full-time, 2022-2024, with 90% confidence intervals among undergraduates from universities by institution",UG,UNI,Labour force outcomes
+SAL_UG_UNI_1Y_INST_FIG,Figure 11,,"Median annual full-time salaries ($), 2024, with 90% confidence intervals among undergraduates from universities by institution",UG,UNI,Labour force outcomes
+SAL_UG_UNI_3YP_INST_FIG,,,"Median annual full-time salaries ($), 2022-2024, with 90% confidence intervals among undergraduates from universities by institution",UG,UNI,Labour force outcomes
+FTE_UG_NUHEI_3YP_INST_FIG,Figure 14,,"Proportion employed full-time, 2022-2024, with 90% confidence intervals among undergraduates from non-university higher education institutes (NUHEIs) by institution",UG,NUHEI,Labour force outcomes
+SAL_UG_NUHEI_3YP_INST_FIG,Figure 15,,"Median annual full-time salaries ($), 2022-2024, with 90% confidence intervals among undergraduates from non-university higher education institutes (NUHEIs) by institution",UG,NUHEI,Labour force outcomes
+FTE_PGC_UNI_1Y_INST_FIG,Figure 12,,"Proportion employed full-time, 2024, with 90% confidence intervals among postgraduate coursework students from universities by institution",PGC,UNI,Labour force outcomes
+FTE_PGC_UNI_3YP_INST_FIG,,,"Proportion employed full-time, 2022-2024, with 90% confidence intervals among postgraduate coursework students from universities by institution",PGC,UNI,Labour force outcomes
+FTE_PGC_NUHEI_3YP_INST_FIG,Figure 16,,"Proportion employed full-time, 2022-2024, with 90% confidence intervals among postgraduate coursework students from non-university higher education institutes (NUHEIs) by institution",PGC,NUHEI,Labour force outcomes
+FTE_PGR_UNI_3YP_INST_FIG,,,"Proportion employed full-time, 2022-2024, with 90% confidence intervals among postgraduate research students from universities by institution",PGR,UNI,Labour force outcomes
+SAL_PGC_UNI_1Y_INST_FIG,Figure 13,,"Median annual full-time salaries ($), 2024, with 90% confidence intervals among postgraduate coursework students from universities by institution",PGC,UNI,Labour force outcomes
+SAL_PGC_UNI_3YP_INST_FIG,,,"Median annual full-time salaries ($), 2022-2024, with 90% confidence intervals among postgraduate coursework students from universities by institution",PGC,UNI,Labour force outcomes
+SAL_PGC_NUHEI_3YP_INST_FIG,Figure 17,,"Median annual full-time salaries ($), 2022-2024, with 90% confidence intervals among postgraduate coursework students from non-university higher education institutes (NUHEIs) by institution",PGC,NUHEI,Labour force outcomes
+SAL_PGR_UNI_3YP_INST_FIG,,,"Median annual full-time salaries ($), 2022-2024, with 90% confidence intervals among postgraduate research students from universities by institution",PGR,UNI,Labour force outcomes
+OCCF_UG_ALL_1Y_BFOE,,,"Occupation level, full-time employed, 2024, among undergraduates from all provider types by broad field of education",UG,ALL,Occupation
+OCCF_PGC_ALL_1Y_BFOE,,,"Occupation level, full-time employed, 2024, among postgraduate coursework students from all provider types by broad field of education",PGC,ALL,Occupation
+OCCF_PGR_ALL_1Y_BFOE,,,"Occupation level, full-time employed, 2024, among postgraduate research students from all provider types by broad field of education",PGR,ALL,Occupation
+OCCO_UG_ALL_1Y_BFOE,,,"Occupation level, overall employed, 2024, among undergraduates from all provider types by broad field of education",UG,ALL,Occupation
+OCCO_PGC_ALL_1Y_BFOE,,,"Occupation level, overall employed, 2024, among postgraduate coursework students from all provider types by broad field of education",PGC,ALL,Occupation
+OCCO_PGR_ALL_1Y_BFOE,,,"Occupation level, overall employed, 2024, among postgraduate research students from all provider types by broad field of education",PGR,ALL,Occupation
+OCCF_UG_ALL_1Y_AREA,Table 10,,"Occupation level, full-time employed, 2024, among undergraduates from all provider types by study area",UG,ALL,Occupation
+OCCF_PGC_ALL_1Y_AREA,Table 10,,"Occupation level, full-time employed, 2024, among postgraduate coursework students from all provider types by study area",PGC,ALL,Occupation
+OCCF_PGR_ALL_1Y_AREA,Table 10,,"Occupation level, full-time employed, 2024, among postgraduate research students from all provider types by study area",PGR,ALL,Occupation
+OCCO_UG_ALL_1Y_AREA,,,"Occupation level, overall employed, 2024, among undergraduates from all provider types by study area",UG,ALL,Occupation
+OCCO_PGC_ALL_1Y_AREA,,,"Occupation level, overall employed, 2024, among postgraduate coursework students from all provider types by study area",PGC,ALL,Occupation
+OCCO_PGR_ALL_1Y_AREA,,,"Occupation level, overall employed, 2024, among postgraduate research students from all provider types by study area",PGR,ALL,Occupation
+SPOQSCL_UG_ALL_1Y_AREA,,,"Occupation does not fully use skills or education, 2024, among undergraduates from all provider types by study area",UG,ALL,Perceived Over-qualification 
+SPOQSCL_PGC_ALL_1Y_AREA,,,"Occupation does not fully use skills or education, 2024, among postgraduate coursework students from all provider types by study area",PGC,ALL,Perceived Over-qualification 
+SPOQSCL_PGR_ALL_1Y_AREA,,,"Occupation does not fully use skills or education, 2024, among postgraduate research students from all provider types by study area",PGR,ALL,Perceived Over-qualification 
+CRSPREP_UG_ALL_1Y_AREA,Table 15,,"Course prepared them well or very well for current job, 2024, among undergraduates from all provider types by study area",UG,ALL,Course preparedness
+CRSPREP_PGC_ALL_1Y_AREA,Table 15,,"Course prepared them well or very well for current job, 2024, among postgraduate coursework students from all provider types by study area",PGC,ALL,Course preparedness
+CRSPREP_PGR_ALL_1Y_AREA,Table 15,,"Course prepared them well or very well for current job, 2024, among postgraduate research students from all provider types by study area",PGR,ALL,Course preparedness
+CRSPREP_UG_ALL_1Y_AREA_OCCF,Table 16,,"Course prepared them well or very well for managerial or professional occupations, full-time employed, among undergraduates from all provider types by study area, 2024",UG,ALL,Course preparedness
+CRSPREP_PGC_ALL_1Y_AREA_OCCF,Table 16,,"Course prepared them well or very well for managerial or professional occupations, full-time employed, among postgraduate coursework students from all provider types by study area, 2024",PGC,ALL,Course preparedness
+CRSPREP_PGR_ALL_1Y_AREA_OCCF,Table 16,,"Course prepared them well or very well for managerial or professional occupations, full-time employed, among postgraduate research students from all provider types by study area, 2024",PGR,ALL,Course preparedness

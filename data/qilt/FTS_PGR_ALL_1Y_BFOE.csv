@@ -1,0 +1,32 @@
+"Further full-time study among postgraduate research students from all provider types by broad field of education, 2024",Unnamed: 1,Unnamed: 2,Unnamed: 3
+Back to INDEX,,,
+,,,
+,,In full-time study in 2024,Not in full-time study in 2024
+,"Agriculture, environmental & related studies",1.0,99.0
+,Architecture & building,8.8,91.2
+,Creative arts,5.2,94.8
+,Education,7.1,92.9
+,Engineering & related technologies,6.5,93.5
+,"Food, hospitality & personal services",,
+,Health,4.5,95.5
+,Information technology,7.8,92.2
+,Management & commerce,5.6,94.4
+,Mixed field programmes,,
+,Natural & physical sciences,5.4,94.6
+,Society & culture,4.4,95.6
+,Total,5.1,94.9
+,,,
+Column variables:,,,
+FURSTUD,,,
+YEAR,,,
+,,,
+Column filters:,,,
+"FURSTUD != (NA, 95, 99)",,,
+"Data for all columns is filtered to: ANALYS12 = (1:2), Postgraduate research: LEVEL = 3, e942 = 0",,,
+,,,
+Row variables:,,,
+BROADFOE,,,
+ANALYS12,,,
+,,,
+Row notes:,,,
+"Where a graduate continues to combined degrees across two study areas, their outcomes are included in both study areas. ‘All study areas’ figures count each graduate once only (ANALYS12 =1).",,,

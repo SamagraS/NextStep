@@ -1,0 +1,30 @@
+"Current further study: field of education among postgraduate coursework students and all provider types by further full-time study, 2024",Unnamed: 1,Unnamed: 2
+Back to INDEX,,
+,,
+,,In full-time study in 2024
+,"Agriculture, environmental & related studies",1.0
+,Architecture & building,0.8
+,Creative arts,2.5
+,Education,11.3
+,Engineering & related technologies,2.6
+,"Food, hospitality & personal services",0.3
+,Health,26.2
+,Information technology,5.6
+,Management & commerce,13.0
+,Mixed field programmes,2.8
+,Natural & physical sciences,5.9
+,Society & culture,27.4
+,Other (please specify),0.4
+,All,100.0
+,,
+Column variables:,,
+FURFOE,,
+FURSTUD,,
+YEAR,,
+,,
+Column filters:,,
+"FURFOE != (NA, 95, 99)",,
+"Data for all columns is filtered to: ANALYSIS = 1, Postgraduate coursework: LEVEL = 2, e942 = 0",,
+,,
+Row variables:,,
+FURFOE,,

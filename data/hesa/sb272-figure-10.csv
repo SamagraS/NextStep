@@ -1,0 +1,43 @@
+﻿﻿Title:,"Figure 10 - Graduate outcomes by subject area of degree and activity"
+Subtitle:,"Academic years 2018/19 to 2022/23"
+Reference ID:,SB272 Figure 10
+Data source:,HESA
+Data source link:,https://www.hesa.ac.uk/data-and-analysis/sb272/figure-10
+Data file canonical link:,https://www.hesa.ac.uk/data-and-analysis/sb272/figure-10.zip
+Licence:,Creative Commons Attribution 4.0 International Licence
+Date:,2025
+Filters:,Country of provider,All 
+,Provider type,All 
+,Level of qualification,All 
+,Mode of former study,All 
+,Interim study,Include significant interim study 
+,Academic year,2022/23 
+
+
+"Subject area of degree","Full-time employment","Part-time employment","Unknown pattern of employment","Voluntary or unpaid work","Employmentand further study","Full-time further study","Part-time further study","Unknown pattern of further study","Other including travel, caring for someone or retired","Unemployed","Total with known outcomes","Non-respondents","Total"
+"01 Medicine and dentistry","5,900","635","50","25","1,310","415","20","5","290","150","8,800","11,160","19,960"
+"02 Subjects allied to medicine","28,760","5,575","280","315","4,900","1,895","155","20","3,200","1,495","46,600","50,545","97,145"
+"03 Biological and sport sciences","8,040","1,910","85","325","2,060","2,050","80","10","1,000","1,040","16,595","19,055","35,650"
+"04 Psychology","9,225","2,350","60","320","2,530","1,195","115","5","1,205","940","17,945","21,180","39,125"
+"05 Veterinary sciences","915","80","5","5","80","30","5","0","55","20","1,200","1,260","2,460"
+"06 Agriculture, food and related studies","1,855","435","15","65","275","160","15","0","200","160","3,185","3,835","7,025"
+"07 Physical sciences","4,420","575","25","65","840","1,245","50","10","505","565","8,300","8,795","17,095"
+"09 Mathematical sciences","3,080","330","25","45","610","595","35","5","260","400","5,380","8,840","14,220"
+"10 Engineering and technology","15,560","1,260","160","140","2,060","1,320","85","10","1,045","1,400","23,045","40,215","63,255"
+"11 Computing","11,410","2,010","145","160","1,765","720","115","5","855","1,925","19,110","35,635","54,745"
+"13 Architecture, building and planning","5,790","690","65","70","860","215","20","5","410","450","8,570","14,335","22,905"
+"26 Geography, earth and environmental studies (natural sciences)","2,940","410","15","80","410","435","25","0","255","250","4,825","5,310","10,135"
+"Total science CAH level 1","97,900","16,265","925","1,615","17,705","10,280","725","70","9,275","8,800","163,555","220,165","383,720"
+"15 Social sciences","22,475","3,710","245","520","4,000","2,205","155","25","2,705","2,200","38,240","53,290","91,535"
+"16 Law","9,600","1,085","80","240","1,965","1,255","115","10","980","1,035","16,360","28,220","44,580"
+"17 Business and management","33,725","4,600","530","440","4,695","1,410","240","20","3,515","4,005","53,185","141,215","194,400"
+"19 Language and area studies","5,170","1,720","75","185","1,220","965","80","10","830","765","11,015","14,830","25,845"
+"20 Historical, philosophical and religious studies","5,255","1,475","50","295","1,365","1,190","135","10","1,030","715","11,520","12,060","23,580"
+"22 Education and teaching","17,585","2,825","145","150","2,380","510","75","5","1,405","945","26,025","31,695","57,720"
+"23 Combined and general studies","1,125","360","15","40","300","165","35","5","340","140","2,520","3,810","6,330"
+"24 Media, journalism and communications","3,520","1,085","55","120","415","220","20","5","275","430","6,140","12,000","18,135"
+"25 Design, and creative and performing arts","11,950","7,765","235","455","2,500","940","90","10","1,655","1,940","27,545","39,760","67,305"
+"26 Geography, earth and environmental studies (social sciences)","1,195","135","15","20","175","135","10","0","110","130","1,930","2,515","4,445"
+"Total non-science CAH level 1","111,595","24,760","1,440","2,465","19,015","8,990","955","95","12,855","12,300","194,480","339,400","533,880"
+"Unknown subject","10","0","0","0","0","0","0","0","0","0","10","5","15"
+"Total","209,505","41,025","2,365","4,080","36,720","19,265","1,680","165","22,135","21,100","358,045","559,570","917,610"

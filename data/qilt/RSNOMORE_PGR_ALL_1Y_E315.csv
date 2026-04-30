@@ -1,0 +1,53 @@
+Reason for not working more hours for part-time employed among postgraduate research students and all provider types by preference for more hours and gender 2024,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7
+Back to INDEX,,,,,,,
+,,,,,,,
+,,Seeking more hours – Male,Seeking more hours – Female,Seeking more hours – Total,Not seeking more hours – Male,Not seeking more hours – Female,Not seeking more hours – Total
+Personal factors,     I'm satisfied with the number of hours I work,0.0,0.0,0.0,46.6,33.3,36.0
+Personal factors,     Studying,2.7,2.4,2.5,13.7,6.8,8.3
+Personal factors,     Short-term illness or injury,0.0,0.0,0.0,0.0,0.0,0.0
+Personal factors,     Long-term health condition or disability,0.9,1.0,0.9,8.2,3.0,4.7
+Personal factors,     Caring for children,3.5,7.7,6.2,9.6,36.0,30.1
+Personal factors,     Caring for family member with a health condition or disability,0.0,0.0,0.0,4.1,2.3,2.7
+Personal factors,     Pursuing other interests / commitments in spare time,0.0,0.0,0.0,11.0,11.4,11.2
+Personal factors,Sub total – personal factors,7.1,11.1,9.6,93.2,92.8,92.9
+Labour market factors,     No suitable jobs in my area of expertise,31.0,20.7,24.5,2.7,2.3,2.4
+Labour market factors,     No suitable jobs in my local area,3.5,6.7,5.6,0.0,0.0,0.0
+Labour market factors,     Considered to be too young by employers,0.0,0.0,0.0,0.0,0.0,0.0
+Labour market factors,     Considered too old by employers,1.8,2.9,2.5,1.4,1.9,1.8
+Labour market factors,     No jobs with a suitable number of hours,7.1,6.7,6.8,0.0,1.1,0.9
+Labour market factors,     No more hours available in current position,39.8,41.3,40.9,0.0,1.1,0.9
+Labour market factors,Sub total – labour market factors,83.2,78.4,80.2,4.1,6.4,5.9
+Other factors,     Due to VISA restrictions / waiting for permanent residency,0.0,0.5,0.3,0.0,0.0,0.0
+Other factors,     Work has been reduced/shutdown due to COVID-19,0.0,0.0,0.0,0.0,0.0,0.0
+Other factors,     Waiting for accreditation/registration,0.0,1.0,0.6,0.0,0.4,0.3
+Other factors,     Other (Please specify),1.8,2.4,2.2,1.4,0.0,0.3
+Other factors,     Due to other commitments outside of main job,1.8,0.5,0.9,0.0,0.0,0.0
+Other factors,     Other problems finding work,1.8,1.9,1.9,0.0,0.0,0.0
+Other factors,     Developing own business / self employed,1.8,1.9,1.9,0.0,0.0,0.0
+Other factors,     Financial reasons,2.7,2.4,2.5,0.0,0.0,0.0
+Other factors,     Lifestyle choice / work-life balance,0.0,0.0,0.0,0.0,0.0,0.0
+Other factors,     Due to contract restrictions,0.0,0.0,0.0,0.0,0.0,0.0
+Other factors,     Waiting to start full time work,0.0,0.0,0.0,1.4,0.0,0.3
+Other factors,     Starting own business / self employed,0.0,0.0,0.0,0.0,0.4,0.3
+Other factors,Sub total –  other factors ,9.7,10.6,10.2,2.7,0.8,1.2
+,Total,100.0,100.0,100.0,100.0,100.0,100.0
+,,,,,,,
+Column variables:,,,,,,,
+E315,,,,,,,
+LFCLASS,,,,,,,
+PARTEMP,,,,,,,
+YEAR,,,,,,,
+,,,,,,,
+Column filters:,,,,,,,
+PARTEMP = 1,,,,,,,
+SH: LFCLASS = 3,,,,,,,
+NSH: LFCLASS = 2,,,,,,,
+"Data for all columns is filtered to: ANALYSIS = 1, Postgraduate research: LEVEL = 3, e942 = 0",,,,,,,
+,,,,,,,
+Row variables:,,,,,,,
+RSMORE,,,,,,,
+RSNOMORE,,,,,,,
+,,,,,,,
+Row notes:,,,,,,,
+"""No more hours available in current position"" new category and explicit option for RSNOMORE.",,,,,,,
+"""I'm satisfied with the number of hours I work"" now explicit option for respondents to choose from in RSNOMORE.",,,,,,,

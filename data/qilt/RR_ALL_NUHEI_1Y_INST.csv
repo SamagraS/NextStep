@@ -1,0 +1,111 @@
+"Response rates Nov 2023, Feb and May 2024 collections among all course levels from non-university higher education institutes (NUHEIs) by institution",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+Back to INDEX,,,,,
+,,,,,
+,,Nov '2023,Feb '2024,May '2024,Total
+,Academies Australasia Polytechnic Pty Limited,60.5,41.9,,52.2
+,Academy of Interactive Technology,43.2,34.2,,40.2
+,Adelaide Central School of Art,,,58.1,58.1
+,Adelaide Institute of Higher Education,,,,
+,Alphacrucis University College,33.5,,42.0,36.2
+,Asia Pacific International College,34.9,18.0,48.0,33.0
+,Australasian College of Health and Wellness,40.0,34.9,41.6,39.6
+,Australia Advance Education Group Pty Ltd,37.1,48.0,,38.3
+,Australian Academy of Music and Performing Arts,30.0,,37.5,33.3
+,ACAP University College,44.1,44.2,60.0,44.3
+,Australian College of Christian Studies,,,39.4,39.4
+,Australian College of Nursing,39.1,40.7,49.8,43.8
+,Australian Institute of Business Pty Ltd,41.9,48.3,48.3,45.7
+,Australian Institute of Higher Education,28.5,,33.3,29.8
+,Australian Institute of Management Education & Training,56.9,53.2,47.5,53.0
+,Australian Institute of Professional Counsellors,,,,
+,Australian University of Theology*,39.0,47.9,51.3,49.3
+,BBI - The Australian Institute of Theological Education,25.0,,,25.0
+,Box Hill Institute,30.0,45.5,47.7,41.2
+,Campion College Australia,,,30.3,30.3
+,Chartered Accountants Australia and New Zealand,23.9,,25.1,24.9
+,Chisholm Institute,42.2,,48.9,44.6
+,Christian Heritage College,51.9,,,51.9
+,CIC Higher Education,31.3,,83.3,46.9
+,Collarts (Australian College of the Arts),27.3,51.7,36.2,37.1
+,Crown Institute of Higher Education Pty Ltd,,,36.1,36.1
+,Eastern College Australia,,,69.2,69.2
+,Endeavour College of Natural Health,,,38.9,38.9
+,Engineering Institute of Technology,40.0,50.0,71.8,58.1
+,Excelsia University College,37.2,24.0,46.1,41.1
+,Gestalt Therapy Brisbane,,,60.0,60.0
+,Governance Institute of Australia,51.8,,45.2,48.1
+,Health Education & Training Institute,,,55.4,47.8
+,HEPCO The Tax Institute Higher Education,,41.7,62.5,46.3
+,Holmes Institute,37.5,,42.5,39.6
+,Holmesglen Institute,25.0,,35.6,31.7
+,ICHM,50.0,,47.4,47.6
+,Ikon Institute of Australia,56.5,,,56.5
+,Institute of Health & Management Pty Ltd,58.7,60.7,44.1,54.6
+,"International College of Management, Sydney",35.7,31.6,37.2,34.9
+,ISN Psychology Pty Ltd,40.9,,38.7,39.6
+,Jazz Music Institute,,,60.0,60.0
+,Kaplan Business School,34.0,41.7,40.5,38.8
+,Kaplan Higher Education Pty Ltd,27.1,27.5,27.4,27.3
+,King's Own Institute,42.9,49.2,,45.0
+,LCI Melbourne,33.3,,47.4,39.1
+,Le Cordon Bleu Australia,,,38.1,37.5
+,Leaders Institute,87.5,,,87.5
+,Leo Cussen Centre for Law,26.0,27.8,38.5,32.6
+,Lyons College,,,,
+,Marcus Oldham College,,,50.0,50.0
+,Melbourne Institute of Technology,35.7,,35.4,35.5
+,Melbourne Polytechnic,27.0,,42.5,34.6
+,Montessori World Educational Institute (Australia),,,50.0,50.0
+,Moore Theological College,,,44.6,44.3
+,Morling College,,,61.7,61.7
+,Nan Tien Institute,66.7,,,58.3
+,National Art School,,,50.4,50.4
+,National Institute of Organisation Dynamics Aust,,,,
+,Ozford Institute of Higher Education,,,,71.4
+,Performing Arts Education,,,100.0,69.2
+,Perth Bible College,,,,58.3
+,Polytechnic Institute Australia Pty Ltd,19.4,31.1,28.1,27.1
+,SAE University College,26.9,36.4,36.7,33.2
+,Sheridan Institute of Higher Education,,,84.6,75.0
+,Southern Cross Education Institute (Higher Education),33.9,,,32.9
+,SP Jain School of Management,35.7,,,35.7
+,Stanley College,,43.8,60.0,51.6
+,Acknowledge Education,50.6,29.5,31.0,38.4
+,Sydney College of Divinity,37.6,,,37.6
+,Tabor College of Higher Education,55.6,65.9,59.3,60.5
+,TAFE NSW,36.8,,42.4,40.1
+,TAFE Queensland,36.0,,44.4,42.0
+,TAFE South Australia,46.7,,40.0,44.9
+,The Australian College of Physical Education,25.9,,42.0,37.5
+,The Australian Institute of Music,,46.2,48.8,46.2
+,The Cairnmillar Institute,35.6,54.5,51.6,48.3
+,The College of Law Limited,27.3,24.3,31.5,27.3
+,The Institute of Creative Arts and Technology,,30.0,40.0,37.9
+,The Institute of Internal Auditors - Australia,83.3,,73.3,77.8
+,The MIECAT Institute,43.2,,,44.4
+,UOW College,,,36.4,21.3
+,UTS College,36.8,28.0,34.5,34.7
+,VIT (Victorian Institute of Technology),57.5,,78.3,66.9
+,Wentworth Institute of Higher Education,36.4,,,36.4
+,"Whitehouse Institute of Design, Australia",,,37.5,37.5
+,William Angliss Institute,20.6,,38.3,28.9
+,All NUHEIs,35.4,34.9,38.3,36.5
+,,,,,
+Column variables:,,,,,
+NATCOMPLETE,,,,,
+NATINSCOPE,,,,,
+PERIOD,,,,,
+YEAR,,,,,
+,,,,,
+Column filters:,,,,,
+NATINSCOPE = 1,,,,,
+,,,,,
+Column notes:,,,,,
+This table is constructed from the GOS operational file.,,,,,
+NUHEI: HEPTYPE = 2,,,,,
+,,,,,
+Row variables:,,,,,
+E306,,,,,
+,,,,,
+Row notes:,,,,,
+"* The Australian University of Theology was awarded university status in December 2024. Prior to this, the institution was known as the Australian College of Theology and was classified as a non-university higher education institution (NUHEI). Data for the 2024 GOS was collected when the institution was a NUHEI.",,,,,

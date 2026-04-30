@@ -1,0 +1,47 @@
+"Employment (FTE, OE, LF, SAL) and study outcomes among all course levels from all provider types by provider type, 2023 - 2024 ",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+Back to INDEX,,,,,,
+,,,,,,
+,,Full-time employment,Overall employment,Labour force participation rate,Median annual full-time salaries ($),In full-time study (%)
+Undergraduate 2023,Universities,79.4,89.1,92.6,"71,000",18.0
+Undergraduate 2023,NUHEIs,65.3,83.4,89.3,"65,600",17.9
+Undergraduate 2023,All institutions,79.0,88.9,92.5,"71,000",18.0
+Undergraduate 2024,Universities,74.4,87.1,92.7,"75,000",17.9
+Undergraduate 2024,NUHEIs,61.8,80.8,89.9,"70,000",19.4
+Undergraduate 2024,All institutions,74.0,86.9,92.6,"75,000",17.9
+Postgraduate coursework 2023,Universities,90.0,93.9,95.6,"97,000",7.1
+Postgraduate coursework 2023,NUHEIs,92.7,94.3,95.6,"94,000",6.4
+Postgraduate coursework 2023,All institutions,90.3,93.9,95.6,"96,600",7.1
+Postgraduate coursework 2024,Universities,87.6,92.5,95.4,"101,000",7.4
+Postgraduate coursework 2024,NUHEIs,91.9,93.6,95.3,"97,000",7.1
+Postgraduate coursework 2024,All institutions,88.1,92.7,95.4,"100,000",7.3
+Postgraduate research 2023,Universities,85.2,91.4,95.2,"100,000",6.9
+Postgraduate research 2023,NUHEIs,,,,,
+Postgraduate research 2023,All institutions,85.3,91.4,95.2,"100,000",6.9
+Postgraduate research 2024,Universities,82.8,90.5,95.1,"104,400",5.1
+Postgraduate research 2024,NUHEIs,,,,,
+Postgraduate research 2024,All institutions,82.8,90.5,95.1,"104,400",5.1
+,,,,,,
+Column variables:,,,,,,
+AVAILEMP,,,,,,
+AVAILFT,,,,,,
+FULLEMP,,,,,,
+FURSTUD,,,,,,
+GENEMP,,,,,,
+SALARYA,,,,,,
+TRIMSAL_ALL,,,,,,
+,,,,,,
+Column filters:,,,,,,
+FTE: AVAILFT = 1,,,,,,
+OE: AVAILEMP = 1,,,,,,
+"SAL: FULLEMP = 1, TRIMSAL_ALL = 1",,,,,,
+"FTS: FURSTUD = (1,2,5)",,,,,,
+"Data for all columns is filtered to: ANALYSIS = 1, e942 = 0",,,,,,
+,,,,,,
+Row variables:,,,,,,
+HEPTYPE,,,,,,
+YEAR,,,,,,
+LEVEL,,,,,,
+,,,,,,
+Row notes:,,,,,,
+Universites: HEPTYPE = 1,,,,,,
+NUHEIs: HEPTYPE = 2,,,,,,

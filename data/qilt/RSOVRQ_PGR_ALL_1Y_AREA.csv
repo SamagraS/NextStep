@@ -1,0 +1,46 @@
+"Occupation does not fully use skills and education, and main reason for working in a job that doesn’t fully use skills and education, 2024 among postgraduate research students from all provider types by study area",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+Back to INDEX,,,,,
+,,,,,
+,,Extent to which skills and education not fully used - Employed full-time,Extent to which skills and education not fully used - Overall employed,Main reason - no suitable jobs in my area of expertise - Employed full-time,Main reason - no suitable jobs in my area of expertise - Overall employed
+,Agriculture and environmental studies,29.6,31.8,,37.0
+,Architecture and built environment,,50.0,,
+,Business and management,43.8,40.1,12.5,13.8
+,Communications,,22.9,,
+,Computing and information systems,28.8,28.8,,
+,Creative arts,38.4,41.3,39.3,44.2
+,Dentistry,,,,
+,Engineering,31.5,31.9,14.9,19.0
+,Health services and support,22.9,27.6,25.0,21.9
+,"Humanities, culture and social sciences",44.4,43.6,17.5,21.0
+,Law and paralegal studies,26.3,27.5,,
+,Medicine,16.0,16.0,16.7,18.4
+,Nursing,27.3,34.4,,
+,Pharmacy,33.3,38.9,,
+,Psychology,20.5,21.9,4.0,10.8
+,Rehabilitation,,,,
+,Science and mathematics,23.7,27.4,25.4,28.1
+,Social work,,,,
+,Teacher education,40.9,39.8,10.7,11.8
+,"Tourism, hospitality, personal services, sport and recreation",,,,
+,Veterinary science,,,,
+,Total,29.7,31.5,19.1,21.5
+,,,,,
+Column variables:,,,,,
+FULLEMP,,,,,
+GENEMP,,,,,
+RSOVRQ,,,,,
+SPOQSCL,,,,,
+YEAR,,,,,
+,,,,,
+Column filters:,,,,,
+FULLEMP = 1,,,,,
+GENEMP = 1,,,,,
+"RSOVRQ != (NA, 995, 999)",,,,,
+"SPOQSCL != (NA, 995, 999)",,,,,
+"Data for all columns is filtered to: ANALYSIS = (1:2), Postgraduate research: LEVEL = 3, e942 = 0",,,,,
+,,,,,
+Row variables:,,,,,
+AREA,,,,,
+,,,,,
+Row notes:,,,,,
+"Where a student completes a second course in a double degree in a different study area, the outcomes are included in both study areas.",,,,,

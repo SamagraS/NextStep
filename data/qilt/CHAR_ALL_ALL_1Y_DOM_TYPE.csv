@@ -1,0 +1,67 @@
+"Respondent characteristics among all course levels and all provider types, 2024",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+Back to INDEX,,,,,
+,,Sample,Sample,Respondents,Respondents
+,,n,%,n,%
+,Base,214155,100.0,87300,100.0
+Level,Undergraduate,132633,61.9,52002,59.6
+Level,Postgraduate coursework,75870,35.4,31673,36.3
+Level,Postgraduate research,5652,2.6,3625,4.2
+Gender,Male,80024,37.5,28527,32.8
+Gender,Female,133547,62.5,58472,67.2
+Age group,30 years or under,145936,68.1,52203,59.8
+Age group,Over 30 years,68219,31.9,35097,40.2
+Combined course of study indicator,Combined/double degree,15612,7.3,6157,7.1
+Combined course of study indicator,Single degree,198543,92.7,81143,92.9
+Indigenous indicator,Indigenous,3476,1.6,1588,1.8
+Indigenous indicator,Non-Indigenous,210679,98.4,85712,98.2
+Study mode,Internal/Mixed study mode,142887,69.1,56418,66.8
+Study mode,External study mode,64001,30.9,28017,33.2
+Type of attendance code,Full-time,135692,64.7,53231,62.2
+Type of attendance code,Part-time,73988,35.3,32314,37.8
+Home language,English,207330,96.8,84401,96.7
+Home language,Other,6825,3.2,2899,3.3
+Citizenship indicator,Domestic,214155,100.0,87300,100.0
+Citizenship indicator,International,0,0.0,0,0.0
+Disability,Disability reported,20149,9.4,9390,10.8
+Disability,No disability reported,194006,90.6,77910,89.2
+First in family,First in family,72103,42.4,30291,44.0
+First in family,Not first in family,97919,57.6,38515,56.0
+Socio-economic status,High,65582,36.3,26079,35.5
+Socio-economic status,Medium,89437,49.5,36441,49.7
+Socio-economic status,Low,25484,14.1,10860,14.8
+Locality,Metropolitan,145484.908409259,100.0,57360.212251429,100.0
+Locality,Regional/remote,33905.0915907153,100.0,15550.7877485584,100.0
+,,,,,
+Column variables:,,,,,
+NATCOMPLETE,,,,,
+NATINSCOPE,,,,,
+E942,,,,,
+Column filters:,,,,,
+Respondents: NATCOMPLETE = 1,,,,,
+Sample: NATINSCOPE = 1,,,,,
+,,,,,
+Column notes:,,,,,
+This table is constructed from the GOS operational file.,,,,,
+e942 = 0,,,,,
+,,,,,
+Row variables:,,,,,
+CONCCOMB,,,,,
+Gender: E315,,,,,
+Mode of attendance: E329,,,,,
+Type of attendance: E330,,,,,
+Combined course of study indicator: E455,,,,,
+Age: E913,,,,,
+Indigenous indicator: E940,,,,,
+English speaking indicator: E941,,,,,
+Citizenship indicator: E942,,,,,
+Disability indicator: E943,,,,,
+FAMILYED,,,,,
+FIRST_ASGS_METRO,,,,,
+FIRST_ASGS_REGIONAL,,,,,
+FIRST_ASGS_REMOTE,,,,,
+FIRST_SES_SA1,,,,,
+LEVEL,,,,,
+,,,,,
+,,,,,
+Row notes:,,,,,
+*Some subgroups may not add to 100 per cent due to rounding.,,,,,

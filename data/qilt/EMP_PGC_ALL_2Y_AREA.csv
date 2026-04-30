@@ -1,0 +1,46 @@
+"Employment outcomes (FTE, OE, LF), 2023-2024 among postgraduate coursework students from all provider types by study area",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+Back to INDEX,,,,,,,,,
+,,,,,,,,,
+,,Full-time employment 2023,Full-time employment 2024,Overall employment 2023,Overall employment 2024,Labour force participation rate 2023,Labour force participation rate 2024,30 years or under 2023,30 years or under 2024
+,Agriculture and environmental studies,83.1,80.3,92.1,90.6,95.6,94.2,48.5,46.3
+,Architecture and built environment,89.8,74.8,92.8,83.1,97.2,95.9,60.0,58.7
+,Business and management,92.6,92.3,94.3,94.0,97.2,97.3,21.8,25.9
+,Communications,73.8,68.2,88.9,85.2,92.5,92.6,49.5,49.7
+,Computing and information systems,88.0,81.2,91.5,85.9,96.5,96.5,31.5,29.0
+,Creative arts,76.9,66.9,88.6,82.5,92.2,91.7,43.0,47.4
+,Dentistry,95.2,93.1,98.9,94.4,93.9,96.8,59.2,49.5
+,Engineering,90.9,88.3,92.6,90.7,97.3,96.9,40.2,42.3
+,Health services and support,89.8,87.1,94.7,93.5,96.3,95.4,39.3,37.3
+,"Humanities, culture and social sciences",85.9,82.1,91.9,89.9,91.8,89.5,32.9,29.6
+,Law and paralegal studies,91.3,89.4,92.4,91.5,96.2,96.2,53.6,53.4
+,Medicine,98.2,96.7,98.4,96.4,95.7,95.6,61.8,61.1
+,Nursing,93.8,94.3,96.4,96.0,95.7,96.2,32.3,32.0
+,Pharmacy,97.9,93.8,95.7,95.1,97.6,95.9,62.0,67.8
+,Psychology,88.2,85.2,92.3,92.2,91.4,92.7,35.4,36.9
+,Rehabilitation,97.5,90.9,95.9,93.1,98.6,96.5,62.5,69.7
+,Science and mathematics,83.0,79.3,90.3,88.5,93.6,94.6,47.1,47.5
+,Social work,82.3,78.6,92.0,90.0,94.7,93.5,24.8,20.3
+,Teacher education,90.9,89.9,95.2,94.7,96.3,95.7,27.8,27.4
+,"Tourism, hospitality, personal services, sport and recreation",,,,,,,,
+,Veterinary science,97.2,94.9,97.5,95.6,95.2,100.0,61.4,63.3
+,Total,90.3,88.1,93.9,92.7,95.6,95.4,34.7,34.8
+,Standard deviation,7.0,9.0,3.2,4.2,2.3,2.5,13.7,14.4
+,,,,,,,,,
+Column variables:,,,,,,,,,
+AVAILEMP,,,,,,,,,
+AVAILFT,,,,,,,,,
+FULLEMP,,,,,,,,,
+GENEMP,,,,,,,,,
+YEAR,,,,,,,,,
+E913,,,,,,,,,
+,,,,,,,,,
+Column filters:,,,,,,,,,
+OE: AVAILEMP = 1,,,,,,,,,
+FTE: AVAILFT = 1,,,,,,,,,
+"Data for all columns is filtered to: ANALYSIS = (1:2), Postgraduate coursework: LEVEL = 2, e942 = 0",,,,,,,,,
+,,,,,,,,,
+Row variables:,,,,,,,,,
+AREA,,,,,,,,,
+,,,,,,,,,
+Row notes:,,,,,,,,,
+"Where a student completes a second course in a double degree in a different study area, the outcomes are included in both study areas.",,,,,,,,,

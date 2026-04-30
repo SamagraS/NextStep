@@ -1,0 +1,48 @@
+Satisfaction (% agreement) 2023-2024 among postgraduate research students from all provider types by study area,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13,Unnamed: 14,Unnamed: 15,Unnamed: 16,Unnamed: 17
+Back to INDEX,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,Overall satisfaction 2023,Overall satisfaction 2024,Supervision 2023,Supervision 2024,Intellectual climate 2023,Intellectual climate 2024,Skills development 2023,Skills development 2024,Infrastructure 2023,Infrastructure 2024,Thesis examination 2023,Thesis examination 2024,Goals and expectations 2023,Goals and expectations 2024,Industry engagement 2023,Industry engagement 2024
+,Agriculture and environmental studies,87.7,87.4,87.2,80.8,66.2,61.6,96.8,96.5,88.1,77.3,84.9,83.8,93.2,92.4,72.7,64.1
+,Architecture and built environment,89.2,82.9,81.5,77.6,66.2,50.0,90.8,96.1,64.1,63.2,87.7,77.6,92.3,89.5,56.9,48.7
+,Business and management,84.7,85.2,85.7,86.9,62.6,68.7,93.5,94.8,75.1,78.6,84.0,86.9,93.6,94.6,62.2,62.6
+,Communications,78.4,81.3,84.3,87.5,60.0,47.9,86.3,89.6,60.8,62.5,80.4,75.0,86.3,87.5,60.8,47.9
+,Computing and information systems,85.7,83.2,85.2,86.3,68.9,66.4,94.0,94.8,82.5,76.9,83.6,82.1,95.1,91.9,66.7,62.3
+,Creative arts,84.5,80.1,85.0,82.5,61.0,50.0,92.5,92.6,65.1,60.5,82.4,79.1,92.0,88.7,47.6,46.3
+,Dentistry,,,,,,,,,,,,,,,,
+,Engineering,87.7,85.1,83.5,81.9,67.7,65.3,94.5,93.7,82.9,80.1,82.7,82.7,94.4,92.8,63.4,64.5
+,Health services and support,86.0,82.7,84.7,83.3,62.7,61.6,96.4,95.9,78.8,77.4,83.7,79.7,93.5,92.5,62.7,60.4
+,"Humanities, culture and social sciences",80.4,86.2,84.4,87.4,52.1,54.2,91.0,92.8,65.3,61.4,77.4,79.3,90.9,93.2,44.1,45.0
+,Law and paralegal studies,86.5,88.8,85.1,91.4,59.5,65.0,93.2,95.0,75.7,71.6,85.1,82.7,94.7,93.8,60.0,50.6
+,Medicine,83.5,87.7,83.0,86.6,63.2,63.8,95.7,94.0,74.1,76.0,80.5,82.2,93.2,92.9,56.5,58.7
+,Nursing,84.4,85.9,85.9,83.5,67.2,55.3,96.9,90.6,79.7,72.6,84.4,83.5,95.3,90.6,60.9,64.7
+,Pharmacy,87.5,88.2,83.3,76.5,70.8,60.8,95.8,98.0,83.3,78.4,85.4,90.2,97.9,92.2,62.5,58.8
+,Psychology,79.7,81.9,77.5,82.8,54.5,53.4,95.7,93.2,74.9,73.8,79.2,83.3,90.5,89.6,52.4,46.6
+,Rehabilitation,93.5,84.0,96.8,88.0,61.3,60.0,96.8,92.0,67.7,68.0,80.6,80.0,96.8,88.0,54.8,64.0
+,Science and mathematics,81.9,83.9,80.2,81.3,63.0,64.0,94.3,94.6,76.9,76.8,77.3,78.3,92.0,92.8,51.8,54.0
+,Social work,,76.0,,80.0,,60.0,,96.0,,72.0,,80.0,,96.0,,48.0
+,Teacher education,87.0,85.5,90.1,86.5,56.7,57.4,94.4,93.6,70.1,69.7,88.7,86.2,95.8,93.3,54.2,56.7
+,"Tourism, hospitality, personal services, sport and recreation",,,,,,,,,,,,,,,,
+,Veterinary science,84.8,74.2,81.8,80.6,57.6,58.1,93.9,100.0,81.8,71.0,81.8,90.3,81.8,90.6,57.6,67.7
+,Total,84.1,84.6,83.4,83.7,61.7,61.4,94.0,94.2,75.5,74.0,81.0,81.4,92.7,92.6,56.0,56.2
+,Standard deviation,7.3,4.2,11.7,4.2,10.3,6.8,6.3,2.9,15.2,8.7,6.7,4.8,8.4,2.8,13.6,7.7
+,,,,,,,,,,,,,,,,,
+Column variables:,,,,,,,,,,,,,,,,,
+PREQ__SS,,,,,,,,,,,,,,,,,
+PREQ_GES,,,,,,,,,,,,,,,,,
+PREQ_ICS,,,,,,,,,,,,,,,,,
+PREQ_IES,,,,,,,,,,,,,,,,,
+PREQ_IS,,,,,,,,,,,,,,,,,
+PREQ_OSI,,,,,,,,,,,,,,,,,
+PREQ_SDS,,,,,,,,,,,,,,,,,
+PREQ_TES,,,,,,,,,,,,,,,,,
+YEAR,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Column filters:,,,,,,,,,,,,,,,,,
+"PREQ_(*) != (NA, 995, 999)",,,,,,,,,,,,,,,,,
+"Data for all columns is filtered to: ANALYSIS = (1:2), Postgraduate research: LEVEL = 3",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Row variables:,,,,,,,,,,,,,,,,,
+AREA,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Row notes:,,,,,,,,,,,,,,,,,
+"Where a student completes a second course in a double degree in a different study area, the outcomes are included in both study areas.",,,,,,,,,,,,,,,,,
