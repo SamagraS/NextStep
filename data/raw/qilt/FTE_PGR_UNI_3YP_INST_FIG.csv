@@ -1,0 +1,65 @@
+"Proportion employed full-time, 2022-2024, with 90% confidence intervals among postgraduate research students from universities by institution",Unnamed: 1,Unnamed: 2
+Back to INDEX,,
+,,
+,,Full-time employment rate
+,Australian Catholic University,"94.4 (88.0, 96.7)"
+,The Australian National University,"90.6 (88.2, 92.4)"
+,The University of Notre Dame Australia,"89.7 (80.8, 93.6)"
+,University of Newcastle,"89.6 (85.7, 92.0)"
+,La Trobe University,"88.1 (84.6, 90.6)"
+,Curtin University,"88.1 (84.9, 90.4)"
+,University of Technology Sydney,"87.4 (84.7, 89.1)"
+,The University of Western Australia,"87.3 (84.3, 89.6)"
+,Southern Cross University,"87.2 (78.8, 91.6)"
+,Charles Darwin University,"87.0 (79.2, 91.4)"
+,The University of Queensland,"86.6 (84.7, 88.2)"
+,University of Southern Queensland,"86.6 (83.2, 88.8)"
+,University of Wollongong,"86.5 (82.6, 89.3)"
+,University of New South Wales,"86.5 (84.4, 88.2)"
+,Charles Sturt University,"86.2 (79.6, 89.8)"
+,University of Canberra,"86.0 (77.5, 90.8)"
+,The University of Melbourne,"85.3 (83.6, 86.7)"
+,Edith Cowan University,"84.5 (80.0, 87.5)"
+,Queensland University of Technology,"84.4 (81.6, 86.6)"
+,All universities,"84.2 (83.7, 84.7)"
+,The University of Sydney,"84.1 (82.4, 85.6)"
+,Swinburne University of Technology,"84.0 (78.5, 87.7)"
+,James Cook University,"83.8 (78.4, 87.5)"
+,Deakin University,"83.3 (80.3, 85.8)"
+,Murdoch University,"83.3 (78.1, 87.1)"
+,Monash University,"82.9 (80.9, 84.6)"
+,Victoria University,"82.8 (75.4, 88.3)"
+,Macquarie University,"82.3 (79.4, 84.8)"
+,Griffith University,"82.2 (78.8, 84.9)"
+,The University of South Australia,"81.9 (77.5, 85.3)"
+,University of Tasmania,"81.7 (77.5, 85.0)"
+,University of the Sunshine Coast,"81.6 (75.1, 85.9)"
+,The University of Adelaide,"80.9 (77.9, 83.3)"
+,Flinders University,"79.7 (75.4, 83.0)"
+,Central Queensland University,"79.2 (70.4, 84.9)"
+,University of New England,"78.7 (71.6, 83.8)"
+,Western Sydney University,"75.9 (71.5, 79.6)"
+,RMIT University,"72.6 (68.6, 76.1)"
+,Federation University Australia,"71.4 (62.5, 78.1)"
+,Avondale University,
+,Bond University,
+,Torrens University,
+,University of Divinity,
+,,
+Column variables:,,
+AVAILFT,,
+FULLEMP,,
+YEAR,,
+,,
+Column filters:,,
+AVAILFT =1,,
+,,
+Column notes:,,
+The Agresti-Coull method is used to calculate 90% confidence intervals for proportions.,,
+Estimates and confidence intervals (CIs) may become unreliable for very small sample sizes and proportions close to 0% or 100%.,,
+CIs are not displayed when estimates are 0% or 100% or fall outside the CI range. Exercise caution when reporting and comparing proportions in these cases.,,
+Bootstrapping on the median is used to estimate 90% confidence intervals for median salary.,,
+"Data for all columns is filtered to: ANALYSIS = 1, Postgraduate research: LEVEL = 3, University: HEPTYPE = 1, e942 = 0",,
+,,
+Row variables:,,
+E306,,

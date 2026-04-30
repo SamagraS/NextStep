@@ -1,0 +1,25 @@
+program_family,description
+computer_science,Software engineering and computing degrees
+data_science,Data science analytics and machine learning degrees
+engineering,Core engineering and technology degrees
+business,Business and management degrees
+finance,Finance accounting and related commerce degrees
+economics,Economics and econometrics degrees
+law,Law and legal studies degrees
+medicine,Medicine dentistry and allied clinical degrees
+healthcare,Nursing pharmacy public health and allied care degrees
+biological_sciences,Biology sport science and life sciences degrees
+physical_sciences,Physics chemistry and laboratory sciences
+mathematics,Mathematics statistics and quantitative methods
+education,Education teaching and pedagogy degrees
+social_sciences,Sociology politics anthropology and related fields
+psychology,Psychology and behavioural science degrees
+architecture,Architecture planning and building degrees
+creative_arts,Creative arts design and performance degrees
+agriculture,Agriculture food and veterinary-adjacent degrees
+environmental_sciences,Environmental and earth sciences degrees
+humanities,History philosophy literature and languages
+communications,Media journalism communications and marketing
+hospitality,Hospitality tourism and event management
+public_policy,Public policy governance and administration
+general_studies,Fallback generalist bucket for unmatched programs

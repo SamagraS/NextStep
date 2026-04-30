@@ -1,0 +1,26 @@
+Satisfaction (% agreement) among postgraduate research students and all provider types by year 2023-2024,Unnamed: 1,Unnamed: 2,Unnamed: 3
+Back to INDEX,,,
+,,,
+,,2023.0,2024.0
+,Overall satisfaction,84.1,84.6
+,Supervision,83.4,83.7
+,Intellectual climate,61.7,61.4
+,Skills development,94.0,94.2
+,Infrastructure,75.5,74.0
+,Thesis examination,81.0,81.4
+,Goals and expectations,92.7,92.6
+,Industry engagement,56.0,56.2
+,,,
+Column variables:,,,
+YEAR,,,
+"Data for all columns is filtered to: ANALYSIS = (1:2), Postgraduate research: LEVEL = 3",,,
+,,,
+Row variables:,,,
+PREQ_GES,,,
+PREQ_ICS,,,
+PREQ_IES,,,
+PREQ_IS,,,
+PREQ_OSI,,,
+PREQ_SDS,,,
+PREQ_SS,,,
+PREQ_TES,,,

@@ -1,0 +1,44 @@
+"Median annual full-time salaries ($) by gender, 2023 and 2024 among postgraduate research students from all provider types by study area",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7
+Back to INDEX,,,,,,,
+,,,,,,,
+,,Male 2023,Male 2024,Female 2023,Female 2024,Total 2023,Total 2024
+,Agriculture and environmental studies,"103,000",,"91,700","94,400","96,600","95,800"
+,Architecture and built environment,,,,,,
+,Business and management,"125,000","126,500","105,000","108,500","114,000","123,500"
+,Communications,,,,,,
+,Computing and information systems,"102,000","115,000",,,"102,000","108,500"
+,Creative arts,"92,000",,"85,000","75,000","87,500","89,500"
+,Dentistry,,,,,,
+,Engineering,"100,000","106,300","92,300","97,000","98,700","105,300"
+,Health services and support,"104,100","114,800","108,000","114,300","107,000","114,700"
+,"Humanities, culture and social sciences","98,400","90,800","98,000","96,600","98,300","93,600"
+,Law and paralegal studies,,,,,"109,300","115,000"
+,Medicine,"119,500","143,500","102,100","110,000","106,100","115,000"
+,Nursing,,,"116,500","120,900","119,000","123,000"
+,Pharmacy,,,,,,"93,000"
+,Psychology,"95,500","110,000","94,000","108,000","95,000","108,000"
+,Rehabilitation,,,,,,
+,Science and mathematics,"95,000","97,400","92,000","97,500","93,500","97,500"
+,Social work,,,,,,
+,Teacher education,"111,000","122,500","110,200","120,000","110,200","120,000"
+,"Tourism, hospitality, personal services, sport and recreation",,,,,,
+,Veterinary science,,,,,,
+,Total,"100,000","106,200","98,000","102,000","100,000","104,400"
+,Standard deviation,"17,800","23,200","10,200","13,400","10,600","13,800"
+,,,,,,,
+Column variables:,,,,,,,
+FULLEMP,,,,,,,
+SALARYA,,,,,,,
+TRIMSAL_ALL,,,,,,,
+YEAR,,,,,,,
+,,,,,,,
+Column filters:,,,,,,,
+FULLEMP = 1,,,,,,,
+TRIMSAL_ALL = 1,,,,,,,
+"Data for all columns is filtered to: ANALYSIS = (1:2), Postgraduate research: LEVEL = 3, e942 = 0",,,,,,,
+,,,,,,,
+Row variables:,,,,,,,
+AREA,,,,,,,
+,,,,,,,
+Row notes:,,,,,,,
+"Where a student completes a second course in a double degree in a different study area, the outcomes are included in both study areas.",,,,,,,

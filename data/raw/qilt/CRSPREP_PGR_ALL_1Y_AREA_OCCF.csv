@@ -1,0 +1,44 @@
+"Course prepared them well or very well for managerial or professional occupations, full-time employed, among postgraduate research students from all provider types by study area, 2024",Unnamed: 1,Unnamed: 2
+Back to INDEX,,
+,,
+,,Employed full-time
+,Agriculture and environmental studies,88.2
+,Architecture and built environment,
+,Business and management,81.1
+,Communications,
+,Computing and information systems,87.2
+,Creative arts,76.7
+,Dentistry,
+,Engineering,81.2
+,Health services and support,85.9
+,"Humanities, culture and social sciences",79.5
+,Law and paralegal studies,85.7
+,Medicine,80.0
+,Nursing,73.7
+,Pharmacy,
+,Psychology,88.6
+,Rehabilitation,
+,Science and mathematics,87.9
+,Social work,
+,Teacher education,84.7
+,"Tourism, hospitality, personal services, sport and recreation",
+,Veterinary science,
+,Total,83.8
+,,
+Column variables:,,
+ANZSCO,,
+CRSPREP,,
+FULLEMP,,
+YEAR,,
+,,
+Column filters:,,
+ANZSCO < 300000,,
+FULLEMP = 1,,
+"CRSPREP != (NA, 95,99)",,
+"Data for all columns is filtered to: ANALYSIS = (1:2), Postgraduate research: LEVEL = 3, e942 = 0",,
+,,
+Row variables:,,
+AREA,,
+,,
+Row notes:,,
+"Where a student completes a second course in a double degree in a different study area, the outcomes are included in both study areas.",,

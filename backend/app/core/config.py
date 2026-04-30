@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     api_v1_prefix: str = "/api/v1"
     database_url: str = "backend/nextstep.db"
     artifacts_dir: Path = Field(default_factory=lambda: Path("artifacts"))
+    data_dir: Path = Field(default_factory=lambda: Path("data"))
+    processed_data_dir: Path = Field(default_factory=lambda: Path("data/processed"))
+    mappings_dir: Path = Field(default_factory=lambda: Path("data/mappings"))
 
     model_config = SettingsConfigDict(
         env_file="backend/.env",

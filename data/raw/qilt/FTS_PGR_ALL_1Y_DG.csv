@@ -1,0 +1,55 @@
+"Further full-time study among postgraduate research students from all provider types by demographic group, 2024",Unnamed: 1,Unnamed: 2,Unnamed: 3
+Back to INDEX,,,
+,,,
+,,In full-time study in 2024,Not in full-time study in 2024
+Gender,Male,5.3,94.7
+Gender,Female,5.0,95.0
+Age group,30 years or under,5.3,94.7
+Age group,Over 30 years,5.1,94.9
+Indigenous,Indigenous,9.3,90.7
+Indigenous,Non-Indigenous,5.1,94.9
+Home language,English,4.9,95.1
+Home language,Language other than English,7.6,92.4
+Disability,Disability reported,5.9,94.1
+Disability,No disability reported,5.1,94.9
+Study mode,Internal/Mixed study mode,4.8,95.2
+Study mode,External study mode,7.1,92.9
+First in family,First in family,4.4,95.6
+First in family,Not first in family,4.7,95.3
+Socio-economic status,High*,4.6,95.4
+Socio-economic status,Medium*,5.4,94.6
+Socio-economic status,Low*,4.3,95.7
+Locality,Metro* †,4.7,95.3
+Locality,Regional/Remote* †,5.7,94.3
+Total,Total,5.1,94.9
+,,,
+Column variables:,,,
+FURSTUD,,,
+YEAR,,,
+,,,
+Column filters:,,,
+"FURSTUD != (NA, 95, 99)",,,
+"Data for all columns is filtered to: ANALYSIS = 1, Postgraduate research: LEVEL = 3, e942 = 0",,,
+,,,
+Row variables:,,,
+Gender: E315,,,
+Mode of attendance: E329,,,
+Indigenous indicator: E940,,,
+English speaking indicator: E941,,,
+Citizenship indicator: E942,,,
+Disability indicator: E943,,,
+FAMILYED,,,
+FIRST_ASGS_METRO,,,
+FIRST_ASGS_REGIONAL,,,
+FIRST_ASGS_REMOTE,,,
+FIRST_SES_SA1,,,
+,,,
+Row notes:,,,
+30 years or under: e913 > 0 & e913 <= 30,,,
+Over 30 years: e913 > 30,,,
+"Internal/Mixed study mode: E329  = (1,3)",,,
+"External study mode: E329  = (2,4,5)",,,
+* Socio-economic status data for 2022 and 2023 has been updated in 2024 to reflect revised information in the 2022 Higher Education student statistics collection (HESSC). Note that student completion data from 2021 and 2022 form the population data for GOS 2022 and 2023 respectively.,,,
+† Locality statistics are calculated according to proportion for both metro and regional/remote categories.,,,
+"† Location data are only reported for Commonwealth assisted students, which excludes international and domestic full fee paying students.",,,
+†† Some subgroups may not add to 100 per cent due to rounding.,,,

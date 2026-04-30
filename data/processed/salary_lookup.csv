@@ -1,0 +1,74 @@
+country,program_family,institution_tier,p15,p50,p85,currency,method
+Australia,agriculture,2,55770.0,71500.0,91520.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,architecture,2,58500.0,75000.0,96000.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,biological_sciences,2,49842.0,63900.0,81792.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,business,2,56160.0,72000.0,92160.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,communications,2,50856.0,65200.0,83456.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,computer_science,2,58734.0,75300.0,96384.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,creative_arts,2,48828.0,62600.0,80128.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,education,2,61464.0,78800.0,100864.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,engineering,2,62400.0,80000.0,102400.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,general_studies,2,54600.0,70000.0,89600.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,healthcare,2,57291.0,73450.0,94016.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,law,2,59280.0,76000.0,97280.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,mathematics,2,56472.0,72400.0,92672.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,medicine,2,74139.0,95050.0,121664.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,psychology,2,58578.0,75100.0,96128.0,AUD,aggregate_lookup_with_heuristic_spread
+Australia,social_sciences,2,60489.0,77550.0,99264.0,AUD,aggregate_lookup_with_heuristic_spread
+India,engineering,1,1712100.0,2195000.0,2809600.0,INR,aggregate_lookup_with_heuristic_spread
+India,engineering,2,510900.0,655000.0,838400.0,INR,aggregate_lookup_with_heuristic_spread
+United Kingdom,general_studies,2,25499.5,31499.5,46499.5,GBP,aggregate_lookup_with_heuristic_spread
+United States,architecture,1,75600.54,83700.0,102988.8,USD,empirical_quantiles_us
+United States,architecture,2,70000.5,77500.0,95360.0,USD,empirical_quantiles_us
+United States,architecture,3,64400.46,71300.0,87731.2,USD,empirical_quantiles_us
+United States,business,1,124200.0,194400.0,270000.0,USD,empirical_quantiles_us
+United States,business,2,115000.0,180000.0,250000.0,USD,empirical_quantiles_us
+United States,business,3,105800.0,165600.0,230000.0,USD,empirical_quantiles_us
+United States,communications,1,64800.0,99900.0,182481.12,USD,empirical_quantiles_us
+United States,communications,2,60000.0,92500.0,168964.0,USD,empirical_quantiles_us
+United States,communications,3,55200.0,85100.0,155446.88,USD,empirical_quantiles_us
+United States,computer_science,1,102728.0,141814.8,200772.0,USD,empirical_quantiles_us
+United States,computer_science,2,95118.52,131310.0,185900.0,USD,empirical_quantiles_us
+United States,computer_science,3,87509.04,120805.2,171028.0,USD,empirical_quantiles_us
+United States,data_science,1,144892.8,144892.8,144892.8,USD,empirical_quantiles_us
+United States,data_science,2,134160.0,134160.0,134160.0,USD,empirical_quantiles_us
+United States,data_science,3,123427.2,123427.2,123427.2,USD,empirical_quantiles_us
+United States,economics,1,84613.95,113672.14,186094.58,USD,empirical_quantiles_us
+United States,economics,2,78346.25,105251.98,172309.8,USD,empirical_quantiles_us
+United States,economics,3,72078.55,96831.82,158525.02,USD,empirical_quantiles_us
+United States,education,1,52013.39,69120.0,191430.16,USD,empirical_quantiles_us
+United States,education,2,48160.55,64000.0,177250.15,USD,empirical_quantiles_us
+United States,education,3,44307.71,58880.0,163070.14,USD,empirical_quantiles_us
+United States,engineering,1,89990.78,125808.66,183600.0,USD,empirical_quantiles_us
+United States,engineering,2,83324.8,116489.5,170000.0,USD,empirical_quantiles_us
+United States,engineering,3,76658.82,107170.34,156400.0,USD,empirical_quantiles_us
+United States,environmental_sciences,1,74056.19,92880.0,114908.09,USD,empirical_quantiles_us
+United States,environmental_sciences,2,68570.55,86000.0,106396.38,USD,empirical_quantiles_us
+United States,environmental_sciences,3,63084.91,79120.0,97884.67,USD,empirical_quantiles_us
+United States,finance,1,81000.0,129600.0,199606.92,USD,empirical_quantiles_us
+United States,finance,2,75000.0,120000.0,184821.22,USD,empirical_quantiles_us
+United States,finance,3,69000.0,110400.0,170035.53,USD,empirical_quantiles_us
+United States,general_studies,1,61676.64,99360.0,194400.0,USD,empirical_quantiles_us
+United States,general_studies,2,57108.0,92000.0,180000.0,USD,empirical_quantiles_us
+United States,general_studies,3,52539.36,84640.0,165600.0,USD,empirical_quantiles_us
+United States,healthcare,1,75411.65,168494.04,337500.0,USD,empirical_quantiles_us
+United States,healthcare,2,69825.6,156013.0,312500.0,USD,empirical_quantiles_us
+United States,healthcare,3,64239.55,143531.96,287500.0,USD,empirical_quantiles_us
+United States,humanities,1,57517.45,73512.36,99360.0,USD,empirical_quantiles_us
+United States,humanities,2,53256.9,68067.0,92000.0,USD,empirical_quantiles_us
+United States,humanities,3,48996.35,62621.64,84640.0,USD,empirical_quantiles_us
+United States,law,1,61960.0,87750.0,149337.0,USD,empirical_quantiles_us
+United States,law,2,57370.38,81250.0,138275.0,USD,empirical_quantiles_us
+United States,law,3,52780.74,74750.0,127213.0,USD,empirical_quantiles_us
+United States,mathematics,1,63427.73,86402.16,127440.0,USD,empirical_quantiles_us
+United States,mathematics,2,58729.38,80002.0,118000.0,USD,empirical_quantiles_us
+United States,mathematics,3,54031.02,73601.84,108560.0,USD,empirical_quantiles_us
+United States,physical_sciences,1,65888.64,84082.32,131763.24,USD,empirical_quantiles_us
+United States,physical_sciences,2,61008.0,77854.0,122003.0,USD,empirical_quantiles_us
+United States,physical_sciences,3,56127.36,71625.68,112242.76,USD,empirical_quantiles_us
+United States,psychology,1,68675.04,84377.7,108500.58,USD,empirical_quantiles_us
+United States,psychology,2,63588.0,78127.5,100463.5,USD,empirical_quantiles_us
+United States,psychology,3,58500.96,71877.3,92426.42,USD,empirical_quantiles_us
+United States,social_sciences,1,46588.07,61621.56,87800.11,USD,empirical_quantiles_us
+United States,social_sciences,2,43137.1,57057.0,81296.4,USD,empirical_quantiles_us
+United States,social_sciences,3,39686.13,52492.44,74792.69,USD,empirical_quantiles_us

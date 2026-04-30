@@ -1,0 +1,32 @@
+"Further full-time study among undergraduates from all provider types by broad field of education, 2024",Unnamed: 1,Unnamed: 2,Unnamed: 3
+Back to INDEX,,,
+,,,
+,,In full-time study in 2024,Not in full-time study in 2024
+,"Agriculture, environmental & related studies",12.8,87.2
+,Architecture & building,16.3,83.7
+,Creative arts,15.6,84.4
+,Education,11.7,88.3
+,Engineering & related technologies,12.8,87.2
+,"Food, hospitality & personal services",,
+,Health,11.3,88.7
+,Information technology,11.4,88.6
+,Management & commerce,9.9,90.1
+,Mixed field programmes,7.1,92.9
+,Natural & physical sciences,35.5,64.5
+,Society & culture,23.3,76.7
+,Total,17.9,82.1
+,,,
+Column variables:,,,
+FURSTUD,,,
+YEAR,,,
+,,,
+Column filters:,,,
+"FURSTUD != (NA, 95, 99)",,,
+"Data for all columns is filtered to: ANALYS12 = (1:2), Undergraduate: LEVEL = 1, e942 = 0",,,
+,,,
+Row variables:,,,
+BROADFOE,,,
+ANALYS12,,,
+,,,
+Row notes:,,,
+"Where a graduate continues to combined degrees across two study areas, their outcomes are included in both study areas. ‘All study areas’ figures count each graduate once only (ANALYS12 =1).",,,

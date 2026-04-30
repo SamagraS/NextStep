@@ -1,0 +1,21 @@
+"Further full-time study level among all course levels from all provider types by original study level,  2024",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+Back to INDEX,,,,,,
+,,,,,,
+,,Further full time study level - undergraduate,Further full time study level - postgraduate coursework,Further full time study level - postgraduate research,Further full time study level - C 1-4 and above,Total
+Original Study Level,Undergraduate,35.7,43.4,13.7,7.2,100.0
+Original Study Level,Postgraduate coursework,5.9,68.7,17.0,8.5,100.0
+Original Study Level,Postgraduate research,2.3,16.3,74.4,7.0,100.0
+Original Study Level,Total,29.9,47.6,15.1,7.4,100.0
+,,,,,,
+Column variables:,,,,,,
+FURLEV,,,,,,
+FURSTUD,,,,,,
+YEAR,,,,,,
+,,,,,,
+Column filters:,,,,,,
+FURSTUD = 1,,,,,,
+furlev = (1:15),,,,,,
+"Data for all columns is filtered to: ANALYSIS = 1, e942 = 0",,,,,,
+,,,,,,
+Column variables:,,,,,,
+LEVEL,,,,,,

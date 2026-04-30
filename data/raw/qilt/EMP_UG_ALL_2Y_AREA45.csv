@@ -1,0 +1,68 @@
+"Employment outcomes (FTE, OE, LF), 2023-2024 among undergraduates from all provider types by 45 study areas",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7
+Back to INDEX,,,,,,,
+,,,,,,,
+,,Full-time employment 2023,Full-time employment 2024,Overall employment 2023,Overall employment 2024,Labour force participation rate 2023,Labour force participation rate 2024
+Agriculture and environmental studies,Agriculture and forestry,87.6,85.1,92.6,91.6,88.6,91.6
+Agriculture and environmental studies,Architecture and urban environments,72.5,57.5,85.1,77.8,94.6,93.6
+Architecture and built environment,Building and construction,91.1,84.5,92.5,87.3,97.9,96.2
+Architecture and built environment,Environmental studies,75.9,70.0,89.4,84.7,96.0,94.9
+Business and management,Accounting,88.6,86.7,90.8,90.3,97.0,96.2
+Business and management,Banking and finance,84.8,82.0,89.0,89.6,95.6,94.7
+Business and management,Business management,82.8,76.1,89.7,88.1,96.0,96.0
+Business and management,Economics,84.2,78.9,89.0,87.3,94.4,95.7
+Business and management,Sales and marketing,80.9,72.0,89.6,88.6,97.2,96.5
+Business and management,Management and commerce - other,88.2,81.4,91.2,89.3,95.4,96.1
+Communications,"Communication, media and journalism",65.1,58.5,84.9,81.1,89.4,91.4
+Computing and information systems,Computing and information systems,74.4,67.8,83.0,80.4,94.7,93.7
+Creative arts,Art and design,51.4,47.8,78.9,76.9,89.5,89.7
+Creative arts,Music and performing arts,59.6,50.1,86.0,84.3,92.2,94.3
+Dentistry,Dentistry,83.2,85.6,91.9,91.0,94.4,94.7
+Engineering,Engineering - aerospace,76.8,73.7,84.1,83.9,93.7,93.9
+Engineering,Engineering - civil,92.8,89.3,94.9,92.3,96.7,96.1
+Engineering,Engineering - electrical and electronic,89.3,86.4,91.5,91.1,96.9,96.7
+Engineering,Engineering - mechanical,90.1,84.9,93.7,87.7,96.5,95.1
+Engineering,Engineering - process and resources,92.8,91.4,93.6,92.0,95.2,95.5
+Engineering,Engineering - other,89.4,85.3,91.7,89.2,95.1,93.7
+Health services and support,Health services and support,78.3,76.2,91.1,90.0,92.4,93.5
+Health services and support,Public health,75.4,71.1,89.6,86.9,93.7,92.2
+"Humanities, culture and social sciences","Humanities, history and geography",71.9,65.9,86.8,84.4,90.2,91.0
+"Humanities, culture and social sciences",Language and literature,65.8,63.7,86.8,82.8,86.8,85.0
+"Humanities, culture and social sciences",Political science,76.1,72.0,88.3,87.1,94.9,94.9
+Law and paralegal studies,Justice studies and policing,81.7,73.5,90.1,88.1,92.8,92.3
+Law and paralegal studies,Law,85.1,80.5,89.7,88.6,95.3,94.9
+Medicine,Medicine,96.4,91.3,96.9,93.4,95.0,91.2
+Medicine,Nursing,86.8,85.5,91.9,91.7,95.6,95.8
+Pharmacy,Pharmacy,98.4,91.4,97.9,91.6,95.2,95.8
+Psychology,Psychology,72.7,65.7,88.1,87.0,90.1,89.4
+Rehabilitation,Occupational therapy,95.5,95.3,96.0,96.4,97.0,98.2
+Rehabilitation,Physiotherapy,95.8,94.3,97.6,95.2,94.9,95.9
+Science and mathematics,Biological sciences,64.0,57.5,86.0,82.1,86.7,86.5
+Science and mathematics,Mathematics,73.5,74.2,86.1,85.6,90.1,92.4
+Science and mathematics,Medical sciences and technology,67.6,63.0,85.7,82.0,84.8,85.5
+Science and mathematics,Natural and physical sciences,73.4,65.5,86.9,82.8,88.2,87.9
+Social work,Social work,80.7,77.3,89.8,88.6,94.0,94.7
+Teacher education,Teacher education - early childhood,90.1,87.5,94.2,93.4,95.2,95.0
+Teacher education,Teacher education - primary and secondary,91.7,88.3,95.4,93.8,94.6,95.2
+Teacher education,Teacher education - other,84.0,82.9,91.5,89.5,92.2,92.3
+"Tourism, hospitality, personal services, sport and recreation",Sport and recreation,67.1,62.9,88.8,87.1,95.5,94.4
+"Tourism, hospitality, personal services, sport and recreation","Tourism, hospitality and personal services",81.0,78.0,87.3,90.1,100.0,95.9
+Veterinary science,Veterinary science,92.7,85.2,92.3,89.1,94.0,92.6
+,Total,79.0,74.0,88.9,86.9,92.5,92.6
+,,,,,,,
+Column variables:,,,,,,,
+AVAILEMP,,,,,,,
+AVAILFT,,,,,,,
+FULLEMP,,,,,,,
+GENEMP,,,,,,,
+YEAR,,,,,,,
+,,,,,,,
+Column filters:,,,,,,,
+OE: AVAILEMP = 1,,,,,,,
+FTE: AVAILFT = 1,,,,,,,
+"Data for all columns is filtered to: ANALYS45 = (1:2), Undergraduate: LEVEL = 1, e942 = 0",,,,,,,
+,,,,,,,
+Row variables:,,,,,,,
+AREA45,,,,,,,
+,,,,,,,
+Row notes:,,,,,,,
+"Where a graduate completes combined degrees across two study areas, their outcomes are included in both study areas. ‘All study areas’ figures count each graduate once only.",,,,,,,

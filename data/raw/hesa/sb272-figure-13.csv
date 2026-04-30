@@ -1,0 +1,31 @@
+﻿﻿Title:,"Figure 13 - Percentage of graduates in full-time paid employment in the UK by salary band and personal characteristics"
+Subtitle:,"Academic years 2018/19 to 2022/23"
+Reference ID:,SB272 Figure 13
+Data source:,HESA
+Data source link:,https://www.hesa.ac.uk/data-and-analysis/sb272/figure-13
+Data file canonical link:,https://www.hesa.ac.uk/data-and-analysis/sb272/figure-13.zip
+Licence:,Creative Commons Attribution 4.0 International Licence
+Date:,2025
+Filters:,Country of provider,All 
+,Permanent address,All 
+,Provider type,All 
+,Level of qualification,All 
+,Mode of former study,All 
+,Work population marker,Paid employment is an activity 
+,Academic year,2022/23 
+
+
+"Salary band","Female","Male"
+"£15,000 - £17,999","1%","1%"
+"£18,000 - £20,999","4%","3%"
+"£21,000 - £23,999","10%","7%"
+"£24,000 - £26,999","16%","14%"
+"£27,000 - £29,999","17%","13%"
+"£30,000 - £32,999","17%","16%"
+"£33,000 - £35,999","9%","10%"
+"£36,000 - £38,999","7%","7%"
+"£39,000 - £41,999","4%","6%"
+"£42,000 - £44,999","3%","3%"
+"£45,000 - £47,999","3%","4%"
+"£48,000 - £50,999","3%","4%"
+"£51,000+","7%","12%"

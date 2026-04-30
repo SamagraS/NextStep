@@ -1,0 +1,29 @@
+"Employment outcomes (FTE, OE, LF, SAL) among postgraduate coursework students from all provider types by full-time study status by gender, 2024",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+Back to INDEX,,,,,
+,,,,,
+,,Full-time employment,Overall employment,Labour force participation rate,Median annual full-time salaries ($)
+In full-time study,Male,86.4,89.7,88.5,"114,800"
+In full-time study,Female,89.5,91.1,87.6,"101,100"
+In full-time study,Total,88.1,90.5,87.9,"105,000"
+Not in full-time study,Male,89.0,92.5,97.5,"110,000"
+Not in full-time study,Female,88.4,93.8,96.5,"98,000"
+Not in full-time study,Total,88.5,93.4,96.8,"100,000"
+,,,,,
+Column variables:,,,,,
+AVAILEMP,,,,,
+AVAILFT,,,,,
+FULLEMP,,,,,
+GENEMP,,,,,
+SALARYA,,,,,
+TRIMSAL_ALL,,,,,
+,,,,,
+Column filters:,,,,,
+OE: AVAILEMP = 1,,,,,
+FTE: AVAILFT = 1,,,,,
+"SAL: FULLEMP = 1, TRIMSAL_ALL = 1",,,,,
+"Data for all columns is filtered to: ANALYSIS = 1, Postgraduate coursework: LEVEL = 2, e942 = 0",,,,,
+,,,,,
+Row Variables:,,,,,
+Gender: E315,,,,,
+FURSTUD,,,,,
+YEAR,,,,,

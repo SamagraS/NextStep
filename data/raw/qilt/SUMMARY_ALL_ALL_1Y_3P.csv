@@ -1,0 +1,41 @@
+"Collection summary among all course levels from all provider types by GOS collection period, 2021",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+Back to INDEX,,,,,,
+,,,,,,
+,,No. of participating institutions,No. of approached graduates,No. of in-scope graduates,No. of completed surveys,Overall response rate (%)
+2020,November - University,41,98874,92532,37185,40.2
+2020,November - NUHEIs,57,11605,10704,4110,38.4
+2020,November - Total,98,110479,103236,41295,40.0
+2021,February - University,29,19772,18512,7479,40.4
+2021,February - NUHEIs,40,6249,5623,2011,35.8
+2021,February - Total,69,26021,24135,9490,39.3
+2021,May - University,41,193551,178088,72366,40.6
+2021,May - NUHEIs,79,12307,11151,4676,41.9
+2021,May - Total,120,205858,189239,77042,40.7
+Total collection,University,41,312197,289132,117030,40.5
+Total collection,NUHEIs,86,30161,27478,10797,39.3
+Total collection,Total,127,342358,316610,127827,40.4
+,,,,,,
+Column variables:,,,,,,
+E306,,,,,,
+NATAPPROACH,,,,,,
+NATCOMPLETE,,,,,,
+NATINSCOPE,,,,,,
+,,,,,,
+Column filters:,,,,,,
+NATAPPROACH = 1,,,,,,
+NATCOMPLETE = 1,,,,,,
+NATINSCOPE = 1,,,,,,
+,,,,,,
+Column notes:,,,,,,
+This table is constructed from the GOS operational file.,,,,,,
+"In-scope graduates excludes opt-outs, disqualified or out-of-scope surveys.",,,,,,
+Data for all columns is filtered to: ANALYSIS = 1,,,,,,
+,,,,,,
+Row variables:,,,,,,
+HEPTYPE,,,,,,
+PERIOD,,,,,,
+YEAR,,,,,,
+,,,,,,
+Row notes:,,,,,,
+Universites: HEPTYPE = 1,,,,,,
+NUHEIs: HEPTYPE = 2,,,,,,

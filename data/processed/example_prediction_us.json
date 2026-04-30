@@ -1,0 +1,37 @@
+{
+  "student_context": {
+    "program_family": "computer_science",
+    "country": "United States",
+    "institution_tier": 1
+  },
+  "placement_probabilities": {
+    "p_3_months": 0.436,
+    "p_6_months": 0.6903,
+    "p_12_months": 0.9083,
+    "macro_factor": 0.9938
+  },
+  "salary_band": {
+    "currency": "USD",
+    "p15": 102728.0,
+    "p50": 141814.8,
+    "p85": 200772.0,
+    "method": "empirical_quantiles_us"
+  },
+  "risk_score": {
+    "value": 32.4,
+    "unemployment_rate": 4.198,
+    "placement_stability": 0.693,
+    "label": "low"
+  },
+  "sources_used": [
+    "Eurostat",
+    "HESA",
+    "NIRF",
+    "OFLC H1B",
+    "QILT",
+    "World Bank"
+  ],
+  "notes": [
+    "Placement used global fallback because no country-specific record was available."
+  ]
+}

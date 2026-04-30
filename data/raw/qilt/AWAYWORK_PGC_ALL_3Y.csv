@@ -1,0 +1,23 @@
+"Proportion of employed who were away from work (FTE, PTE, OE) among postgraduate coursework students from all provider types by year 2022 - 2024",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4
+Back to INDEX,,,,
+,,,,
+,,In part-time employment (%),In full-time employment (%),Overall employed (%)
+,GOS 2022,6.3,2.4,3.2
+,GOS 2023,5.5,2.3,3.0
+,GOS 2024,5.1,2.4,3.0
+,Total,5.6,2.4,3.1
+,,,,
+Column variables:,,,,
+FULLEMP,,,,
+AWAYWORK,,,,
+GENEMP,,,,
+PARTEMP,,,,
+,,,,
+Column filters:,,,,
+FT: FULLEMP = 1,,,,
+OE: GENEMP = 1,,,,
+PT: PARTEMP = 1,,,,
+"Data for all columns is filtered to: ANALYSIS = 1, Postgraduate coursework: LEVEL = 2, e942 = 0",,,,
+,,,,
+Row variables:,,,,
+YEAR,,,,

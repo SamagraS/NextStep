@@ -1,0 +1,19 @@
+{
+  "placement_sources": [
+    "Eurostat",
+    "HESA",
+    "NIRF",
+    "QILT"
+  ],
+  "salary_sources": [
+    "HESA",
+    "NIRF",
+    "QILT"
+  ],
+  "salary_microdata_sources": [
+    "OFLC H1B"
+  ],
+  "macro_sources": [
+    "World Bank"
+  ]
+}

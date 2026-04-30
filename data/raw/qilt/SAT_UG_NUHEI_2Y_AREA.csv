@@ -1,0 +1,40 @@
+Satisfaction (% agreement) 2023-2024 among undergraduates from non-university higher education institutes (NUHEIs) by study area,Unnamed: 1,Unnamed: 2,Unnamed: 3
+Back to INDEX,,,
+,,,
+,,Overall satisfaction 2023,Overall satisfaction 2024
+,Agriculture and environmental studies,92.5,84.4
+,Architecture and built environment,58.3,78.9
+,Business and management,80.2,77.9
+,Communications,69.5,67.3
+,Computing and information systems,78.8,77.4
+,Creative arts,72.9,70.1
+,Dentistry,,
+,Engineering,81.3,79.8
+,Health services and support,63.2,64.6
+,"Humanities, culture and social sciences",91.2,92.1
+,Law and paralegal studies,,
+,Medicine,,
+,Nursing,78.3,62.9
+,Pharmacy,,
+,Psychology,79.4,86.2
+,Rehabilitation,,
+,Science and mathematics,,83.7
+,Social work,81.2,73.6
+,Teacher education,83.2,82.1
+,"Tourism, hospitality, personal services, sport and recreation",85.3,82.4
+,Veterinary science,,
+,Total,78.5,76.7
+,,,
+Column variables:,,,
+CEQ_OSI,,,
+YEAR,,,
+,,,
+Column filters:,,,
+"CEQOSI != (NA, 995, 999)",,,
+"Data for all columns is filtered to: ANALYSIS = (1:2), Undergraduate: LEVEL = 1, NUHEI: HEPTYPE = 2",,,
+,,,
+Row variables:,,,
+AREA,,,
+,,,
+Row notes:,,,
+"Where a student completes a second course in a double degree in a different study area, the outcomes are included in both study areas.",,,

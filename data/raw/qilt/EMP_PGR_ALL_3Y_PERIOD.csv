@@ -1,0 +1,34 @@
+"Employment outcomes (FTE, OE, LF, SAL) among postgraduate research students from all provider types by survey round, 2022-2024",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+Back to INDEX,,,,,
+,,,,,
+,,Full-time employment,Overall employment,Labour force participation rate,Median annual full-time salaries ($)
+GOS 2022,November,83.8,92.6,94.6,"95,000"
+GOS 2022,February,84.7,89.5,96.2,"97,000"
+GOS 2022,May,85.8,92.2,94.4,"98,200"
+GOS 2022,Total,84.7,91.9,94.8,"96,000"
+GOS 2023,November,85.2,91.5,95.1,"98,200"
+GOS 2023,February,84.8,89.7,94.6,"102,000"
+GOS 2023,May,85.5,92.4,95.6,"100,000"
+GOS 2023,Total,85.3,91.4,95.2,"100,000"
+GOS 2024,November,85.0,91.6,94.7,"101,500"
+GOS 2024,February,79.0,87.4,95.3,"105,000"
+GOS 2024,May,82.1,90.9,95.4,"105,300"
+GOS 2024,Total,82.8,90.5,95.1,"104,400"
+,,,,,
+Column variables:,,,,,
+AVAILEMP,,,,,
+AVAILFT,,,,,
+FULLEMP,,,,,
+GENEMP,,,,,
+SALARYA,,,,,
+TRIMSAL_ALL,,,,,
+,,,,,
+Column filters:,,,,,
+OE: AVAILEMP = 1,,,,,
+FTE: AVAILFT = 1,,,,,
+"SAL: FULLEMP = 1, TRIMSAL_ALL = 1",,,,,
+"Data for all columns is filtered to: ANALYSIS = 1, Postgraduate research: LEVEL = 3, e942 = 0",,,,,
+,,,,,
+Row variables:,,,,,
+PERIOD,,,,,
+YEAR,,,,,

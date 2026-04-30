@@ -1,0 +1,50 @@
+"Reason working in a job that does not fully use skills and educations among postgraduate coursework students and all provider types by employment outcomes (FTE, OE) 2024",Unnamed: 1,Unnamed: 2,Unnamed: 3
+Back to INDEX,,,
+,,,
+,,Full-time employment,Overall employment
+Personal factors,     Studying,4.4,7.0
+Personal factors,     I'm satisfied with my current job,19.9,17.2
+Personal factors,     Do not have permanent residency,0.1,0.1
+Personal factors,     Changing jobs/careers,13.7,13.1
+Personal factors,     For financial reasons,7.3,6.0
+Personal factors,     Travelling / gap year,0.2,0.3
+Personal factors,     Caring for children or family member,3.7,5.6
+Personal factors,     Short-term illness or injury,0.0,0.0
+Personal factors,     Long-term health condition or disability,0.2,0.3
+Personal factors,Sub total,49.5,49.6
+Labour market factors,     No suitable jobs in my area of expertise,9.3,9.7
+Labour market factors,     No suitable jobs in my local area,8.0,8.1
+Labour market factors,     Considered to be too young by employers,3.1,2.6
+Labour market factors,     Considered to be too old by employers,1.8,1.8
+Labour market factors,     Not enough work experience,8.3,8.4
+Labour market factors,     No jobs with a suitable number of hours,0.8,1.3
+Labour market factors,     Cannot find a job,0.9,1.0
+Labour market factors,     I had to change jobs due to COVID-19,0.7,0.7
+Labour market factors,     Entry level job/career stepping stone,11.5,10.4
+Labour market factors,Sub total,44.3,44.0
+Other,     Did not mention that I have more skills or education than are needed to do my current job,0.0,0.0
+Other,     Not sure what I want to do / still figuring it out,0.0,0.1
+Other,     Already working in this job prior to obtaining skills or education,0.1,0.1
+Other,     Working in own / family business,0.4,0.4
+Other,     Haven't started looking for work yet/only just finished studying,0.0,0.1
+Other,     My job is temporary/casual,0.2,0.3
+Other,     Other (Please specify),2.0,2.0
+Other,     I have skills that are not required in my current job,1.5,1.3
+Other,     Waiting for accreditation/registration,2.0,2.3
+Other,Sub total,6.2,6.4
+,Total,100.0,100.0
+,Extent to which skills and education are not fully utilised,28.3,30.2
+,,,
+Column variables:,,,
+FULLEMP,,,
+GENEMP,,,
+YEAR,,,
+,,,
+Column filters:,,,
+FT: FULLEMP = 1,,,
+OE: GENEMP = 1,,,
+"Data for all columns is filtered to: ANALYSIS = 1, Postgraduate coursework: LEVEL = 2, e942 = 0",,,
+,,,
+Row variables:,,,
+RSOVRQ,,,
+SPOQSC,,,
