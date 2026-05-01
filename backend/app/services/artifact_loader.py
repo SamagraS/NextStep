@@ -17,6 +17,8 @@ ARTIFACT_CONTRACTS = [
     ArtifactContract("salary_model_q15", "salary_model_q15.pkl", "ml_artifact"),
     ArtifactContract("salary_model_q50", "salary_model_q50.pkl", "ml_artifact"),
     ArtifactContract("salary_model_q85", "salary_model_q85.pkl", "ml_artifact"),
+    ArtifactContract("state_encode", "state_encode.pkl", "ml_artifact"),
+    ArtifactContract("family_encode", "family_encode.pkl", "ml_artifact"),
     ArtifactContract("bandit_model", "bandit_model.pkl", "ml_artifact"),
     ArtifactContract("aggregate_outcomes", "aggregate_outcomes.pkl", "published_aggregate_data"),
     ArtifactContract("salary_band_factors", "salary_band_factors.pkl", "published_salary_band_data"),

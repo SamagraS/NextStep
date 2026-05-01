@@ -6,6 +6,7 @@ from app.schemas.score import (
     ScoreLatestResponse,
     ScoringResponse,
 )
+from app.services.persistence import PersistenceService
 from app.services.scoring import DemoScoringService
 
 router = APIRouter()
@@ -17,7 +18,27 @@ async def score_origination(request: Request, payload: OriginationScoringRequest
         store=request.app.state.demo_store,
         artifacts=request.app.state.artifacts,
     )
-    response, _ = service.score_origination(payload)
+    response, scored_at = service.score_origination(payload)
+
+    try:
+        persistence = PersistenceService(request.app.state.database)
+        await persistence.save_origination(
+            application_id=response.application_id,
+            student_id=payload.student_id,
+            payload_json=payload.model_dump_json(),
+            response_json=response.model_dump_json(),
+            score=response.repayment_score.score,
+            tier=response.repayment_score.tier.value,
+            reliability_band=response.reliability.band.value,
+            delayed_placement_risk=response.delayed_placement_risk.flag.value,
+            behavioral_engagement=response.reliability.behavioral_engagement.value,
+            tenacity_score=response.reliability.tenacity_score,
+            macro_snapshot_ts=response.reliability.macro_snapshot_ts,
+            scored_at=scored_at,
+        )
+    except Exception:
+        pass  # DB failure never blocks demo
+
     return response
 
 

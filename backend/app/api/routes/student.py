@@ -4,6 +4,7 @@ from app.schemas.student import (
     StudentActionCompleteRequest,
     StudentDashboardResponse,
 )
+from app.services.persistence import PersistenceService
 from app.services.student_dashboard import StudentDashboardService
 from app.services.student_engagement import StudentEngagementService
 
@@ -25,6 +26,7 @@ async def complete_student_action(request: Request, payload: StudentActionComple
         store=request.app.state.demo_store,
         notifier=request.app.state.notifier,
         artifacts=request.app.state.artifacts,
+        persistence=PersistenceService(request.app.state.database),
     )
     outcome = await service.complete_action(payload)
     if not outcome.student_found:

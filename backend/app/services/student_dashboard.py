@@ -27,7 +27,7 @@ class StudentDashboardService:
         ]
 
         scoring = DemoScoringService(self.store)
-        employer_matches = scoring._employer_matches(
+        employer_matches = scoring.build_employer_matches(
             destination_country=student.destination_country,
             program_family=student.program_family,
         )
