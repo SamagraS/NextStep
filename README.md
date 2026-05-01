@@ -7,13 +7,13 @@ The repository is centered on two workflows:
 - serving API endpoints for scoring, dashboards, and forecasting
 - rebuilding the outcomes pipeline from raw data into processed lookup artifacts
 
-Project documentation lives in [docs/architecture.md](docs/architecture.md), [docs/flow.md](docs/flow.md), and [docs/communication.md](docs/communication.md).
+Project documentation lives in [docs/architecture.md](docs/architecture.md) and [docs/flow.md](docs/flow.md).
 
 ## What This Project Does
 
 The backend exposes a small set of demo-oriented APIs and a separate outcomes prediction endpoint. Under the hood, the application loads artifact snapshots at startup, stores lightweight state in SQLite, and serves data through FastAPI.
 
-The outcomes pipeline consumes raw data from sources such as HESA, QILT, Eurostat, OFLC H1B, NIRF, and World Bank. It transforms those inputs into processed lookup tables that the API uses for predictions.
+The outcomes pipeline consumes raw data from sources such as HESA, QILT, Eurostat, Eurostat salary extracts, BLS, OFLC H1B, NIRF, StatsCan, and World Bank. It transforms those inputs into processed lookup tables that the API uses for predictions.
 
 ## Repository Layout
 
@@ -223,8 +223,11 @@ The current pipeline is wired to these source families:
 - HESA
 - QILT
 - Eurostat
+- Eurostat salary
+- BLS
 - OFLC H1B
 - NIRF
+- StatsCan
 - World Bank
 
 ### Raw Data
@@ -236,8 +239,11 @@ Important raw folders include:
 - `data/raw/hesa/`
 - `data/raw/qilt/`
 - `data/raw/eurostat/`
+- `data/raw/eurostat_salary/`
+- `data/raw/bls/`
 - `data/raw/oflc/`
 - `data/raw/nirf/`
+- `data/raw/statscan/`
 - `data/raw/world_bank/`
 
 ### Processed Outputs

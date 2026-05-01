@@ -1,0 +1,2 @@
+program_family,country,median_eur,p15_eur,p85_eur,source,currency,year
+general_studies,Germany,68144.0,53152.32,84498.56,Eurostat_SES_earn_ses_pub1s,EUR,2018

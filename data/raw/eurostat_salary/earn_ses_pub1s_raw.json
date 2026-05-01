@@ -1,0 +1,318 @@
+{
+  "version": "2.0",
+  "class": "dataset",
+  "label": "Low-wage earners as a proportion of all employees (excluding apprentices) by sex",
+  "source": "ESTAT",
+  "updated": "2026-02-09T23:00:00+0100",
+  "value": {},
+  "id": [
+    "freq",
+    "unit",
+    "sex",
+    "sizeclas",
+    "geo",
+    "time"
+  ],
+  "size": [
+    1,
+    0,
+    1,
+    1,
+    44,
+    5
+  ],
+  "dimension": {
+    "freq": {
+      "label": "Time frequency",
+      "category": {
+        "index": {
+          "A": 0
+        },
+        "label": {
+          "A": "Annual"
+        }
+      }
+    },
+    "unit": {
+      "label": "Unit of measure",
+      "category": {
+        "index": {},
+        "label": {}
+      }
+    },
+    "sex": {
+      "label": "Sex",
+      "category": {
+        "index": {
+          "T": 0
+        },
+        "label": {
+          "T": "Total"
+        }
+      }
+    },
+    "sizeclas": {
+      "label": "Size classes in number of employees",
+      "category": {
+        "index": {
+          "GE10": 0
+        },
+        "label": {
+          "GE10": "10 employees or more"
+        }
+      }
+    },
+    "geo": {
+      "label": "Geopolitical entity (reporting)",
+      "category": {
+        "index": {
+          "EU27_2020": 0,
+          "EU28": 1,
+          "EU27_2007": 2,
+          "EA20": 3,
+          "EA19": 4,
+          "EA18": 5,
+          "EA17": 6,
+          "BE": 7,
+          "BG": 8,
+          "CZ": 9,
+          "DK": 10,
+          "DE": 11,
+          "EE": 12,
+          "IE": 13,
+          "EL": 14,
+          "ES": 15,
+          "FR": 16,
+          "HR": 17,
+          "IT": 18,
+          "CY": 19,
+          "LV": 20,
+          "LT": 21,
+          "LU": 22,
+          "HU": 23,
+          "MT": 24,
+          "NL": 25,
+          "AT": 26,
+          "PL": 27,
+          "PT": 28,
+          "RO": 29,
+          "SI": 30,
+          "SK": 31,
+          "FI": 32,
+          "SE": 33,
+          "IS": 34,
+          "NO": 35,
+          "CH": 36,
+          "UK": 37,
+          "BA": 38,
+          "ME": 39,
+          "MK": 40,
+          "AL": 41,
+          "RS": 42,
+          "TR": 43
+        },
+        "label": {
+          "EU27_2020": "European Union - 27 countries (from 2020)",
+          "EU28": "European Union - 28 countries (2013-2020)",
+          "EU27_2007": "European Union - 27 countries (2007-2013)",
+          "EA20": "Euro area \u2013 20 countries (2023-2025)",
+          "EA19": "Euro area - 19 countries  (2015-2022)",
+          "EA18": "Euro area - 18 countries (2014)",
+          "EA17": "Euro area - 17 countries (2011-2013)",
+          "BE": "Belgium",
+          "BG": "Bulgaria",
+          "CZ": "Czechia",
+          "DK": "Denmark",
+          "DE": "Germany",
+          "EE": "Estonia",
+          "IE": "Ireland",
+          "EL": "Greece",
+          "ES": "Spain",
+          "FR": "France",
+          "HR": "Croatia",
+          "IT": "Italy",
+          "CY": "Cyprus",
+          "LV": "Latvia",
+          "LT": "Lithuania",
+          "LU": "Luxembourg",
+          "HU": "Hungary",
+          "MT": "Malta",
+          "NL": "Netherlands",
+          "AT": "Austria",
+          "PL": "Poland",
+          "PT": "Portugal",
+          "RO": "Romania",
+          "SI": "Slovenia",
+          "SK": "Slovakia",
+          "FI": "Finland",
+          "SE": "Sweden",
+          "IS": "Iceland",
+          "NO": "Norway",
+          "CH": "Switzerland",
+          "UK": "United Kingdom",
+          "BA": "Bosnia and Herzegovina",
+          "ME": "Montenegro",
+          "MK": "North Macedonia",
+          "AL": "Albania",
+          "RS": "Serbia",
+          "TR": "T\u00fcrkiye"
+        }
+      }
+    },
+    "time": {
+      "label": "Time",
+      "category": {
+        "index": {
+          "2006": 0,
+          "2010": 1,
+          "2014": 2,
+          "2018": 3,
+          "2022": 4
+        },
+        "label": {
+          "2006": "2006",
+          "2010": "2010",
+          "2014": "2014",
+          "2018": "2018",
+          "2022": "2022"
+        }
+      }
+    }
+  },
+  "extension": {
+    "lang": "EN",
+    "id": "EARN_SES_PUB1S",
+    "agencyId": "ESTAT",
+    "version": "1.0",
+    "datastructure": {
+      "id": "EARN_SES_PUB1S",
+      "agencyId": "ESTAT",
+      "version": "28.0"
+    },
+    "annotation": [
+      {
+        "type": "CREATED",
+        "date": "2012-12-20T09:05:34+0100"
+      },
+      {
+        "type": "DISSEMINATION_DOI_XML",
+        "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/EARN_SES_PUB1S\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/EARN_SES_PUB1S</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-23</dct:issued></adms:Identifier></adms:identifier>"
+      },
+      {
+        "type": "DISSEMINATION_OBJECT_TYPE",
+        "title": "DATASET"
+      },
+      {
+        "type": "DISSEMINATION_TIMESTAMP_DATA",
+        "date": "2026-02-09T23:00:00+0100"
+      },
+      {
+        "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+        "date": "2026-02-09T23:00:00+0100"
+      },
+      {
+        "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+        "date": "2026-02-09T23:00:00+0100"
+      },
+      {
+        "type": "ESMS_HTML",
+        "title": "Explanatory texts (metadata)",
+        "href": "https://ec.europa.eu/eurostat/cache/metadata/en/earn_ses_main_esms.htm"
+      },
+      {
+        "type": "ESMS_SDMX",
+        "title": "Explanatory texts (metadata)",
+        "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/earn_ses_main_esms.sdmx.zip"
+      },
+      {
+        "type": "OBS_COUNT",
+        "title": "561"
+      },
+      {
+        "type": "OBS_PERIOD_OVERALL_LATEST",
+        "title": "2022"
+      },
+      {
+        "type": "OBS_PERIOD_OVERALL_OLDEST",
+        "title": "2006"
+      },
+      {
+        "type": "SOURCE_INSTITUTIONS",
+        "text": "Eurostat"
+      },
+      {
+        "type": "UPDATE_DATA",
+        "date": "2026-02-09T23:00:00+0100"
+      },
+      {
+        "type": "UPDATE_STRUCTURE",
+        "date": "2025-02-11T23:00:00+0100"
+      }
+    ],
+    "positions-with-no-data": {
+      "freq": [
+        0
+      ],
+      "unit": [],
+      "sex": [
+        0
+      ],
+      "sizeclas": [
+        0
+      ],
+      "geo": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "time": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  }
+}

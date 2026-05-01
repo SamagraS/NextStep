@@ -48,7 +48,7 @@ Defines the feature-assembly data structures used by the scoring flow, including
 ## Outcomes Pipeline
 
 ### `backend/app/outcomes/ingestion.py`
-Loads raw datasets from `data/raw/`, including HESA, QILT, Eurostat, OFLC, NIRF, and World Bank inputs. It normalizes input formats into raw data frames that the preprocessing layer can standardize.
+Loads raw datasets from `data/raw/`, including HESA, QILT, Eurostat, Eurostat salary, BLS, OFLC, NIRF, StatsCan, and World Bank inputs. It normalizes input formats into raw data frames that the preprocessing layer can standardize.
 
 ### `backend/app/outcomes/preprocessing.py`
 Converts raw ingested data into standardized placement, salary, macro, and microdata tables. This is where source-specific rows are normalized into the common shape used by the model builders.
@@ -59,14 +59,14 @@ Contains taxonomy and program-family mapping utilities. It translates country, S
 ### `backend/app/outcomes/inference.py`
 Builds processed lookup artifacts, writes the manifest, and loads those artifacts at prediction time to produce outcomes forecasts.
 
-### `backend/app/outcomes/models/placement.py`
-Builds the placement lookup table from standardized placement inputs and derives probabilities across time horizons.
-
-### `backend/app/outcomes/models/salary.py`
-Builds salary lookup tables from standardized salary inputs and OFLC microdata.
-
 ### `backend/app/outcomes/models/macro.py`
 Builds macroeconomic adjustment tables from country-level unemployment inputs.
+
+### `backend/app/outcomes/models/placement.py`
+Builds placement lookup tables from standardized employment inputs and combines source data across countries and tiers.
+
+### `backend/app/outcomes/models/salary.py`
+Builds salary lookup tables from standardized salary inputs and microdata-backed wage sources.
 
 ## Service Layer
 

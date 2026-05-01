@@ -68,6 +68,20 @@ This document explains how the backend modules work together today.
 - Optional model artifacts live in `artifacts/`.
 - The database lives at the configured SQLite path, defaulting to `backend/nextstep.db`.
 
+## Source Families
+
+The outcomes pipeline currently ingests and standardizes these source families:
+
+- HESA
+- QILT
+- Eurostat
+- Eurostat salary
+- BLS
+- OFLC H1B
+- NIRF
+- StatsCan
+- World Bank
+
 ## Current Cross-Module Relationships
 
 - `backend/app/main.py` owns application lifecycle and dependency wiring.

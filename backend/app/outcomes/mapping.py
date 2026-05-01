@@ -38,6 +38,7 @@ COUNTRY_ALIASES = {
     "uk": "United Kingdom",
     "england": "United Kingdom",
     "australia": "Australia",
+    "canada": "Canada",
     "india": "India",
     "germany": "Germany",
 }
@@ -162,3 +163,6 @@ class TaxonomyMapper:
 def soc_to_program_family(soc_code: str | int | float | None, soc_title: str = "") -> str:
     return TaxonomyMapper().map_soc_code(soc_code=soc_code, soc_title=soc_title)
 
+
+def isced_to_program_family(isced_code: str) -> str:
+    return TaxonomyMapper().map_eurostat_isced(isced_code)

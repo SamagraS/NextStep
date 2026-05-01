@@ -33,11 +33,14 @@ class DatasetPreprocessor:
             self._standardize_eurostat(raw.eurostat),
             self._standardize_bls(raw.bls_employment),
             self._standardize_nirf_placement(raw.nirf),
+            self._standardize_statscan_placement(raw.statscan_placement),
         ]
         salary_frames = [
             self._standardize_qilt_salary(raw.qilt_salary),
             self._standardize_hesa_salary(raw.hesa_salary),
             self._standardize_nirf_salary(raw.nirf),
+            self._standardize_eurostat_salary(raw.eurostat_salary),
+            self._standardize_statscan_salary(raw.statscan_salary),
         ]
         placement_parts = [
             frame.dropna(how="all", axis=0).dropna(how="all", axis=1)
@@ -184,6 +187,23 @@ class DatasetPreprocessor:
             }
         )
 
+    def _standardize_statscan_placement(self, frame: pd.DataFrame) -> pd.DataFrame:
+        if frame.empty:
+            return pd.DataFrame()
+        working = frame.copy()
+        working["program_family"] = working["program_family"].map(self.mapper.normalize_program_family)
+        return pd.DataFrame(
+            {
+                "source": working["source"],
+                "country": working["country"].map(self.mapper.normalize_country),
+                "program_family": working["program_family"],
+                "institution_tier": 2,
+                "employment_rate": pd.to_numeric(working["employment_rate"], errors="coerce"),
+                "unemployment_rate_source": None,
+                "sample_size": 1.0,
+            }
+        ).dropna(subset=["employment_rate"])
+
     def _standardize_qilt_salary(self, frame: pd.DataFrame) -> pd.DataFrame:
         if frame.empty:
             return pd.DataFrame()
@@ -272,12 +292,64 @@ class DatasetPreprocessor:
             }
         )
 
+    def _standardize_eurostat_salary(self, frame: pd.DataFrame) -> pd.DataFrame:
+        if frame.empty:
+            return pd.DataFrame()
+        working = frame.copy().rename(
+            columns={
+                "median_eur": "salary_median",
+                "p15_eur": "salary_p15",
+                "p85_eur": "salary_p85",
+            }
+        )
+        working["program_family"] = working["program_family"].map(self.mapper.normalize_program_family)
+        return pd.DataFrame(
+            {
+                "source": working["source"],
+                "country": working["country"].map(self.mapper.normalize_country),
+                "program_family": working["program_family"],
+                "institution_tier": 2,
+                "salary_p15": pd.to_numeric(working["salary_p15"], errors="coerce"),
+                "salary_median": pd.to_numeric(working["salary_median"], errors="coerce"),
+                "salary_p85": pd.to_numeric(working["salary_p85"], errors="coerce"),
+                "currency": working["currency"].fillna("EUR"),
+            }
+        ).dropna(subset=["salary_median"])
+
+    def _standardize_statscan_salary(self, frame: pd.DataFrame) -> pd.DataFrame:
+        if frame.empty:
+            return pd.DataFrame()
+        working = frame.copy()
+        working["program_family"] = working["program_family"].map(self.mapper.normalize_program_family)
+        salary_p15 = (
+            pd.to_numeric(working["salary_p15"], errors="coerce")
+            if "salary_p15" in working.columns
+            else np.nan
+        )
+        salary_p85 = (
+            pd.to_numeric(working["salary_p85"], errors="coerce")
+            if "salary_p85" in working.columns
+            else np.nan
+        )
+        return pd.DataFrame(
+            {
+                "source": working["source"],
+                "country": working["country"].map(self.mapper.normalize_country),
+                "program_family": working["program_family"],
+                "institution_tier": 2,
+                "salary_p15": salary_p15,
+                "salary_median": pd.to_numeric(working["salary_median"], errors="coerce"),
+                "salary_p85": salary_p85,
+                "currency": working["currency"].fillna("CAD"),
+            }
+        ).dropna(subset=["salary_median"])
+
     def _standardize_world_bank(self, frame: pd.DataFrame) -> pd.DataFrame:
         if frame.empty:
             return pd.DataFrame()
         filtered = frame[
             frame["country"].isin(
-                ["United States", "United Kingdom", "Australia", "India", "Germany"]
+                ["United States", "United Kingdom", "Australia", "India", "Germany", "Canada"]
             )
         ].copy()
         return filtered[["country", "year", "unemployment_rate"]]

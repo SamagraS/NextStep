@@ -4,12 +4,15 @@
     "Eurostat_edat_lfse_24",
     "HESA",
     "NIRF",
-    "QILT"
+    "QILT",
+    "StatsCan_NGS_2020"
   ],
   "salary_sources": [
+    "Eurostat_SES_earn_ses_pub1s",
     "HESA",
     "NIRF",
-    "QILT"
+    "QILT",
+    "StatsCan_NGS_2020"
   ],
   "salary_microdata_sources": [
     "OFLC H1B"
@@ -18,9 +21,11 @@
     "World Bank"
   ],
   "salary_aggregate_sources": [
+    "Eurostat_SES_earn_ses_pub1s",
     "HESA",
     "NIRF",
-    "QILT"
+    "QILT",
+    "StatsCan_NGS_2020"
   ],
   "salary_micro_source": "OFLC H1B",
   "macro_source": "World Bank"

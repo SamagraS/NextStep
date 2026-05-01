@@ -22,9 +22,12 @@ class RawDatasetBundle:
     qilt_employment: pd.DataFrame
     qilt_salary: pd.DataFrame
     eurostat: pd.DataFrame
+    eurostat_salary: pd.DataFrame
     bls_employment: pd.DataFrame
     oflc: pd.DataFrame
     nirf: pd.DataFrame
+    statscan_placement: pd.DataFrame
+    statscan_salary: pd.DataFrame
     world_bank: pd.DataFrame
 
 
@@ -40,9 +43,12 @@ class DatasetIngestor:
             qilt_employment=self._load_qilt_employment(),
             qilt_salary=self._load_qilt_salary(),
             eurostat=self._load_eurostat(),
+            eurostat_salary=self._load_eurostat_salary(),
             bls_employment=self._load_bls_employment(),
             oflc=self._load_oflc(),
             nirf=self._load_nirf(),
+            statscan_placement=self._load_statscan_placement(),
+            statscan_salary=self._load_statscan_salary(),
             world_bank=self._load_world_bank(),
         )
 
@@ -166,6 +172,10 @@ class DatasetIngestor:
         path = self.raw_dir / "bls" / "bls_us_employment_proxy.csv"
         return pd.read_csv(path) if path.exists() else pd.DataFrame()
 
+    def _load_eurostat_salary(self) -> pd.DataFrame:
+        path = self.raw_dir / "eurostat_salary" / "germany_salary_bands.csv"
+        return pd.read_csv(path) if path.exists() else pd.DataFrame()
+
     def _load_oflc(self) -> pd.DataFrame:
         oflc_dir = self.raw_dir / "oflc"
         xlsx_files = sorted(oflc_dir.glob("*.xlsx"))
@@ -258,6 +268,17 @@ class DatasetIngestor:
                                 }
                             )
         return pd.DataFrame(records)
+
+    def _load_statscan_placement(self) -> pd.DataFrame:
+        statscan_dir = self.raw_dir / "statscan"
+        ngs_path = statscan_dir / "canada_placement_ngs.csv"
+        oecd_path = statscan_dir / "canada_placement_oecd_eag.csv"
+        chosen = ngs_path if ngs_path.exists() else oecd_path
+        return pd.read_csv(chosen) if chosen.exists() else pd.DataFrame()
+
+    def _load_statscan_salary(self) -> pd.DataFrame:
+        path = self.raw_dir / "statscan" / "canada_salary_ngs.csv"
+        return pd.read_csv(path) if path.exists() else pd.DataFrame()
 
     def _safe_int(self, value: str) -> int | None:
         cleaned = value.replace(",", "").strip()

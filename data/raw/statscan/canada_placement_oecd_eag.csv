@@ -1,0 +1,17 @@
+program_family,country,employment_rate,source
+computer_science,Canada,0.88,OECD_EAG_2023_Canada
+engineering,Canada,0.88,OECD_EAG_2023_Canada
+business,Canada,0.85,OECD_EAG_2023_Canada
+healthcare,Canada,0.91,OECD_EAG_2023_Canada
+biological_sciences,Canada,0.79,OECD_EAG_2023_Canada
+social_sciences,Canada,0.79,OECD_EAG_2023_Canada
+humanities,Canada,0.72,OECD_EAG_2023_Canada
+education,Canada,0.83,OECD_EAG_2023_Canada
+law,Canada,0.85,OECD_EAG_2023_Canada
+mathematics,Canada,0.88,OECD_EAG_2023_Canada
+architecture,Canada,0.82,OECD_EAG_2023_Canada
+creative_arts,Canada,0.72,OECD_EAG_2023_Canada
+environmental_sciences,Canada,0.8,OECD_EAG_2023_Canada
+agriculture,Canada,0.78,OECD_EAG_2023_Canada
+communications,Canada,0.72,OECD_EAG_2023_Canada
+general_studies,Canada,0.81,OECD_EAG_2023_Canada
