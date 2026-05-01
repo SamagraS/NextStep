@@ -22,6 +22,7 @@ class RawDatasetBundle:
     qilt_employment: pd.DataFrame
     qilt_salary: pd.DataFrame
     eurostat: pd.DataFrame
+    bls_employment: pd.DataFrame
     oflc: pd.DataFrame
     nirf: pd.DataFrame
     world_bank: pd.DataFrame
@@ -39,10 +40,45 @@ class DatasetIngestor:
             qilt_employment=self._load_qilt_employment(),
             qilt_salary=self._load_qilt_salary(),
             eurostat=self._load_eurostat(),
+            bls_employment=self._load_bls_employment(),
             oflc=self._load_oflc(),
             nirf=self._load_nirf(),
             world_bank=self._load_world_bank(),
         )
+
+    def load_placement_sources(self) -> list[pd.DataFrame]:
+        frames: list[pd.DataFrame] = []
+        eurostat_full_path = self.raw_dir / "eurostat" / "eurostat_employment_full.csv"
+        if eurostat_full_path.exists():
+            frames.append(pd.read_csv(eurostat_full_path))
+        else:
+            eurostat_dir = self.raw_dir / "eurostat"
+            for path in sorted(eurostat_dir.glob("*.json")):
+                payload = json.loads(path.read_text(encoding="utf-8"))
+                time_labels = payload["dimension"]["time"]["category"]["label"]
+                geo_labels = payload["dimension"]["geo"]["category"]["label"]
+                for geo_code, geo_name in geo_labels.items():
+                    for idx, year in enumerate(time_labels.keys()):
+                        value = payload.get("value", {}).get(str(idx))
+                        if value is None:
+                            continue
+                        frames.append(
+                            pd.DataFrame(
+                                [
+                                    {
+                                        "country": geo_name,
+                                        "geo_code": geo_code,
+                                        "year": int(year),
+                                        "employment_rate": float(value) / 100.0,
+                                        "dataset": payload.get("extension", {}).get("id", "EDAT_LFSE_24"),
+                                    }
+                                ]
+                            )
+                        )
+        bls_path = self.raw_dir / "bls" / "bls_us_employment_proxy.csv"
+        if bls_path.exists():
+            frames.append(pd.read_csv(bls_path))
+        return frames
 
     def _raw_path(self, folder: str, filename: str) -> Path:
         preferred = self.raw_dir / folder / filename
@@ -51,7 +87,13 @@ class DatasetIngestor:
         legacy = self.data_dir / folder / filename
         return legacy
 
-    def _read_csv_after_marker(self, path: Path, marker: str, encoding: str = "utf-8-sig") -> pd.DataFrame:
+    def _read_csv_after_marker(
+        self,
+        path: Path,
+        marker: str,
+        encoding: str = "utf-8-sig",
+        na_values: list[str] | None = None,
+    ) -> pd.DataFrame:
         if not path.exists():
             return pd.DataFrame()
 
@@ -61,16 +103,24 @@ class DatasetIngestor:
             if marker in row:
                 start = index
                 break
-        return pd.read_csv(path, skiprows=start)
+        return pd.read_csv(path, skiprows=start, na_values=na_values)
 
     def _load_hesa_subject(self) -> pd.DataFrame:
         path = self._raw_path("hesa", "sb272-figure-10.csv")
-        frame = self._read_csv_after_marker(path, '"Subject area of degree"')
+        frame = self._read_csv_after_marker(
+            path,
+            '"Subject area of degree"',
+            na_values=["*", "N/A", "n/a", "na", "-", "...", "c", "x"],
+        )
         return frame.dropna(how="all")
 
     def _load_hesa_salary(self) -> pd.DataFrame:
         path = self._raw_path("hesa", "sb272-figure-13.csv")
-        frame = self._read_csv_after_marker(path, '"Salary band"')
+        frame = self._read_csv_after_marker(
+            path,
+            '"Salary band"',
+            na_values=["*", "N/A", "n/a", "na", "-", "...", "c", "x"],
+        )
         return frame.dropna(how="all")
 
     def _load_qilt_employment(self) -> pd.DataFrame:
@@ -86,6 +136,9 @@ class DatasetIngestor:
         return pd.read_csv(path) if path.exists() else pd.DataFrame()
 
     def _load_eurostat(self) -> pd.DataFrame:
+        full_csv = self.raw_dir / "eurostat" / "eurostat_employment_full.csv"
+        if full_csv.exists():
+            return pd.read_csv(full_csv)
         eurostat_dir = self.raw_dir / "eurostat"
         records: list[dict[str, object]] = []
         for path in sorted(eurostat_dir.glob("*.json")):
@@ -93,10 +146,8 @@ class DatasetIngestor:
             time_labels = payload["dimension"]["time"]["category"]["label"]
             geo_labels = payload["dimension"]["geo"]["category"]["label"]
             for geo_code, geo_name in geo_labels.items():
-                times = list(time_labels.keys())
                 values = payload.get("value", {})
-                size_time = len(times)
-                for idx, year in enumerate(times):
+                for idx, year in enumerate(time_labels.keys()):
                     value = values.get(str(idx))
                     if value is None:
                         continue
@@ -110,6 +161,10 @@ class DatasetIngestor:
                         }
                     )
         return pd.DataFrame(records)
+
+    def _load_bls_employment(self) -> pd.DataFrame:
+        path = self.raw_dir / "bls" / "bls_us_employment_proxy.csv"
+        return pd.read_csv(path) if path.exists() else pd.DataFrame()
 
     def _load_oflc(self) -> pd.DataFrame:
         oflc_dir = self.raw_dir / "oflc"
@@ -136,6 +191,29 @@ class DatasetIngestor:
         return pd.DataFrame()
 
     def _load_nirf(self) -> pd.DataFrame:
+        aggregated_path = self.raw_dir / "nirf" / "nirf_aggregated.csv"
+        if aggregated_path.exists():
+            frame = pd.read_csv(aggregated_path)
+            if frame.empty:
+                return frame
+            return frame.assign(
+                country="India",
+                program_family="engineering",
+                salary_median_lpa=lambda df: df["median_salary_inr"] / 100000.0,
+                employment_rate=lambda df: df["placement_rate"],
+                source_file="nirf_aggregated.csv",
+            )[
+                [
+                    "country",
+                    "program_family",
+                    "institution_tier",
+                    "salary_median_lpa",
+                    "employment_rate",
+                    "source_file",
+                    "year",
+                    "n_institutions",
+                ]
+            ]
         if pdfplumber is None:
             return pd.DataFrame()
 

@@ -2,12 +2,16 @@ from __future__ import annotations
 
 import math
 import re
+import warnings
 from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
 
 from app.outcomes.mapping import TaxonomyMapper
+
+# Suppress numpy RuntimeWarnings from internal nanmean operations on edge cases
+warnings.filterwarnings("ignore", category=RuntimeWarning, module="numpy.lib._nanfunctions_impl")
 
 
 @dataclass(frozen=True)
@@ -23,23 +27,30 @@ class DatasetPreprocessor:
         self.mapper = mapper
 
     def standardize(self, raw) -> StandardizedDatasetBundle:
-        placement = pd.concat(
-            [
-                self._standardize_hesa(raw.hesa_subject),
-                self._standardize_qilt_employment(raw.qilt_employment),
-                self._standardize_eurostat(raw.eurostat),
-                self._standardize_nirf_placement(raw.nirf),
-            ],
-            ignore_index=True,
-        )
-        salary = pd.concat(
-            [
-                self._standardize_qilt_salary(raw.qilt_salary),
-                self._standardize_hesa_salary(raw.hesa_salary),
-                self._standardize_nirf_salary(raw.nirf),
-            ],
-            ignore_index=True,
-        )
+        placement_frames = [
+            self._standardize_hesa(raw.hesa_subject),
+            self._standardize_qilt_employment(raw.qilt_employment),
+            self._standardize_eurostat(raw.eurostat),
+            self._standardize_bls(raw.bls_employment),
+            self._standardize_nirf_placement(raw.nirf),
+        ]
+        salary_frames = [
+            self._standardize_qilt_salary(raw.qilt_salary),
+            self._standardize_hesa_salary(raw.hesa_salary),
+            self._standardize_nirf_salary(raw.nirf),
+        ]
+        placement_parts = [
+            frame.dropna(how="all", axis=0).dropna(how="all", axis=1)
+            for frame in placement_frames
+        ]
+        placement_parts = [frame for frame in placement_parts if not frame.empty]
+        salary_parts = [
+            frame.dropna(how="all", axis=0).dropna(how="all", axis=1)
+            for frame in salary_frames
+        ]
+        salary_parts = [frame for frame in salary_parts if not frame.empty]
+        placement = pd.concat(placement_parts, ignore_index=True) if placement_parts else pd.DataFrame()
+        salary = pd.concat(salary_parts, ignore_index=True) if salary_parts else pd.DataFrame()
         macro = self._standardize_world_bank(raw.world_bank)
         salary_microdata = self._standardize_oflc(raw.oflc)
         return StandardizedDatasetBundle(
@@ -110,6 +121,20 @@ class DatasetPreprocessor:
     def _standardize_eurostat(self, frame: pd.DataFrame) -> pd.DataFrame:
         if frame.empty:
             return pd.DataFrame()
+        if {"program_family", "country", "employment_rate", "source"}.issubset(frame.columns):
+            working = frame.copy()
+            working["program_family"] = working["program_family"].map(self.mapper.normalize_program_family)
+            return pd.DataFrame(
+                {
+                    "source": working["source"],
+                    "country": working["country"].map(self.mapper.normalize_country),
+                    "program_family": working["program_family"],
+                    "institution_tier": 2,
+                    "employment_rate": working["employment_rate"],
+                    "unemployment_rate_source": None,
+                    "sample_size": 1.0,
+                }
+            )
         latest = frame.sort_values("year").groupby("country", as_index=False).tail(1)
         return pd.DataFrame(
             {
@@ -122,6 +147,25 @@ class DatasetPreprocessor:
                 "sample_size": 1.0,
             }
         )
+
+    def _standardize_bls(self, frame: pd.DataFrame) -> pd.DataFrame:
+        if frame.empty:
+            return pd.DataFrame()
+        rows: list[dict[str, object]] = []
+        for _, row in frame.iterrows():
+            for tier in (1, 2, 3):
+                rows.append(
+                    {
+                        "source": row.get("source", "BLS_OES_proxy"),
+                        "country": "United States",
+                        "program_family": self.mapper.normalize_program_family(str(row["program_family"])),
+                        "institution_tier": tier,
+                        "employment_rate": row["employment_rate"],
+                        "unemployment_rate_source": None,
+                        "sample_size": 1.0,
+                    }
+                )
+        return pd.DataFrame(rows)
 
     def _standardize_nirf_placement(self, frame: pd.DataFrame) -> pd.DataFrame:
         if frame.empty:
@@ -172,7 +216,10 @@ class DatasetPreprocessor:
             male = self._to_number(row.get("Male"))
             if "£" not in band and "Â£" not in band:
                 continue
-            average_share = np.nanmean([female, male]) / 100.0
+            shares = [value for value in (female, male) if value is not None and not np.isnan(value)]
+            if not shares:
+                continue
+            average_share = float(np.mean(shares)) / 100.0
             numbers = [int(part.replace(",", "")) for part in re.findall(r"(\d[\d,]*)", band)]
             if len(numbers) == 1:
                 low, high = numbers[0], numbers[0] + 5000

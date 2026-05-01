@@ -1,0 +1,11 @@
+program_family,country,employment_rate,source
+business,United States,0.5798597186341307,BLS_OES_proxy
+communications,United States,0.5529369403134914,BLS_OES_proxy
+computer_science,United States,0.92,BLS_OES_proxy
+education,United States,0.5505794637718019,BLS_OES_proxy
+engineering,United States,0.6000815184654719,BLS_OES_proxy
+finance,United States,0.5868875741229068,BLS_OES_proxy
+general_studies,United States,0.5764671315940944,BLS_OES_proxy
+healthcare,United States,0.5675721150628456,BLS_OES_proxy
+physical_sciences,United States,0.5777201600920931,BLS_OES_proxy
+social_sciences,United States,0.55,BLS_OES_proxy

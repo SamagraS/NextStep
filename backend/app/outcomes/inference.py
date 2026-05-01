@@ -52,6 +52,15 @@ class OutcomeInferenceEngine:
             "salary_microdata_sources": ["OFLC H1B"] if not standardized.salary_microdata.empty else [],
             "macro_sources": ["World Bank"] if not standardized.macro.empty else [],
         }
+        source_manifest["salary_aggregate_sources"] = source_manifest["salary_sources"]
+        source_manifest["salary_micro_source"] = (
+            source_manifest["salary_microdata_sources"][0]
+            if source_manifest["salary_microdata_sources"]
+            else None
+        )
+        source_manifest["macro_source"] = (
+            source_manifest["macro_sources"][0] if source_manifest["macro_sources"] else None
+        )
         (self.processed_dir / "source_manifest.json").write_text(
             json.dumps(source_manifest, indent=2),
             encoding="utf-8",
@@ -210,4 +219,3 @@ class OutcomeInferenceEngine:
         if not match.empty:
             return match.iloc[0]
         return pd.Series({"country": country, "macro_factor": 1.0, "unemployment_rate": None})
-

@@ -5,3 +5,4 @@ __pycache__/
 .pytest_cache/
 backend/.env
 backend/nextstep.db
+data\raw\oflc\LCA_Disclosure_Data_FY2024_Q4.xlsx

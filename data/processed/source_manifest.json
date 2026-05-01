@@ -1,6 +1,7 @@
 {
   "placement_sources": [
-    "Eurostat",
+    "BLS_OES_proxy",
+    "Eurostat_edat_lfse_24",
     "HESA",
     "NIRF",
     "QILT"
@@ -15,5 +16,12 @@
   ],
   "macro_sources": [
     "World Bank"
-  ]
+  ],
+  "salary_aggregate_sources": [
+    "HESA",
+    "NIRF",
+    "QILT"
+  ],
+  "salary_micro_source": "OFLC H1B",
+  "macro_source": "World Bank"
 }
