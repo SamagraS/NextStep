@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     app_version: str = "0.1.0"
     api_v1_prefix: str = "/api/v1"
     database_url: str = "backend/nextstep.db"
-    artifacts_dir: Path = Field(default_factory=lambda: Path("artifacts"))
+    artifacts_dir: Path = Field(default_factory=lambda: Path("backend/artifacts"))
     data_dir: Path = Field(default_factory=lambda: Path("data"))
     processed_data_dir: Path = Field(default_factory=lambda: Path("data/processed"))
     mappings_dir: Path = Field(default_factory=lambda: Path("data/mappings"))

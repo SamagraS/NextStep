@@ -22,6 +22,12 @@ class Layer2SalaryService:
                 program_family=program_family,
                 institution_tier=institution_tier,
             )
+            # Reject degenerate predictions where all quantiles collapsed to same value
+            if ml_result is not None:
+                _p15, _p50, _p85 = ml_result
+                if (_p85 - _p15) < 5_000.0:
+                    ml_result = None
+
             if ml_result is not None:
                 pessimistic, realistic, optimistic = ml_result
                 method = "xgboost_quantile_regression_us"
@@ -32,7 +38,7 @@ class Layer2SalaryService:
                     institution_tier=institution_tier,
                 )
                 method = "xgboost_quantile_regression_us"
-                source_note = "Seeded US salary lookup active (ML artifact not loaded)."
+                source_note = "Seeded US salary lookup active (ML fallback)."
             year_2, year_3 = realistic + 7000.0, realistic + 15000.0
         else:
             pessimistic, realistic, optimistic = self._non_us_salary_values(

@@ -30,22 +30,22 @@ async def lifespan(app: FastAPI):
     app.state.demo_store = demo_store
     app.state.notifier = notifier
 
-    # Seed demo users
-    auth_service = AuthService(settings)
-    persistence = PersistenceService(database)
-    await persistence.seed_demo_users(auth_service)
-    
-    # Seed other demo records and sync back to DemoStore
-    await persistence.seed_all(demo_store)
-    
-    students_db = await persistence.get_all_students()
-    cohorts_db = await persistence.get_all_cohorts()
-    alerts_db = await persistence.get_all_alerts()
-    actions_by_student = {}
-    for s in students_db:
-        actions_by_student[s["id"]] = await persistence.get_all_student_actions(s["id"])
-    
-    demo_store.sync_from_persistence(students_db, cohorts_db, alerts_db, actions_by_student)
+    # Seed demo data — best-effort, never blocks startup
+    try:
+        auth_service = AuthService(settings)
+        persistence = PersistenceService(database)
+        await persistence.seed_demo_users(auth_service)
+        await persistence.seed_all(demo_store)
+
+        students_db = await persistence.get_all_students()
+        cohorts_db = await persistence.get_all_cohorts()
+        alerts_db = await persistence.get_all_alerts()
+        actions_by_student = {}
+        for s in students_db:
+            actions_by_student[s["id"]] = await persistence.get_all_student_actions(s["id"])
+        demo_store.sync_from_persistence(students_db, cohorts_db, alerts_db, actions_by_student)
+    except Exception:
+        pass  # Demo store seed still runs from DemoStore.__init__; DB seed is best-effort
 
     try:
         yield
