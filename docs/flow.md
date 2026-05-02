@@ -11,6 +11,14 @@ This document explains how the backend modules work together today.
 5. Runtime helpers such as the demo store and notifier are attached to `app.state`.
 6. `backend/app/api/router.py` mounts the API routes under `/api/v1`.
 
+## Authentication Flow
+
+1. Requests hit `backend/app/api/routes/auth.py`.
+2. The route uses `backend/app/services/persistence.py` to load the user by email.
+3. `backend/app/services/auth.py` verifies the password and creates the access token.
+4. The demo store resolves the display name for student accounts.
+5. The response is shaped by `backend/app/schemas/auth.py`.
+
 ## API Request Flow
 
 ### Health
@@ -28,6 +36,14 @@ This document explains how the backend modules work together today.
 5. `backend/app/services/demo_store.py` stores demo state.
 6. `backend/app/services/notifier.py` publishes or records score updates.
 7. The response model is shaped by `backend/app/schemas/score.py` and shared schema types.
+
+### Portfolio Views
+
+1. Requests hit `backend/app/api/routes/portfolio.py`.
+2. `backend/app/services/portfolio_monitor.py` collects the dashboard, cohort, and alert state.
+3. `backend/app/services/persistence.py` supplies stored demo and alert history.
+4. `GET /api/v1/portfolio/dashboard`, `GET /api/v1/portfolio/cohorts`, and `GET /api/v1/portfolio/alerts` are handled here.
+5. The response is validated by `backend/app/schemas/portfolio.py`.
 
 ### Student Dashboard
 
@@ -50,6 +66,12 @@ This document explains how the backend modules work together today.
 3. `backend/app/outcomes/inference.py` selects placement, salary, and macro rows.
 4. `backend/app/outcomes/mapping.py` is used to normalize program-family and country inputs.
 5. The response is composed with `backend/app/schemas/outcomes.py`.
+
+### Health
+
+1. Requests hit `backend/app/api/routes/health.py`.
+2. The route reads database and artifact status from `app.state`.
+3. The response reports the health of the app, database, and loaded artifacts.
 
 ## Outcomes Rebuild Flow
 

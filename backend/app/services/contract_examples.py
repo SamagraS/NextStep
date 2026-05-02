@@ -10,6 +10,12 @@ from app.schemas.common import (
     Tier,
     UniversityMatchStatus,
 )
+from app.schemas.auth import Token
+from app.schemas.portfolio import (
+    CohortAlert,
+    CohortRow,
+    PortfolioDashboardResponse,
+)
 from app.schemas.score import (
     DelayedPlacementRisk,
     EmployerMatch,
@@ -285,4 +291,54 @@ def build_placeholder_student_dashboard(student_id: str) -> StudentDashboardResp
                 visa_approval_rate=0.94,
             ),
         ],
+    )
+
+
+def build_placeholder_login_response() -> Token:
+    return Token(
+        access_token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+        token_type="bearer",
+        role="student",
+        full_name="Priya Sharma",
+    )
+
+
+def build_placeholder_cohort_list() -> list[CohortRow]:
+    return [
+        CohortRow(
+            cohort_id="cohort-us-cs",
+            program_name="MS Computer Science",
+            destination_country="United States",
+            cohort_size=43,
+            baseline_score=72,
+            current_score=68,
+            delta=-4.0,
+            severity="AMBER",
+            triggered_at=MOCK_TIMESTAMP,
+            primary_macro_driver="US tech hiring momentum softened.",
+        )
+    ]
+
+
+def build_placeholder_alert_list() -> list[CohortAlert]:
+    return [
+        CohortAlert(
+            cohort_id="cohort-us-cs",
+            severity="AMBER",
+            delta=-4.0,
+            primary_macro_driver="US tech hiring momentum softened.",
+            recommended_action="Rule-based: review employability support actions for this cohort.",
+            macro_snapshot_ts=MOCK_TIMESTAMP,
+            triggered_at=MOCK_TIMESTAMP,
+        )
+    ]
+
+
+def build_placeholder_portfolio_dashboard() -> PortfolioDashboardResponse:
+    return PortfolioDashboardResponse(
+        total_active_cohorts=3,
+        amber_count=1,
+        red_count=1,
+        cohorts=build_placeholder_cohort_list(),
+        latest_alerts=build_placeholder_alert_list(),
     )

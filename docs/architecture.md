@@ -9,6 +9,9 @@ Creates the FastAPI application, wires the startup and shutdown lifecycle, loads
 
 ## API Layer
 
+### `backend/app/api/routes/auth.py`
+Handles demo login by verifying credentials, resolving the display name for the authenticated user, and returning a signed token response.
+
 ### `backend/app/api/router.py`
 Builds the top-level API router and mounts the functional route groups under `/api/v1`.
 
@@ -22,7 +25,7 @@ Handles origination scoring requests, latest-score lookup, and streaming score u
 Serves student dashboard data and action-completion endpoints.
 
 ### `backend/app/api/routes/portfolio.py`
-Supports portfolio-level rescore operations.
+Supports portfolio dashboard, cohort, alert, and rescore operations.
 
 ### `backend/app/api/routes/outcomes.py`
 Exposes the outcomes prediction endpoint used for placement, salary, and risk forecasting.
@@ -39,6 +42,14 @@ Owns SQLite connection setup, initialization, and shutdown behavior for the loca
 
 ### `backend/app/db/schema.py`
 Defines the database schema and table creation helpers used during startup.
+
+## Authentication and Persistence
+
+### `backend/app/services/auth.py`
+Creates and verifies demo access tokens used by the login route.
+
+### `backend/app/services/persistence.py`
+Reads and writes user, demo, and portfolio state against the SQLite-backed store.
 
 ## Domain Models
 
@@ -103,6 +114,11 @@ Builds the student dashboard view model from demo and scoring state.
 ### `backend/app/services/student_engagement.py`
 Tracks student engagement signals and action-completion state.
 
+## Testing
+
+### `backend/tests/`
+Contains the current pytest coverage for auth, health, scoring, student, and portfolio flows.
+
 ## Shared Schemas
 
 ### `backend/app/schemas/common.py`
@@ -144,3 +160,9 @@ Fetches or prepares the full Eurostat employment source data.
 
 ### `backend/scripts/fetch_nirf_batch.py`
 Fetches or prepares NIRF batch inputs.
+
+## Additional Docs
+
+- [docs/api_contract.md](api_contract.md)
+- [docs/flow.md](flow.md)
+- [docs/runbook.md](runbook.md)

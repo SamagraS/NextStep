@@ -7,8 +7,10 @@ from app.api.routes import health
 from app.core.config import get_settings
 from app.db.database import Database
 from app.services.artifact_loader import ArtifactRegistry
+from app.services.auth import AuthService
 from app.services.demo_store import DemoStore
 from app.services.notifier import DemoNotifier
+from app.services.persistence import PersistenceService
 
 
 @asynccontextmanager
@@ -27,6 +29,23 @@ async def lifespan(app: FastAPI):
     app.state.artifacts = artifacts
     app.state.demo_store = demo_store
     app.state.notifier = notifier
+
+    # Seed demo users
+    auth_service = AuthService(settings)
+    persistence = PersistenceService(database)
+    await persistence.seed_demo_users(auth_service)
+    
+    # Seed other demo records and sync back to DemoStore
+    await persistence.seed_all(demo_store)
+    
+    students_db = await persistence.get_all_students()
+    cohorts_db = await persistence.get_all_cohorts()
+    alerts_db = await persistence.get_all_alerts()
+    actions_by_student = {}
+    for s in students_db:
+        actions_by_student[s["id"]] = await persistence.get_all_student_actions(s["id"])
+    
+    demo_store.sync_from_persistence(students_db, cohorts_db, alerts_db, actions_by_student)
 
     try:
         yield

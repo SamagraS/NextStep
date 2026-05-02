@@ -14,6 +14,11 @@ class Settings(BaseSettings):
     data_dir: Path = Field(default_factory=lambda: Path("data"))
     processed_data_dir: Path = Field(default_factory=lambda: Path("data/processed"))
     mappings_dir: Path = Field(default_factory=lambda: Path("data/mappings"))
+    
+    # Auth settings
+    secret_key: str = "demo-secret-key-change-this-in-production"
+    algorithm: str = "HS256"
+    access_token_expire_minutes: int = 60 * 24  # 1 day
 
     model_config = SettingsConfigDict(
         env_file="backend/.env",

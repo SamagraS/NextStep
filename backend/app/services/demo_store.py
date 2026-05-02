@@ -173,6 +173,82 @@ class DemoStore:
             ],
         )
 
+        self.students["student-aravind"] = DemoStudentState(
+            student_id="student-aravind",
+            full_name="Aravind Nair",
+            destination_country="Australia",
+            program_family="computer_science",
+            macro_summary="Engineering demand in Australia remains STABLE with moderate growth in regional hubs.",
+            readiness_base_score=62,
+            preloan_actions=[
+                DemoPreloanAction(
+                    title="Civil Engineering Basics",
+                    action_type="skill_certification",
+                    total_active_seconds=8 * 3600,
+                    days_spread=5,
+                    return_visits=6,
+                    certificate_uploaded=True,
+                ),
+                DemoPreloanAction(
+                    title="Resume Review",
+                    action_type="resume_improvement",
+                    total_active_seconds=int(1.2 * 3600),
+                    days_spread=2,
+                    return_visits=2,
+                    certificate_uploaded=False,
+                ),
+            ],
+            dashboard_actions=[
+                DemoDashboardAction(
+                    action_id="action-aravind-1",
+                    action_type="networking_outreach",
+                    title="Australian Industry Networking",
+                    rationale="Networking in Australia is critical for international graduates.",
+                    assigned_at=MOCK_SNAPSHOT_TS,
+                    expected_effort_hours=5,
+                    total_active_seconds=0,
+                    return_visits=0,
+                    certificate_uploaded=False,
+                    status="assigned",
+                    readiness_score_delta=3,
+                ),
+            ],
+        )
+
+        self.students["student-sarah"] = DemoStudentState(
+            student_id="student-sarah",
+            full_name="Sarah Jenkins",
+            destination_country="United Kingdom",
+            program_family="business",
+            macro_summary="UK financial services demand is MODERATE. Strong alumni connections are advantageous.",
+            readiness_base_score=71,
+            preloan_actions=[
+                DemoPreloanAction(
+                    title="Financial Analysis Prep",
+                    action_type="skill_certification",
+                    total_active_seconds=20 * 3600,
+                    days_spread=12,
+                    return_visits=15,
+                    certificate_uploaded=True,
+                ),
+            ],
+            dashboard_actions=[
+                DemoDashboardAction(
+                    action_id="action-sarah-1",
+                    action_type="mock_interview",
+                    title="Investment Banking Mock Interview",
+                    rationale="High-stakes interviews require specialized preparation.",
+                    assigned_at=MOCK_SNAPSHOT_TS,
+                    expected_effort_hours=3,
+                    total_active_seconds=0,
+                    return_visits=0,
+                    certificate_uploaded=False,
+                    status="assigned",
+                    readiness_score_delta=4,
+                ),
+            ],
+        )
+
         self.cohorts["cohort-us-cs"] = DemoCohortState(
             cohort_id="cohort-us-cs",
             program_name="MS Computer Science",
@@ -364,3 +440,69 @@ class DemoStore:
             application.response.reliability.behavioral_engagement,
             application.scored_at,
         )
+
+    def sync_from_persistence(
+        self,
+        students: list[dict],
+        cohorts: list[dict],
+        alerts: list[dict],
+        actions_by_student: dict[str, list[dict]],
+    ) -> None:
+        """
+        Synchronize the in-memory store with database records.
+        """
+        # Load students
+        for s in students:
+            sid = s["id"]
+            # Preserve existing demo metadata (summary/score) if already in memory
+            existing = self.students.get(sid)
+            self.students[sid] = DemoStudentState(
+                student_id=sid,
+                full_name=s["full_name"],
+                destination_country=s["destination_country"],
+                program_family=s["program_family"] or (existing.program_family if existing else "general"),
+                macro_summary=existing.macro_summary if existing else "Market data loaded from database.",
+                readiness_base_score=existing.readiness_base_score if existing else 67,
+                preloan_actions=existing.preloan_actions if existing else [],
+                dashboard_actions=[
+                    DemoDashboardAction(
+                        action_id=a["id"],
+                        action_type=a["action_type"],
+                        title=a["title"],
+                        rationale="Loaded from persistence.",
+                        assigned_at=a["assigned_at"],
+                        expected_effort_hours=a["expected_effort_hours"],
+                        total_active_seconds=a["total_active_seconds"],
+                        return_visits=a["return_visits"],
+                        certificate_uploaded=a["certificate_uploaded"],
+                        status=a["status"],
+                        completed_at=a["completed_at"],
+                        readiness_score_delta=3 if a["action_type"] == "skill_certification" else 2,
+                    )
+                    for a in actions_by_student.get(sid, [])
+                ] or (existing.dashboard_actions if existing else [])
+            )
+
+        # Load cohorts
+        for c in cohorts:
+            self.cohorts[c["id"]] = DemoCohortState(
+                cohort_id=c["id"],
+                program_name=c["program_name"],
+                destination_country=c["destination_country"],
+                cohort_size=c["cohort_size"],
+                baseline_score=c["baseline_score"],
+                current_score=c["current_score"],
+            )
+
+        # Load alerts
+        for a in alerts:
+            self.cohort_alerts[a["id"]] = DemoCohortAlert(
+                alert_id=a["id"],
+                cohort_id=a["cohort_id"],
+                severity=a["severity"],
+                delta=a["delta"],
+                primary_macro_driver=a["primary_macro_driver"],
+                recommended_action=a["recommended_action"],
+                macro_snapshot_ts=a["macro_snapshot_ts"],
+                created_at=a["created_at"],
+            )
