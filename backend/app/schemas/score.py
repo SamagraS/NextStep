@@ -123,6 +123,7 @@ class Reliability(StrictSchema):
 class NextBestAction(StrictSchema):
     rank: int = Field(ge=1)
     action_type: str
+    title: str
     rationale: str
     recommendation_confidence: RecommendationConfidence
     ucb_raw: float

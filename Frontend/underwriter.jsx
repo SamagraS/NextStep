@@ -8,10 +8,10 @@ import { useState, useEffect, useRef } from "react";
 
 const UW_CSS = `
 /* ── Page shell ─────────────────────────────── */
-.uw-page { background:transparent; min-height:calc(100vh - 56px); }
+.uw-page { background:transparent; min-height:calc(100vh - 60px); }
 .uw-wrap {
   display:grid; grid-template-columns: 100% 0%;
-  min-height:calc(100vh - 56px);
+  min-height:calc(100vh - 60px);
   align-items:start;
   transition: grid-template-columns 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -24,10 +24,11 @@ const UW_CSS = `
   background:rgba(244,245,251,0.85);
   backdrop-filter: blur(12px);
   border-right:1px solid rgba(0,0,0,0.07);
-  padding:28px 28px 60px;
-  position:sticky; top:56px;
-  height:calc(100vh - 56px);
+  padding:32px 40px;
+  position:sticky; top:60px;
+  height:calc(100vh - 60px);
   overflow-y:auto;
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .uw-left-inner {
   max-width: 580px;
@@ -36,6 +37,7 @@ const UW_CSS = `
 }
 .uw-right {
   padding:28px 32px 60px;
+  height: calc(100vh - 60px);
   overflow-y:auto;
   overflow-x:hidden;
   opacity: 0;
@@ -400,9 +402,9 @@ const MOCK = {
     repayment_score: { score: 71, tier: "GREEN", base_score_without_behavioral: 68, behavioral_boost_points: 3, employability_sub: 0.64, affordability_sub: 0.81, market_risk_sub: 0.74, data_confidence_sub: 0.88 },
     reliability: { band: "HIGH", behavioral_engagement: "HIGH", tenacity_score: 0.79, tenacity_data_count: 3, university_match_score: 97 },
     next_best_action: [
-        { rank: 1, action_type: "skill_certification", label: "AWS Cloud Associate", rationale: "Students at UT Austin MS CS who completed this certification saw 8% better placement within 6 months. High confidence from 312 profiles.", recommendation_confidence: "high" },
-        { rank: 2, action_type: "portfolio_project", label: "Build Portfolio Project", rationale: "Portfolio work improves employer engagement rate 23% for cloud and software engineering roles in the US market.", recommendation_confidence: "medium" },
-        { rank: 3, action_type: "mock_interview", label: "Mock Interview Practice", rationale: "Technical interview practice shows positive outcomes for this profile type. Still learning optimal timing.", recommendation_confidence: "exploratory" },
+        { rank: 1, action_type: "skill_certification", title: "Role-aligned Certification", rationale: "Students at UT Austin MS CS who completed this certification saw 8% better placement within 6 months. High confidence from 312 profiles.", recommendation_confidence: "high" },
+        { rank: 2, action_type: "portfolio_project", title: "Build a Portfolio Project", rationale: "Portfolio work improves employer engagement rate 23% for cloud and software engineering roles in the US market.", recommendation_confidence: "medium" },
+        { rank: 3, action_type: "mock_interview", title: "Interview Practice", rationale: "Technical interview practice shows positive outcomes for this profile type. Still learning optimal timing.", recommendation_confidence: "exploratory" },
     ],
     employer_match_list: [
         { employer: "Infosys BPM Ltd", median_salary_usd: 89000, annual_h1b_filings: 420, visa_approval_rate: 0.91 },
@@ -685,7 +687,7 @@ function ExplanationBlock({ data, show }) {
                             )
                     )}
                     <div className="wf-result" style={{ animationDelay: show ? "360ms" : "999ms", animation: `fade-up .4s ease both ${show ? "360ms" : "999ms"}`, opacity: 0 }}>
-                        <div className="wf-val">0.63</div>
+                        <div className="wf-val">{(attr.base_rate * attr.strength_multiplier * attr.macro_adjustment).toFixed(2)}</div>
                         <div className="wf-lbl" style={{ marginTop: 4 }}>Final Prob.</div>
                     </div>
                 </div>
@@ -713,6 +715,7 @@ function ActionCards({ actions, onAssign, delay = 0 }) {
         setAssigned(p => ({ ...p, [rank]: true }));
         onAssign?.(rank);
     };
+
     return (
         <div className="action-cards">
             {actions.map((a, i) => {
@@ -722,7 +725,7 @@ function ActionCards({ actions, onAssign, delay = 0 }) {
                     <div key={i} className={`action-card ${ci.cls}`}
                         style={{ animationDelay: `${delay + i * 80}ms` }}>
                         <div style={{ fontSize: 22, marginBottom: 8 }}>{ACTION_ICON[a.action_type] || "📋"}</div>
-                        <div className="action-name">{a.label}</div>
+                        <div className="action-name">{a.title || a.label}</div>
                         <div className="action-rationale">{a.rationale}</div>
                         <div className="action-footer">
                             <div className="conf-label" style={{ color: ci.color }}>{ci.label}</div>
@@ -778,8 +781,15 @@ function EmployerTable({ employers, delay = 0 }) {
 }
 
 // ── PRE-LOAN PANEL ────────────────────────────────────────────────────────────
-function PreLoanPanel() {
-    const levelColor = { HIGH: "#D97706", GOOD: "#059669", FAIR: "#64748B" };
+function PreLoanPanel({ data }) {
+    if (!data) return (
+        <div className="preloan sk" style={{ height: 160, marginBottom: 20, opacity: 0.5 }} />
+    );
+
+    const actions = data.completed_actions || [];
+    const tenacity = data.tenacity_summary?.tenacity_score || 0;
+    const engagement = data.tenacity_summary?.behavioral_engagement || "NONE";
+
     return (
         <div className="preloan">
             <div className="preloan-hdr">
@@ -787,29 +797,29 @@ function PreLoanPanel() {
                     <div style={{ fontFamily: "var(--fd)", fontSize: 9, fontWeight: 800, letterSpacing: ".12em", textTransform: "uppercase", color: "#B45309", marginBottom: 3 }}>
                         Pre-Loan Behavioral Engagement
                     </div>
-                    <div style={{ fontFamily: "var(--fd)", fontSize: 13, fontWeight: 700, color: "#0F172A" }}>Priya Sharma · 3 actions completed</div>
+                    <div style={{ fontFamily: "var(--fd)", fontSize: 13, fontWeight: 700, color: "#0F172A" }}>Priya Sharma · {actions.length} actions completed</div>
                 </div>
                 <div style={{ textAlign: "right" }}>
-                    <div style={{ fontFamily: "var(--fd)", fontSize: 22, fontWeight: 800, color: "#D97706", letterSpacing: "-.04em" }}>0.79</div>
+                    <div style={{ fontFamily: "var(--fd)", fontSize: 22, fontWeight: 800, color: "#D97706", letterSpacing: "-.04em" }}>{tenacity.toFixed(2)}</div>
                     <div style={{ fontFamily: "var(--fd)", fontSize: 9, fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", color: "#B45309" }}>Tenacity</div>
                 </div>
             </div>
-            {PRE_ACTIONS.map((a, i) => (
+            {actions.map((a, i) => (
                 <div key={i} className="preloan-row" style={{ animationDelay: `${.3 + i * .12}s` }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 5 }}>
                         <div>
-                            <span style={{ fontFamily: "var(--fd)", fontSize: 12, fontWeight: 700, color: "#0F172A" }}>{a.label}</span>
-                            {a.cert && <span style={{ marginLeft: 6, fontSize: 10 }}>📄</span>}
+                            <span style={{ fontFamily: "var(--fd)", fontSize: 12, fontWeight: 700, color: "#0F172A" }}>{a.title}</span>
+                            {a.certificate_uploaded && <span style={{ marginLeft: 6, fontSize: 10 }}>📄</span>}
                             <div style={{ fontSize: 11, color: "#94A3B8", marginTop: 2 }}>
-                                {a.hours}h active · {a.days} days · {a.visits} visits
+                                {a.expected_effort_hours}h active · {a.return_visits} visits
                             </div>
                         </div>
-                        <div style={{ fontFamily: "var(--fd)", fontSize: 11, fontWeight: 800, letterSpacing: ".06em", textTransform: "uppercase", color: levelColor[a.level] || "#64748B" }}>
-                            {a.level}
+                        <div style={{ fontFamily: "var(--fd)", fontSize: 11, fontWeight: 800, letterSpacing: ".06em", textTransform: "uppercase", color: "#059669" }}>
+                            {engagement}
                         </div>
                     </div>
                     <div className="eng-bar-track">
-                        <div className="eng-bar-fill" style={{ width: `${a.pct}%`, background: `linear-gradient(90deg,#F59E0B,${a.pct > 80 ? "#D97706" : "#F59E0B"})`, animationDelay: `${.4 + i * .12}s` }} />
+                        <div className="eng-bar-fill" style={{ width: `${Math.min(100, (a.total_active_seconds / (Math.max(1, a.expected_effort_hours) * 3600) * 100))}%`, background: `linear-gradient(90deg,#F59E0B, #D97706)`, animationDelay: `${.4 + i * .12}s` }} />
                     </div>
                 </div>
             ))}
@@ -1043,21 +1053,66 @@ function ApplicationForm({ onScore, loading }) {
 // ── UNDERWRITER CONSOLE ───────────────────────────────────────────────────────
 export default function UnderwriterConsole() {
     const [loading, setLoading] = useState(false);
+    const [studentDashboard, setStudentDashboard] = useState(null);
     const [scored, setScored] = useState(false);
     const [result, setResult] = useState(null);
     const rightRef = useRef(null);
 
-    const handleScore = () => {
+    useEffect(() => {
+        fetch("http://localhost:8000/api/v1/student/dashboard/student-priya")
+            .then(res => res.json())
+            .then(data => setStudentDashboard(data))
+            .catch(err => console.error("Failed to fetch student dashboard:", err));
+    }, []);
+
+    const handleScore = async (form) => {
         setLoading(true);
         setScored(false);
         setResult(null);
-        setTimeout(() => {
+
+        try {
+            const payload = {
+                student_id: form.studentName === "Priya Sharma" ? "student-priya" : null,
+                full_name: form.studentName,
+                university_name: form.university,
+                program_name: form.program,
+                destination_country: form.country,
+                target_sector: form.sector,
+                cgpa: parseFloat(form.gpa) || 8.0,
+                cgpa_present: true,
+                internship_count: parseInt(form.interns) || 0,
+                internship_count_present: true,
+                loan_amount_inr: parseFloat(form.loanAmount) || 4500000,
+                interest_rate_annual_pct: 10.5,
+                repayment_term_months: 120,
+                moratorium_months: parseInt(form.moratorium) || 9
+            };
+
+            const res = await fetch("http://localhost:8000/api/v1/score/origination", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+
+            if (!res.ok) {
+                const errData = await res.json();
+                throw new Error(errData.detail || "Scoring failed");
+            }
+            
+            const data = await res.json();
+            
+            // Artificial delay for premium "calculating" feel
+            setTimeout(() => {
+                setLoading(false);
+                setScored(true);
+                setResult(data);
+                if (rightRef.current) rightRef.current.scrollTop = 0;
+            }, 1200);
+
+        } catch (err) {
             setLoading(false);
-            setScored(true);
-            setResult(MOCK);
-            // Scroll right column to top to start the reveal
-            if (rightRef.current) rightRef.current.scrollTop = 0;
-        }, 1400);
+            alert("Scoring Error: " + err.message);
+        }
     };
 
     return (
@@ -1080,7 +1135,7 @@ export default function UnderwriterConsole() {
                             </div>
 
                             {/* Pre-loan panel */}
-                            <PreLoanPanel />
+                             <PreLoanPanel data={studentDashboard} />
 
                             {/* Form */}
                             <ApplicationForm onScore={handleScore} loading={loading} />

@@ -7,7 +7,9 @@ The repository is centered on two workflows:
 - serving API endpoints for scoring, dashboards, and forecasting
 - rebuilding the outcomes pipeline from raw data into processed lookup artifacts
 
-Project documentation lives in [docs/architecture.md](docs/architecture.md) and [docs/flow.md](docs/flow.md).
+**Quick Start**: See [docs/SETUP.md](docs/SETUP.md) for installation and running instructions.
+
+**Architecture & Design**: See [docs/architecture.md](docs/architecture.md) and [docs/flow.md](docs/flow.md) for system design details.
 
 ## What This Project Does
 

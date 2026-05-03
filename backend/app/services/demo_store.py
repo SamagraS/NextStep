@@ -273,6 +273,30 @@ class DemoStore:
             baseline_score=66,
             current_score=58,
         )
+        self.cohorts["cohort-de-swe"] = DemoCohortState(
+            cohort_id="cohort-de-swe",
+            program_name="MS Software Engineering",
+            destination_country="Germany",
+            cohort_size=24,
+            baseline_score=72,
+            current_score=72,
+        )
+        self.cohorts["cohort-sg-ds"] = DemoCohortState(
+            cohort_id="cohort-sg-ds",
+            program_name="MS Data Science",
+            destination_country="Singapore",
+            cohort_size=19,
+            baseline_score=77,
+            current_score=77,
+        )
+        self.cohorts["cohort-au-eng"] = DemoCohortState(
+            cohort_id="cohort-au-eng",
+            program_name="MS Engineering",
+            destination_country="Australia",
+            cohort_size=31,
+            baseline_score=71,
+            current_score=71,
+        )
 
         self.cohort_alerts["alert-amber-1"] = DemoCohortAlert(
             alert_id="alert-amber-1",
@@ -315,6 +339,75 @@ class DemoStore:
         )
         if student_id:
             self.student_to_application_ids.setdefault(student_id, set()).add(application_id)
+            # Update student metadata from the application response for demo continuity
+            student = self.get_student(student_id)
+            if student:
+                student.readiness_base_score = int(response.repayment_score.score)
+                student.destination_country = payload.destination_country
+                student.program_family = payload.target_sector.split(' & ')[0].lower().replace(' ', '_')
+                # Update macro summary if available in response or derived
+                if response.explanation.tier_1:
+                    student.macro_summary = response.explanation.tier_1
+
+                # Update actions based on the new program family for demo relevance
+                if student.program_family == "finance":
+                    student.dashboard_actions = [
+                        DemoDashboardAction(
+                            action_id=f"action-{student_id}-f1",
+                            action_type="skill_certification",
+                            title="Financial Modeling & Valuation",
+                            rationale="Critical for high-tier finance roles in the UK/US markets.",
+                            assigned_at=MOCK_SNAPSHOT_TS,
+                            expected_effort_hours=12,
+                            total_active_seconds=0,
+                            return_visits=0,
+                            certificate_uploaded=False,
+                            status="assigned",
+                            readiness_score_delta=4,
+                        ),
+                        DemoDashboardAction(
+                            action_id=f"action-{student_id}-f2",
+                            action_type="mock_interview",
+                            title="Investment Banking Mock Drill",
+                            rationale="Specialized preparation for high-stakes finance interviews.",
+                            assigned_at=MOCK_SNAPSHOT_TS,
+                            expected_effort_hours=4,
+                            total_active_seconds=0,
+                            return_visits=0,
+                            certificate_uploaded=False,
+                            status="assigned",
+                            readiness_score_delta=3,
+                        ),
+                    ]
+                elif student.program_family in ["computer_science", "software_engineering"]:
+                    student.dashboard_actions = [
+                        DemoDashboardAction(
+                            action_id=f"action-{student_id}-cs1",
+                            action_type="skill_certification",
+                            title="Kubernetes Certification Sprint",
+                            rationale="Improves fit for cloud engineering roles in the target market.",
+                            assigned_at=MOCK_SNAPSHOT_TS,
+                            expected_effort_hours=8,
+                            total_active_seconds=0,
+                            return_visits=0,
+                            certificate_uploaded=False,
+                            status="assigned",
+                            readiness_score_delta=4,
+                        ),
+                        DemoDashboardAction(
+                            action_id=f"action-{student_id}-cs2",
+                            action_type="portfolio_project",
+                            title="Cloud-Native Portfolio Project",
+                            rationale="Concrete evidence of technical skill for employer matching.",
+                            assigned_at=MOCK_SNAPSHOT_TS,
+                            expected_effort_hours=15,
+                            total_active_seconds=0,
+                            return_visits=0,
+                            certificate_uploaded=False,
+                            status="assigned",
+                            readiness_score_delta=5,
+                        ),
+                    ]
 
     def get_application(self, application_id: str) -> DemoApplicationState | None:
         return self.applications.get(application_id)
@@ -406,8 +499,10 @@ class DemoStore:
             return
 
         self.portfolio_rescore_triggered = True
-        cohort = self.cohorts["cohort-ca-ds"]
-        cohort.current_score = 66
+        
+        # Scenario 1: Canada cohort drops from Green to Amber
+        cohort_ca = self.cohorts["cohort-ca-ds"]
+        cohort_ca.current_score = 66
         self.cohort_alerts["alert-amber-2"] = DemoCohortAlert(
             alert_id="alert-amber-2",
             cohort_id="cohort-ca-ds",
@@ -415,6 +510,20 @@ class DemoStore:
             delta=-4.0,
             primary_macro_driver="Canada hiring sentiment softened for data roles.",
             recommended_action="Rule-based: review placement action plans for the cohort.",
+            macro_snapshot_ts=MOCK_ACTION_COMPLETION_TS,
+            created_at=MOCK_ACTION_COMPLETION_TS,
+        )
+
+        # Scenario 2: Germany cohort drops to Amber
+        cohort_de = self.cohorts["cohort-de-swe"]
+        cohort_de.current_score = 68
+        self.cohort_alerts["alert-amber-3"] = DemoCohortAlert(
+            alert_id="alert-amber-3",
+            cohort_id="cohort-de-swe",
+            severity="AMBER",
+            delta=-4.0,
+            primary_macro_driver="German tech sector contraction following Q1 GDP miss.",
+            recommended_action="Monitor closely. Send proactive status email to affected cohort.",
             macro_snapshot_ts=MOCK_ACTION_COMPLETION_TS,
             created_at=MOCK_ACTION_COMPLETION_TS,
         )

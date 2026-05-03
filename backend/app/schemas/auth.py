@@ -6,6 +6,7 @@ class Token(StrictSchema):
     token_type: str
     role: str
     full_name: str
+    email: str
 
 
 class TokenData(StrictSchema):

@@ -291,59 +291,15 @@ function StyleInjectorSD() {
 }
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
-const STUDENT = {
-  name: "Priya Sharma",
-  readiness: 71,
-  program: "MS Computer Science",
-  university: "University of Texas Austin",
-  tenacity: 0.79,
-  tenacity_breakdown: { completion: 1.0, engagement: 0.82, consistency: 0.74 },
-  certifications: 1,
+const ACTION_ICONS = {
+  skill_certification: { icon: "🎓", bg: "rgba(99,102,241,0.1)", color: "#6366F1" },
+  portfolio_project:   { icon: "💼", bg: "rgba(16,185,129,0.1)", color: "#10B981" },
+  mock_interview:      { icon: "🎯", bg: "rgba(245,158,11,0.1)", color: "#D97706" },
+  resume_improvement: { icon: "📄", bg: "rgba(59,130,246,0.1)", color: "#3B82F6" },
+  networking_outreach: { icon: "🤝", bg: "rgba(139,92,246,0.1)", color: "#8B5CF6" },
 };
 
-const ACTIONS = [
-  {
-    id: 1, status: "active",
-    icon: "🎓", iconBg: "rgba(99,102,241,0.1)", iconColor: "#6366F1",
-    title: "AWS Cloud Associate Certificate",
-    rationale: "Students at UT Austin MS CS who completed this saw 8% better placement within 6 months. High confidence from 312 similar profiles.",
-    hours: 14.2, days: 8, visits: 11, cert: true, pct: 89,
-    assigned: "Apr 10, 2026", effort: "~72 hours",
-    scoreImpact: 3,
-  },
-  {
-    id: 2, status: "pending",
-    icon: "💼", iconBg: "rgba(16,185,129,0.1)", iconColor: "#10B981",
-    title: "Build a Portfolio Project",
-    rationale: "Portfolio work improves employer engagement rate by 23% for cloud and software engineering roles in the US market.",
-    hours: 0, days: 0, visits: 0, cert: false, pct: 0,
-    assigned: "Apr 14, 2026", effort: "~20 hours",
-    scoreImpact: 5,
-  },
-  {
-    id: 3, status: "pending",
-    icon: "🎯", iconBg: "rgba(245,158,11,0.1)", iconColor: "#D97706",
-    title: "Mock Interview Practice",
-    rationale: "Technical interview practice shows positive outcomes for this profile. One focused session is the expected pattern for this action type.",
-    hours: 0, days: 0, visits: 0, cert: false, pct: 0,
-    assigned: "Apr 14, 2026", effort: "~2 hours",
-    scoreImpact: 2,
-  },
-];
-
-const EMPLOYERS = [
-  { rank: 1, name: "Infosys BPM Ltd",      salary: 89000,  hires: 420 },
-  { rank: 2, name: "Cognizant Technology",  salary: 92000,  hires: 380 },
-  { rank: 3, name: "TCS America",           salary: 87000,  hires: 312 },
-  { rank: 4, name: "Wipro Technologies",    salary: 88000,  hires: 287 },
-  { rank: 5, name: "Google LLC",            salary: 148000, hires: 241 },
-];
-
-const MACRO = [
-  { label: "Hiring Demand",  val: "HIGH",     num: 0.84, color: "#10B981" },
-  { label: "Competition",    val: "MODERATE", num: 0.55, color: "#F59E0B" },
-  { label: "Visa Climate",   val: "CAUTIOUS", num: 0.42, color: "#F59E0B" },
-];
+const DEFAULT_ICON = { icon: "⚡", bg: "rgba(0,0,0,0.05)", color: "#94A3B8" };
 
 // ── ICONS ─────────────────────────────────────────────────────────────────────
 const CheckI   = () => <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg>;
@@ -442,7 +398,7 @@ function Confetti({ x, y }) {
 // ── ACTION CARD ────────────────────────────────────────────────────────────────
 function ActionCard({ action, onComplete, delay }) {
   const [completing, setCompleting] = useState(false);
-  const [done, setDone]             = useState(action.status === "done");
+  const done = !!action.completed_at;
   const btnRef = useRef(null);
   const [confetti, setConfetti]     = useState(null);
 
@@ -450,26 +406,30 @@ function ActionCard({ action, onComplete, delay }) {
     if (completing || done) return;
     setCompleting(true);
     const rect = btnRef.current?.getBoundingClientRect();
-    setTimeout(() => {
+    onComplete?.(action, (success) => {
       setCompleting(false);
-      setDone(true);
-      if (rect) setConfetti({ x: rect.left + rect.width / 2, y: rect.top });
-      setTimeout(() => setConfetti(null), 1200);
-      onComplete?.(action);
-    }, 1000);
+      if (success) {
+        if (rect) setConfetti({ x: rect.left + rect.width / 2, y: rect.top });
+        setTimeout(() => setConfetti(null), 1200);
+      }
+    });
   };
 
-  const isActive  = action.status === "active" && !done;
-  const isPending = action.status === "pending" && !done;
+  const config = ACTION_ICONS[action.action_type] || DEFAULT_ICON;
+  const isActive  = !done && action.total_active_seconds > 0;
+  const isPending = !done && action.total_active_seconds === 0;
   const cardCls   = done ? "done" : isActive ? "active" : "pending";
+
+  const activeHours = (action.total_active_seconds / 3600).toFixed(1);
+  const pct = isActive ? Math.min(Math.round((action.total_active_seconds / (action.expected_effort_hours * 3600)) * 100), 95) : 0;
 
   return (
     <>
       <div className={`action-plan-card ${cardCls}`} style={{ animationDelay: `${delay}ms` }}>
         <div className="apc-header">
           <div style={{ display: "flex", gap: 12, flex: 1 }}>
-            <div className="apc-icon-wrap" style={{ background: action.iconBg }}>
-              <span>{action.icon}</span>
+            <div className="apc-icon-wrap" style={{ background: config.bg }}>
+              <span>{config.icon}</span>
             </div>
             <div style={{ flex: 1 }}>
               <div className="apc-title">{action.title}</div>
@@ -489,13 +449,13 @@ function ActionCard({ action, onComplete, delay }) {
         {(isActive || done) && (
           <div className="apc-body">
             {/* Passive tracking row */}
-            {(action.hours > 0 || done) && (
+            {(action.total_active_seconds > 0 || done) && (
               <div className="eng-track">
                 {[
-                  { icon: <ClockI />, label: `${done ? action.hours : action.hours}h active` },
-                  { icon: <CalI />,   label: `${done ? action.days : action.days} days` },
-                  { icon: <EyeI />,   label: `${done ? action.visits : action.visits} visits` },
-                  ...(action.cert || done ? [{ icon: <CertI />, label: "Certificate ✓", color: "#D97706" }] : []),
+                  { icon: <ClockI />, label: `${activeHours}h active` },
+                  { icon: <CalI />,   label: `${action.return_visits > 0 ? Math.ceil(action.return_visits / 1.5) : 0} days` },
+                  { icon: <EyeI />,   label: `${action.return_visits} visits` },
+                  ...(action.certificate_uploaded || (done && action.action_type === 'skill_certification') ? [{ icon: <CertI />, label: "Certificate ✓", color: "#D97706" }] : []),
                 ].map((s, i) => (
                   <span key={i} className="eng-chip" style={s.color ? { color: s.color, fontWeight: 700 } : {}}>
                     {i > 0 && <span className="eng-chip-sep">·</span>}
@@ -510,11 +470,11 @@ function ActionCard({ action, onComplete, delay }) {
               <div className="apc-progress-wrap">
                 <div className="apc-progress-head">
                   <span className="apc-progress-lbl">Progress</span>
-                  <span className="apc-progress-pct">{action.pct}%</span>
+                  <span className="apc-progress-pct">{pct}%</span>
                 </div>
                 <div className="apc-track">
                   <div className="apc-fill" style={{
-                    width: `${action.pct}%`,
+                    width: `${pct}%`,
                     background: "linear-gradient(90deg,#6366F1,#818CF8)",
                   }} />
                 </div>
@@ -525,10 +485,10 @@ function ActionCard({ action, onComplete, delay }) {
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
               <div style={{ display: "flex", gap: 14 }}>
                 <span style={{ fontSize: 11, color: "#94A3B8", display: "flex", alignItems: "center", gap: 4 }}>
-                  <CalI /> Assigned {action.assigned}
+                  <CalI /> Assigned {new Date(action.assigned_at).toLocaleDateString()}
                 </span>
                 <span style={{ fontSize: 11, color: "#94A3B8", display: "flex", alignItems: "center", gap: 4 }}>
-                  <ClockI /> Expected {action.effort}
+                  <ClockI /> Expected ~{action.expected_effort_hours} hours
                 </span>
               </div>
               {!done && (
@@ -556,7 +516,7 @@ function ActionCard({ action, onComplete, delay }) {
           <div className="apc-body" style={{ paddingTop: 0 }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <span style={{ fontSize: 11, color: "#94A3B8", display: "flex", alignItems: "center", gap: 4 }}>
-                <CalI /> Assigned {action.assigned} · {action.effort}
+                <CalI /> Assigned {new Date(action.assigned_at).toLocaleDateString()} · ~{action.expected_effort_hours}h
               </span>
               <span style={{ fontSize: 11, color: "#6366F1", fontFamily: "var(--fd)", fontWeight: 700 }}>
                 High impact action
@@ -609,7 +569,7 @@ function LiveToast({ from, to, onDismiss }) {
 
 // ── TENACITY CARD ─────────────────────────────────────────────────────────────
 function TenacityCard({ data, animate }) {
-  const display = useCountUp(Math.round(data.tenacity * 100), 900, animate);
+  const display = useCountUp(Math.round((data.tenacity_score || 0) * 100), 900, animate);
   return (
     <div className="tenacity-card" style={{ animationDelay: "300ms" }}>
       <div className="tenacity-header">
@@ -618,26 +578,25 @@ function TenacityCard({ data, animate }) {
             Behavioral Tenacity Score
           </div>
           <div style={{ fontSize: 13, color: "#78350F", lineHeight: 1.6, maxWidth: 380 }}>
-            Based on your active engagement across {data.actions} completed actions over {data.days} days.
-            This signal contributes to your repayment confidence score.
+            {data.summary}
           </div>
         </div>
         <div style={{ textAlign: "right" }}>
-          <div className="tenacity-score-big">{animate ? `0.${display < 100 ? display.toString().padStart(2,"0") : "100"}` : `0.${Math.round(data.tenacity * 100)}`}</div>
-          <div style={{ fontFamily: "var(--fd)", fontSize: 9, fontWeight: 800, letterSpacing: ".1em", textTransform: "uppercase", color: "#B45309" }}>HIGH</div>
+          <div className="tenacity-score-big">{animate ? `0.${display < 10 ? "0" + display : display}` : `0.${Math.round((data.tenacity_score || 0) * 100)}`}</div>
+          <div style={{ fontFamily: "var(--fd)", fontSize: 9, fontWeight: 800, letterSpacing: ".1em", textTransform: "uppercase", color: "#B45309" }}>{data.behavioral_engagement}</div>
         </div>
       </div>
       <div className="tenacity-grid">
         {[
-          { label: "Completion Rate", val: `${Math.round(data.breakdown.completion * 100)}%` },
-          { label: "Engagement Depth", val: `${Math.round(data.breakdown.engagement * 100)}%` },
-          { label: "Consistency", val: `${Math.round(data.breakdown.consistency * 100)}%` },
+          { label: "Completion Ratio", val: `${Math.round((data.data_points / 5) * 100)}%` },
+          { label: "Engagement Data", val: `${data.data_points} signals` },
+          { label: "Status", val: data.behavioral_engagement },
         ].map((t, i) => (
           <div key={i} className="ten-item" style={{ animationDelay: `${400 + i * 80}ms` }}>
             <div className="ten-item-lbl">{t.label}</div>
-            <div className="ten-item-val">{t.val}</div>
+            <div className="ten-item-val" style={{ fontSize: 14 }}>{t.val}</div>
             <div style={{ height: 3, borderRadius: 99, background: "rgba(245,158,11,0.15)", marginTop: 6, overflow: "hidden" }}>
-              <div style={{ height: "100%", width: t.val, background: "#F59E0B", borderRadius: 99, animation: "fill-bar .8s cubic-bezier(.22,1,.36,1) both", animationDelay: `${500 + i * 80}ms` }} />
+              <div style={{ height: "100%", width: '80%', background: "#F59E0B", borderRadius: 99, animation: "fill-bar .8s cubic-bezier(.22,1,.36,1) both", animationDelay: `${500 + i * 80}ms` }} />
             </div>
           </div>
         ))}
@@ -647,36 +606,85 @@ function TenacityCard({ data, animate }) {
 }
 
 // ── MAIN COMPONENT ────────────────────────────────────────────────────────────
-export default function StudentDashboard() {
-  const [readiness, setReadiness]     = useState(STUDENT.readiness);
-  const [actions, setActions]         = useState(ACTIONS);
+export default function StudentDashboard({ auth }) {
+  const [data, setData]               = useState(null);
+  const [loading, setLoading]         = useState(true);
   const [toast, setToast]             = useState(null);
   const [animated, setAnimated]       = useState(false);
   const [ringFlash, setRingFlash]     = useState(false);
-  const [completedCount, setCompleted] = useState(0);
 
-  useEffect(() => { setTimeout(() => setAnimated(true), 100); }, []);
+  const isUnderwriter = auth.role === 'underwriter';
+  const studentId = isUnderwriter ? "student-priya" : `student-${auth.email.split('@')[0]}`;
 
-  const handleComplete = (action) => {
-    // Update score
-    const newScore = Math.min(readiness + action.scoreImpact, 100);
-    setReadiness(newScore);
-    setCompleted(c => c + 1);
-    setRingFlash(true);
-    setTimeout(() => setRingFlash(false), 700);
-
-    // SSE simulation → show underwriter toast
-    setTimeout(() => {
-      setToast({ from: readiness, to: newScore });
-    }, 400);
-
-    // Mark action as done in state
-    setActions(prev => prev.map(a => a.id === action.id ? { ...a, status: "done" } : a));
+  const fetchDashboard = async () => {
+    try {
+      const res = await fetch(`http://localhost:8000/api/v1/student/dashboard/${studentId}`);
+      const payload = await res.json();
+      if (!res.ok) throw new Error(payload.detail || "Fetch failed");
+      setData(payload);
+      setLoading(false);
+    } catch (err) {
+      console.error("Dashboard fetch failed", err);
+      setLoading(false);
+    }
   };
 
-  const doneCount    = actions.filter(a => a.status === "done").length;
-  const activeCount  = actions.filter(a => a.status === "active").length;
-  const pendingCount = actions.filter(a => a.status === "pending").length;
+  useEffect(() => {
+    fetchDashboard();
+    setTimeout(() => setAnimated(true), 100);
+  }, [studentId]);
+
+  const handleComplete = async (action, cb) => {
+    try {
+      const res = await fetch("http://localhost:8000/api/v1/student/action/complete", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ student_id: studentId, action_id: action.action_id, bandit_arm_index: 0 })
+      });
+      
+      if (res.ok) {
+        const prevScore = data.readiness_score;
+        // Refresh data from backend
+        const freshRes = await fetch(`http://localhost:8000/api/v1/student/dashboard/${studentId}`);
+        const freshData = await freshRes.json();
+        
+        setData(freshData);
+        cb(true);
+        
+        if (freshData.readiness_score > prevScore) {
+          setRingFlash(true);
+          setTimeout(() => setRingFlash(false), 700);
+          setToast({ from: Math.round(prevScore), to: Math.round(freshData.readiness_score) });
+        }
+      } else {
+        cb(false);
+      }
+    } catch (err) {
+      cb(false);
+    }
+  };
+
+  if (loading) return (
+    <div style={{ display:"flex", alignItems:"center", justify:"center", height:"80vh", color:"#94A3B8", fontFamily:"var(--fd)", fontWeight:800 }}>
+      <SpinI /> &nbsp; LOADING YOUR DASHBOARD...
+    </div>
+  );
+
+  if (!data || !data.action_plan) return (
+    <div style={{ display:"flex", alignItems:"center", justify:"center", height:"80vh", color:"#94A3B8", fontFamily:"var(--fd)", fontWeight:800, textAlign:"center" }}>
+      <div>
+        <div style={{ fontSize: 40, marginBottom: 10 }}>📂</div>
+        PROFILE NOT FOUND<br/>
+        <span style={{ fontSize: 12, fontWeight: 500, color: "#CBD5E1" }}>We couldn't load the student record for {studentId}</span>
+      </div>
+    </div>
+  );
+
+  const actions = data.action_plan;
+  const readiness = data.readiness_score;
+  const doneCount    = data.completed_actions.length;
+  const pendingCount = data.pending_actions.length;
+  const activeCount  = actions.filter(a => !a.completed_at && a.total_active_seconds > 0).length;
 
   return (
     <>
@@ -699,7 +707,7 @@ export default function StudentDashboard() {
             </div>
             <div className="sd-hero-text">
               <div className="sd-greeting">Your dashboard · Apr 30, 2026</div>
-              <div className="sd-name">Hi, Priya 👋</div>
+              <div className="sd-name">Hi, {data.full_name.split(' ')[0]} 👋</div>
               <div className="sd-headline">
                 You're <strong>on track for placement within 6 months</strong> based on
                 your profile and current market conditions.
@@ -716,7 +724,7 @@ export default function StudentDashboard() {
             </div>
           </div>
 
-
+          <TenacityCard data={data.tenacity_summary} animate={animated} />
 
           {/* ── ACTION PLAN ───────────────────────────── */}
           <div style={{ marginBottom: 20 }}>
@@ -726,7 +734,7 @@ export default function StudentDashboard() {
             </div>
             {actions.map((a, i) => (
               <ActionCard
-                key={a.id}
+                key={a.action_id}
                 action={a}
                 onComplete={handleComplete}
                 delay={i * 80}
@@ -742,11 +750,9 @@ export default function StudentDashboard() {
             {[
               { label: "Profile submitted",       meta: "Apr 8, 2026",  status: "done" },
               { label: "Pre-loan plan assigned",  meta: "Apr 10, 2026", status: "done" },
-              { label: "AWS certification",       meta: "In progress",  status: "active" },
-              { label: "Portfolio project",       meta: "Not started",  status: "pending" },
-              { label: "Mock interview",          meta: "Not started",  status: "pending" },
-              { label: "Final score review",      meta: "Pending",      status: "pending" },
-            ].map((item, i) => (
+              ...data.completed_actions.slice(0, 2).map(a => ({ label: a.title, meta: new Date(a.completed_at).toLocaleDateString(), status: "done" })),
+              ...data.pending_actions.slice(0, 2).map(a => ({ label: a.title, meta: "Assigned", status: "pending" })),
+            ].slice(0, 6).map((item, i) => (
               <div key={i} className="checklist-item" style={{ animationDelay: `${350 + i * 55}ms` }}>
                 <div className={`check-circle ${item.status}`}>
                   {item.status === "done"   && <CheckI />}
@@ -768,12 +774,16 @@ export default function StudentDashboard() {
             <div className="sd-sec-head" style={{ marginBottom: 0 }}>
               <div>
                 <div className="sd-sec-title" style={{ marginBottom: 2 }}>Market conditions in your target sector</div>
-                <div style={{ fontSize: 12, color: "#64748B" }}>🇺🇸 United States · Cloud & Software Engineering</div>
+                <div style={{ fontSize: 12, color: "#64748B" }}>{data.macro_summary.destination_country} · Cloud & Software Engineering</div>
               </div>
-              <div style={{ fontFamily: "var(--fm)", fontSize: 10, color: "#94A3B8" }}>Updated Apr 30, 2026</div>
+              <div style={{ fontFamily: "var(--fm)", fontSize: 10, color: "#94A3B8" }}>Updated {new Date(data.macro_summary.macro_snapshot_ts).toLocaleDateString()}</div>
             </div>
             <div className="macro-signals">
-              {MACRO.map((m, i) => (
+              {[
+                { label: "Hiring Demand", val: "HIGH", num: 0.84, color: "#10B981" },
+                { label: "Competition", val: "MODERATE", num: 0.55, color: "#F59E0B" },
+                { label: "Visa Climate", val: "CAUTIOUS", num: 0.42, color: "#F59E0B" },
+              ].map((m, i) => (
                 <div key={i} className="macro-sig" style={{ animation: `fade-up .35s ease both ${400 + i * 70}ms`, opacity: 0 }}>
                   <div className="macro-sig-label">{m.label}</div>
                   <div className="macro-sig-val" style={{ color: m.color }}>{m.val}</div>
@@ -784,9 +794,7 @@ export default function StudentDashboard() {
               ))}
             </div>
             <div className="macro-insight">
-              "Your action plan was updated this week to reflect rising cloud engineering demand
-              in the US market. AWS certification completion now has a stronger placement signal
-              than it did at origination."
+              "{data.macro_summary.summary}"
             </div>
           </div>
 
@@ -796,12 +804,12 @@ export default function StudentDashboard() {
               <div className="emp-panel-title">Companies looking for profiles like yours</div>
               <div className="emp-panel-sub">Based on 700,000+ real H1B hiring records · filtered to your program + target sector</div>
             </div>
-            {EMPLOYERS.map((e, i) => (
+            {data.employer_matches.map((e, i) => (
               <div key={i} className="emp-row" style={{ animationDelay: `${450 + i * 60}ms` }}>
-                <div className="emp-rank">{e.rank}</div>
-                <div className="emp-name">{e.name}</div>
-                <div className="emp-sal">${(e.salary / 1000).toFixed(0)}K<span style={{ fontSize: 10, fontWeight: 500, color: "#94A3B8", marginLeft: 2 }}>/yr</span></div>
-                <div className="emp-hires">{e.hires} hires/yr</div>
+                <div className="emp-rank">{i + 1}</div>
+                <div className="emp-name">{e.employer}</div>
+                <div className="emp-sal">${(e.median_salary_usd / 1000).toFixed(0)}K<span style={{ fontSize: 10, fontWeight: 500, color: "#94A3B8", marginLeft: 2 }}>/yr</span></div>
+                <div className="emp-hires">{e.annual_h1b_filings} hires/yr</div>
               </div>
             ))}
           </div>

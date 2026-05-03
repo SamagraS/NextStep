@@ -18,6 +18,14 @@ class Layer4RecommendationService:
         "portfolio_project",
     ]
 
+    ACTION_TITLES = {
+        "skill_certification": "Role-aligned Certification",
+        "resume_improvement": "Resume Improvement",
+        "mock_interview": "Interview Practice",
+        "networking_outreach": "Alumni Networking Outreach",
+        "portfolio_project": "Build a Portfolio Project",
+    }
+
     def __init__(self, artifacts: Any | None = None) -> None:
         self.artifacts = artifacts
         self.bandit = self._load_bandit()
@@ -36,6 +44,7 @@ class Layer4RecommendationService:
                     NextBestAction(
                         rank=1,
                         action_type="skill_certification",
+                        title=self.ACTION_TITLES["skill_certification"],
                         rationale=(
                             "Role-aligned certification is the strongest immediate lever for this placement profile."
                         ),
@@ -46,6 +55,7 @@ class Layer4RecommendationService:
                     NextBestAction(
                         rank=2,
                         action_type="mock_interview",
+                        title=self.ACTION_TITLES["mock_interview"],
                         rationale=(
                             "Interview practice improves short-horizon conversion before the moratorium window ends."
                         ),
@@ -56,6 +66,7 @@ class Layer4RecommendationService:
                     NextBestAction(
                         rank=3,
                         action_type="networking_outreach",
+                        title=self.ACTION_TITLES["networking_outreach"],
                         rationale=(
                             "Targeted outreach can accelerate employer conversations for this profile."
                         ),
@@ -80,6 +91,7 @@ class Layer4RecommendationService:
                 NextBestAction(
                     rank=rank,
                     action_type=action_type,
+                    title=self.ACTION_TITLES[action_type],
                     rationale=self._rationale_for(action_type),
                     recommendation_confidence=self._confidence_for(raw_score),
                     ucb_raw=round(raw_score, 3),

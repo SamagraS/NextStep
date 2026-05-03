@@ -136,6 +136,7 @@ def build_placeholder_scoring_response(payload: OriginationScoringRequest) -> Sc
             NextBestAction(
                 rank=1,
                 action_type="skill_certification",
+                title="Role-aligned Certification",
                 rationale="Cloud engineering roles align well with the current placement outlook for this profile.",
                 recommendation_confidence=RecommendationConfidence.high,
                 ucb_raw=0.24,
@@ -144,6 +145,7 @@ def build_placeholder_scoring_response(payload: OriginationScoringRequest) -> Sc
             NextBestAction(
                 rank=2,
                 action_type="mock_interview",
+                title="Interview Practice",
                 rationale="Interview practice can improve short-horizon employability before the moratorium ends.",
                 recommendation_confidence=RecommendationConfidence.medium,
                 ucb_raw=0.44,
@@ -152,6 +154,7 @@ def build_placeholder_scoring_response(payload: OriginationScoringRequest) -> Sc
             NextBestAction(
                 rank=3,
                 action_type="networking_outreach",
+                title="Alumni Networking Outreach",
                 rationale="Targeted outreach helps convert placement probability into faster employer conversations.",
                 recommendation_confidence=RecommendationConfidence.exploratory,
                 ucb_raw=0.71,

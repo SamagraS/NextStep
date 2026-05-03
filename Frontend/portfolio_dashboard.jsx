@@ -301,77 +301,19 @@ function StyleInjectorPF() {
     return null;
 }
 
-// ── DATA ──────────────────────────────────────────────────────────────────────
-const INITIAL_COHORTS = [
-    {
-        id: "US_MSCS_2024_Q1", program: "MS Computer Science", country: "US", flag: "🇺🇸",
-        size: 43, baseline: 74, current: 70, severity: "AMBER",
-        triggered: "Apr 12, 2026",
-        driver: "US tech sector hiring index down 18% since origination. H1B approval rates declined sharply in Q1 2026.",
-        secondary: "Federal Reserve rate policy has dampened hiring at mid-sized tech firms. Approval rate fell from 87% to 71%.",
-        macro: [
-            { label: "Hiring Index", val: "–18%", num: 0.32, color: "#EF4444" },
-            { label: "H1B Approvals", val: "71%", num: 0.71, color: "#F59E0B" },
-            { label: "Job Postings", val: "–9%", num: 0.41, color: "#EF4444" },
-            { label: "Sector Demand", val: "MODERATE", num: 0.55, color: "#F59E0B" },
-        ],
-        recommended: "Review for proactive borrower outreach and consider restructuring timeline.",
-    },
-    {
-        id: "UK_MBA_2024_Q2", program: "MBA Finance", country: "UK", flag: "🇬🇧",
-        size: 28, baseline: 68, current: 68, severity: "GREEN",
-        triggered: null,
-        driver: null,
-        secondary: null,
-        macro: [
-            { label: "Hiring Index", val: "+4%", num: 0.74, color: "#10B981" },
-            { label: "Placement Rate", val: "79%", num: 0.79, color: "#10B981" },
-            { label: "Job Postings", val: "+2%", num: 0.66, color: "#10B981" },
-            { label: "Sector Demand", val: "HIGH", num: 0.80, color: "#10B981" },
-        ],
-        recommended: "No action required. Monitor quarterly.",
-    },
-    {
-        id: "CA_ENG_2024_Q1", program: "MS Engineering", country: "CA", flag: "🇨🇦",
-        size: 31, baseline: 71, current: 63, severity: "RED",
-        triggered: "Apr 10, 2026",
-        driver: "Canada tech layoffs accelerated across Q1 2026. Work permit processing delays now reaching 8+ months.",
-        secondary: "Bank of Canada rate increases reduced startup hiring by 34%. Provincial nominee programs paused until Q3.",
-        macro: [
-            { label: "Hiring Index", val: "–24%", num: 0.18, color: "#EF4444" },
-            { label: "Permit Delays", val: "8mo", num: 0.2, color: "#EF4444" },
-            { label: "Layoff Rate", val: "+34%", num: 0.82, color: "#EF4444" },
-            { label: "Sector Demand", val: "LOW", num: 0.22, color: "#EF4444" },
-        ],
-        recommended: "Escalate to senior review. Consider early contact with affected borrowers.",
-    },
-    {
-        id: "SG_DATA_2024_Q3", program: "MS Data Science", country: "SG", flag: "🇸🇬",
-        size: 19, baseline: 77, current: 77, severity: "GREEN",
-        triggered: null, driver: null, secondary: null,
-        macro: [
-            { label: "Hiring Index", val: "+11%", num: 0.88, color: "#10B981" },
-            { label: "Placement Rate", val: "84%", num: 0.84, color: "#10B981" },
-            { label: "Job Postings", val: "+7%", num: 0.77, color: "#10B981" },
-            { label: "Sector Demand", val: "HIGH", num: 0.90, color: "#10B981" },
-        ],
-        recommended: "No action required.",
-    },
-];
-
-const NEW_ALERT_COHORT = {
-    id: "DE_SWE_2024_Q2", program: "MS Software Engineering", country: "DE", flag: "🇩🇪",
-    size: 24, baseline: 72, current: 68, severity: "AMBER",
-    triggered: "Just now",
-    driver: "German tech sector contraction following Q1 GDP miss. BMW, SAP and Deutsche Telekom hiring freezes announced.",
-    secondary: "EUR/USD exchange rate movement adds repayment pressure for borrowers with INR-denominated loans.",
-    macro: [
-        { label: "Hiring Index", val: "–11%", num: 0.39, color: "#EF4444" },
-        { label: "GDP Growth", val: "–0.2%", num: 0.3, color: "#F59E0B" },
-        { label: "Job Postings", val: "–6%", num: 0.44, color: "#F59E0B" },
-        { label: "Sector Demand", val: "MODERATE", num: 0.51, color: "#F59E0B" },
-    ],
-    recommended: "Monitor closely. Send proactive status email to affected cohort.",
+const FLAG_MAP = {
+    "United States": "🇺🇸",
+    "United Kingdom": "🇬🇧",
+    "Canada": "🇨🇦",
+    "Singapore": "🇸🇬",
+    "Germany": "🇩🇪",
+    "Australia": "🇦🇺",
+    "US": "🇺🇸",
+    "UK": "🇬🇧",
+    "CA": "🇨🇦",
+    "SG": "🇸🇬",
+    "DE": "🇩🇪",
+    "AU": "🇦🇺"
 };
 
 // ── ICONS ─────────────────────────────────────────────────────────────────────
@@ -418,9 +360,10 @@ const DELTA_CLR = (d) => d < -3 ? "#EF4444" : d < 0 ? "#F59E0B" : d > 0 ? "#10B9
 
 // ── ALERT DRAWER ──────────────────────────────────────────────────────────────
 function AlertDrawer({ cohort, onClose }) {
-    const delta = cohort.current - cohort.baseline;
+    const delta = cohort.current_score - cohort.baseline_score;
     const isRed = cohort.severity === "RED";
     const accentColor = isRed ? "#EF4444" : "#F59E0B";
+    const flag = FLAG_MAP[cohort.destination_country] || "🌐";
 
     // Prevent body scroll when drawer open
     useEffect(() => {
@@ -437,13 +380,13 @@ function AlertDrawer({ cohort, onClose }) {
                     <button className="drawer-close" onClick={onClose}><XIcon /></button>
 
                     <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
-                        <span style={{ fontSize: 20 }}>{cohort.flag}</span>
+                        <span style={{ fontSize: 20 }}>{flag}</span>
                         <div>
                             <div style={{ fontFamily: "var(--fd)", fontSize: 9, fontWeight: 800, letterSpacing: ".12em", textTransform: "uppercase", color: "#94A3B8", marginBottom: 2 }}>
                                 Cohort Alert
                             </div>
                             <div style={{ fontFamily: "var(--fd)", fontSize: 17, fontWeight: 800, letterSpacing: "-.03em", color: "#0F172A" }}>
-                                {cohort.id}
+                                {cohort.cohort_id}
                             </div>
                         </div>
                         <div style={{ marginLeft: "auto" }}>
@@ -458,9 +401,9 @@ function AlertDrawer({ cohort, onClose }) {
                     <div style={{ background: "rgba(0,0,0,0.03)", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 13, padding: "14px 16px" }}>
                         <div style={{ fontFamily: "var(--fd)", fontSize: 9, fontWeight: 800, letterSpacing: ".1em", textTransform: "uppercase", color: "#94A3B8", marginBottom: 8 }}>Score change since origination</div>
                         <div className="drawer-score-change">
-                            <div className="dsc-from">{cohort.baseline}</div>
+                            <div className="dsc-from">{cohort.baseline_score}</div>
                             <div className="dsc-arrow">→</div>
-                            <div className="dsc-to" style={{ color: accentColor }}>{cohort.current}</div>
+                            <div className="dsc-to" style={{ color: accentColor }}>{cohort.current_score}</div>
                             <div style={{ marginLeft: "auto", fontFamily: "var(--fd)", fontSize: 22, fontWeight: 800, color: accentColor }}>
                                 {delta > 0 ? "+" : ""}{delta}
                             </div>
@@ -477,9 +420,9 @@ function AlertDrawer({ cohort, onClose }) {
                     {/* Program + Size */}
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginBottom: 16 }}>
                         {[
-                            { label: "Program", val: cohort.program },
-                            { label: "Country", val: cohort.country },
-                            { label: "Borrowers", val: `${cohort.size}` },
+                            { label: "Program", val: cohort.program_name },
+                            { label: "Country", val: cohort.destination_country },
+                            { label: "Borrowers", val: `${cohort.cohort_size}` },
                         ].map((r, i) => (
                             <div key={i} style={{ padding: "11px 13px", background: "rgba(0,0,0,0.03)", borderRadius: 11, border: "1px solid rgba(0,0,0,0.07)" }}>
                                 <div className="drawer-row-lbl">{r.label}</div>
@@ -489,13 +432,13 @@ function AlertDrawer({ cohort, onClose }) {
                     </div>
 
                     {/* Primary driver */}
-                    {cohort.driver && (
+                    {cohort.primary_macro_driver && (
                         <>
                             <div style={{ fontFamily: "var(--fd)", fontSize: 9, fontWeight: 800, letterSpacing: ".1em", textTransform: "uppercase", color: "#94A3B8", marginBottom: 8 }}>
                                 Primary macro driver
                             </div>
                             <div className={`driver-box ${cohort.severity === "AMBER" ? "amber" : ""}`}>
-                                {cohort.driver}
+                                {cohort.primary_macro_driver}
                             </div>
                         </>
                     )}
@@ -513,7 +456,12 @@ function AlertDrawer({ cohort, onClose }) {
                             Macro signal snapshot · Apr 30 2026
                         </div>
                         <div className="macro-strip">
-                            {cohort.macro.map((m, i) => (
+                            {[
+                                { label: "Hiring Index", val: "–18%", num: 0.32, color: "#EF4444" },
+                                { label: "H1B Approvals", val: "71%", num: 0.71, color: "#F59E0B" },
+                                { label: "Job Postings", val: "–9%", num: 0.41, color: "#EF4444" },
+                                { label: "Sector Demand", val: "MODERATE", num: 0.55, color: "#F59E0B" },
+                            ].map((m, i) => (
                                 <div key={i} className="macro-item">
                                     <div className="macro-item-lbl">{m.label}</div>
                                     <div className="macro-item-val" style={{ color: m.color }}>{m.val}</div>
@@ -530,13 +478,13 @@ function AlertDrawer({ cohort, onClose }) {
                         <div style={{ fontFamily: "var(--fd)", fontSize: 9, fontWeight: 800, letterSpacing: ".1em", textTransform: "uppercase", color: "#6366F1", marginBottom: 6 }}>
                             Recommended action · rule-based
                         </div>
-                        <div style={{ fontSize: 13, color: "#1E293B", lineHeight: 1.6 }}>{cohort.recommended}</div>
+                        <div style={{ fontSize: 13, color: "#1E293B", lineHeight: 1.6 }}>{cohort.recommended_action || "No action required. Monitor quarterly."}</div>
                     </div>
 
                     {/* Timestamp */}
                     <div style={{ marginTop: 16, display: "flex", alignItems: "center", gap: 8 }}>
                         <div className="ts-chip">Macro snapshot: Apr 30, 2026 · 02:00 UTC</div>
-                        {cohort.triggered && <div className="ts-chip">Triggered: {cohort.triggered}</div>}
+                        {cohort.triggered_at && <div className="ts-chip">Triggered: {cohort.triggered_at}</div>}
                     </div>
                 </div>
 
@@ -563,22 +511,23 @@ function AlertDrawer({ cohort, onClose }) {
 
 // ── TABLE ROW ─────────────────────────────────────────────────────────────────
 function TableRow({ cohort, onClick, delay, isNew }) {
-    const delta = cohort.current - cohort.baseline;
+    const delta = cohort.current_score - cohort.baseline_score;
+    const flag = FLAG_MAP[cohort.destination_country] || "🌐";
     return (
-        <div className={`tbl-row ${SEV_ROW[cohort.severity]} ${isNew ? "row-new" : ""}`}
+        <div className={`tbl-row ${SEV_ROW[cohort.severity] || ""} ${isNew ? "row-new" : ""}`}
             style={{ animationDelay: `${delay}ms` }}
             onClick={() => onClick(cohort)}>
 
             <div className="tbl-td">
-                <span style={{ fontSize: 14 }}>{cohort.flag}</span>
+                <span style={{ fontSize: 14 }}>{flag}</span>
             </div>
-            <div className="tbl-td td-mono">{cohort.id}</div>
-            <div className="tbl-td td-name" style={{ paddingRight: 12, fontSize: 13 }}>{cohort.program}</div>
-            <div className="tbl-td" style={{ fontSize: 13, color: "#475569" }}>{cohort.size}</div>
-            <div className="tbl-td td-num" style={{ color: "#0F172A" }}>{cohort.baseline}</div>
-            <div className="tbl-td td-num" style={{ color: "#0F172A" }}>{cohort.current}</div>
+            <div className="tbl-td td-mono">{cohort.cohort_id}</div>
+            <div className="tbl-td td-name" style={{ paddingRight: 12, fontSize: 13 }}>{cohort.program_name}</div>
+            <div className="tbl-td" style={{ fontSize: 13, color: "#475569" }}>{cohort.cohort_size}</div>
+            <div className="tbl-td td-num" style={{ color: "#0F172A" }}>{cohort.baseline_score}</div>
+            <div className="tbl-td td-num" style={{ color: "#0F172A" }}>{cohort.current_score}</div>
             <div className="tbl-td td-delta" style={{ color: DELTA_CLR(delta) }}>
-                {delta > 0 ? "+" : ""}{delta}
+                {delta > 0 ? "+" : ""}{delta.toFixed(1)}
             </div>
             <div className="tbl-td">
                 <span className={`sev-badge ${SEV_CLS[cohort.severity]}`}>
@@ -595,47 +544,68 @@ function TableRow({ cohort, onClick, delay, isNew }) {
 
 // ── MAIN COMPONENT ────────────────────────────────────────────────────────────
 export default function PortfolioDashboard() {
-    const [cohorts, setCohorts] = useState(INITIAL_COHORTS);
+    const [cohorts, setCohorts] = useState([]);
+    const [stats, setStats] = useState({ total_active_cohorts: 0, amber_count: 0, red_count: 0 });
     const [filter, setFilter] = useState("ALL");
+    const [countryFilter, setCountryFilter] = useState("All Countries");
+    const [programFilter, setProgramFilter] = useState("All Programs");
     const [selected, setSelected] = useState(null);
     const [rescoring, setRescoring] = useState(false);
     const [newRowId, setNewRowId] = useState(null);
     const [kpiAnim, setKpiAnim] = useState(false);
     const [toast, setToast] = useState(null);
 
-    useEffect(() => { setTimeout(() => setKpiAnim(true), 100); }, []);
+    const loadData = async () => {
+        try {
+            const res = await fetch("http://localhost:8000/api/v1/portfolio/dashboard");
+            const data = await res.json();
+            setCohorts(data.cohorts);
+            setStats({
+                total_active_cohorts: data.total_active_cohorts,
+                amber_count: data.amber_count,
+                red_count: data.red_count
+            });
+        } catch (err) {
+            console.error("Failed to load portfolio data", err);
+        }
+    };
+
+    useEffect(() => {
+        loadData();
+        setTimeout(() => setKpiAnim(true), 100);
+    }, []);
 
     // Derived KPIs
-    const amber = cohorts.filter(c => c.severity === "AMBER").length;
-    const red = cohorts.filter(c => c.severity === "RED").length;
+    const amber = stats.amber_count;
+    const red = stats.red_count;
 
-    // Filter
-    const visible = cohorts.filter(c =>
-        filter === "ALL" ? true :
-            filter === "AMBER" ? c.severity === "AMBER" :
-                filter === "RED" ? c.severity === "RED" :
-                    filter === "GREEN" ? c.severity === "GREEN" : true
-    );
+    // Filter Options
+    const countries = ["All Countries", ...new Set(cohorts.map(c => c.destination_country))];
+    const programs = ["All Programs", ...new Set(cohorts.map(c => c.program_name))];
 
-    const triggerRescore = () => {
+    // Filter Logic
+    const visible = cohorts.filter(c => {
+        const matchesSeverity = filter === "ALL" ? true : c.severity === filter;
+        const matchesCountry = countryFilter === "All Countries" ? true : c.destination_country === countryFilter;
+        const matchesProgram = programFilter === "All Programs" ? true : c.program_name === programFilter;
+        return matchesSeverity && matchesCountry && matchesProgram;
+    });
+
+    const triggerRescore = async () => {
         if (rescoring) return;
         setRescoring(true);
-        setTimeout(() => {
-            const exists = cohorts.find(c => c.id === NEW_ALERT_COHORT.id);
-            if (!exists) {
-                setCohorts(prev => [NEW_ALERT_COHORT, ...prev]);
-                setNewRowId(NEW_ALERT_COHORT.id);
-                setTimeout(() => setNewRowId(null), 1200);
-            } else {
-                // cycle an existing green cohort to amber for demo
-                setCohorts(prev => prev.map(c =>
-                    c.id === "SG_DATA_2024_Q3" ? { ...c, current: 73, severity: "AMBER", triggered: "Just now" } : c
-                ));
-            }
+        try {
+            await fetch("http://localhost:8000/api/v1/portfolio/rescore", { method: "POST" });
+            // Simulation delay for theatrical effect
+            setTimeout(async () => {
+                await loadData();
+                setRescoring(false);
+                setToast({ msg: "Re-score complete · New alerts detected", type: "amber" });
+                setTimeout(() => setToast(null), 4000);
+            }, 1800);
+        } catch (err) {
             setRescoring(false);
-            setToast({ msg: "Re-score complete · 1 new alert detected", type: "amber" });
-            setTimeout(() => setToast(null), 4000);
-        }, 1800);
+        }
     };
 
     return (
@@ -667,10 +637,10 @@ export default function PortfolioDashboard() {
 
                     {/* ── KPI CARDS ────────────────────────────── */}
                     <div className="kpi-grid">
-                        <KpiCard val={cohorts.length} label="Active Cohorts" color="#0F172A" accent="#E2E8F0" delta={`↑ 3 added this month`} delay={0} animStart={kpiAnim} />
+                        <KpiCard val={stats.total_active_cohorts} label="Active Cohorts" color="#0F172A" accent="#E2E8F0" delta={`↑ 3 added this month`} delay={0} animStart={kpiAnim} />
                         <KpiCard val={amber} label="At Risk — AMBER" color="#D97706" accent="#F59E0B" delta={`↑ ${amber > 1 ? "2" : "1"} this week`} delay={70} animStart={kpiAnim} />
                         <KpiCard val={red} label="Critical — RED" color="#DC2626" accent="#EF4444" delta="— unchanged" delay={140} animStart={kpiAnim} />
-                        <KpiCard val={Math.round(cohorts.reduce((s, c) => s + c.size, 0))} label="Total Borrowers" color="#6366F1" accent="#6366F1" delta="Across all cohorts" delay={210} animStart={kpiAnim} />
+                        <KpiCard val={Math.round(cohorts.reduce((s, c) => s + c.cohort_size, 0))} label="Total Borrowers" color="#6366F1" accent="#6366F1" delta="Across all cohorts" delay={210} animStart={kpiAnim} />
                     </div>
 
                     {/* ── FILTER BAR ───────────────────────────── */}
@@ -684,20 +654,11 @@ export default function PortfolioDashboard() {
                             </div>
                         ))}
                         <div className="filter-sep" />
-                        <select className="filter-select">
-                            <option>All Countries</option>
-                            <option>US</option>
-                            <option>UK</option>
-                            <option>Canada</option>
-                            <option>Singapore</option>
-                            <option>Germany</option>
+                        <select className="filter-select" value={countryFilter} onChange={e => setCountryFilter(e.target.value)}>
+                            {countries.map(c => <option key={c}>{c}</option>)}
                         </select>
-                        <select className="filter-select">
-                            <option>All Programs</option>
-                            <option>MS Computer Science</option>
-                            <option>MBA</option>
-                            <option>MS Engineering</option>
-                            <option>MS Data Science</option>
+                        <select className="filter-select" value={programFilter} onChange={e => setProgramFilter(e.target.value)}>
+                            {programs.map(p => <option key={p}>{p}</option>)}
                         </select>
                         <div style={{ marginLeft: "auto", fontFamily: "var(--fm)", fontSize: 10, color: "#94A3B8" }}>
                             {visible.length} cohort{visible.length !== 1 ? "s" : ""} shown

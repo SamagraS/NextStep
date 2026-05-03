@@ -31,6 +31,7 @@ class MacroSummary(StrictSchema):
 
 
 class StudentDashboardResponse(StrictSchema):
+    full_name: str
     readiness_score: float = Field(ge=0, le=100)
     action_plan: list[ActionPlanItem]
     completed_actions: list[ActionPlanItem]

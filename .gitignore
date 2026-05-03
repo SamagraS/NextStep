@@ -10,3 +10,4 @@ data/raw/statscan/ngs_table_37100281/37100281.csv
 test_audit.py
 technical_report.md
 data/colab_salary_model_training.py
+Frontend\node_modules

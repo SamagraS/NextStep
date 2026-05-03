@@ -53,4 +53,5 @@ async def login(request: Request, payload: LoginRequest) -> Token:
         token_type="bearer",
         role=user["role"],
         full_name=full_name,
+        email=user["email"],
     )

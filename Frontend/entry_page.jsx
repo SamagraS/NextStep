@@ -3,6 +3,7 @@ import backgroundVideo from "./Video Project.mp4";
 import UnderwriterConsole from "./underwriter.jsx";
 import PortfolioDashboard from "./portfolio_dashboard.jsx";
 import StudentDashboard from "./student_dashboard.jsx";
+import { DEMO_RESPONSE, PRE_ACTIONS, COHORTS, BLOBS } from "./constants.js";
 
 /* ─────────────────────────────────────────────────────────────────────────────
    NEXTSTEP · CHUNK 1 · v2
@@ -163,7 +164,7 @@ html, body, #root {
 
 /* ── NAV ──────────────────────────────────── */
 .ns-nav {
-  position:sticky; top:0; z-index:100; height:60px;
+  position:fixed; top:0; left:0; right:0; z-index:100; height:60px;
   display:flex; align-items:center; gap:4px; padding:0 32px;
   background:rgba(255, 255, 255, 0.8);
   backdrop-filter:blur(16px);
@@ -266,7 +267,7 @@ html, body, #root {
   animation: shimmer 1.6s ease-in-out infinite;
 }
 
-.ns-page { animation:fade-in .3s ease; }
+.ns-page { margin-top: 60px; animation:fade-in .3s ease; }
 
 /* ── LABEL ────────────────────────────────── */
 .lbl {
@@ -308,53 +309,11 @@ const Ic = {
     Spin: () => <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" style={{ animation: "spin .7s linear infinite" }}><path d="M21 12a9 9 0 11-3.5-7" /></svg>,
 };
 
-// ── MOCK DATA ─────────────────────────────────────────────────────────────────
-export const PRIYA_MOCK = {
-    application_id: "APP-2026-001337",
-    placement_probability: { p_3mo: 0.38, p_6mo: 0.64, p_12mo: 0.83, moratorium_window_used: "6mo", moratorium_months: 9 },
-    delayed_placement_risk: { flag: "MODERATE", reason: "Placement by 6 months is likely (64%) but significantly delayed from 3-month probability (38%). Given 9-month moratorium, proactive monitoring recommended.", p3_p6_gap: 0.26 },
-    salary_forecast: { pessimistic: 72000, realistic: 95000, optimistic: 118000, salary_progression_scenario: { year_1: 95000, year_2: 103550, year_3: 112869 }, emi_monthly_usd: 1460, emi_as_pct_realistic: 18.4, source_note: "Based on 700,000+ H1B LCA filings (OFLC 2022–2024)" },
-    repayment_score: { score: 71, tier: "GREEN", base_score_without_behavioral: 68, behavioral_boost_points: 3, employability_sub: 0.64, affordability_sub: 0.81, market_risk_sub: 0.74, data_confidence_sub: 0.88, moratorium_months_used: 9 },
-    reliability: { band: "HIGH", behavioral_engagement: "HIGH", tenacity_score: 0.79, tenacity_data_count: 3, university_match: "resolved", university_match_score: 97, data_coverage_level: "HIGH", macro_snapshot_ts: "2026-04-30T02:00:00Z" },
-    next_best_action: [
-        { rank: 1, action_type: "skill_certification", rationale: "Students at UT Austin MS CS who completed AWS certification saw 8% better placement within 6 months. High confidence from 312 profiles.", recommendation_confidence: "high" },
-        { rank: 2, action_type: "portfolio_project", rationale: "Portfolio projects improve employer engagement 23% for cloud/software roles in the US market.", recommendation_confidence: "medium" },
-        { rank: 3, action_type: "mock_interview", rationale: "Technical interview practice shows positive outcomes for this profile. Still learning optimal timing.", recommendation_confidence: "exploratory" },
-    ],
-    employer_match_list: [
-        { employer: "Infosys BPM Ltd", median_salary_usd: 89000, annual_h1b_filings: 420, visa_approval_rate: 0.91 },
-        { employer: "Cognizant Technology", median_salary_usd: 92000, annual_h1b_filings: 380, visa_approval_rate: 0.89 },
-        { employer: "TCS America", median_salary_usd: 87000, annual_h1b_filings: 312, visa_approval_rate: 0.84 },
-        { employer: "Wipro Technologies", median_salary_usd: 88000, annual_h1b_filings: 287, visa_approval_rate: 0.78 },
-        { employer: "Google LLC", median_salary_usd: 148000, annual_h1b_filings: 241, visa_approval_rate: 0.95 },
-    ],
-    explanation: {
-        tier_1: "Strong placement outlook and manageable EMI burden drive a positive assessment. Priya's active behavioral engagement provides additional confidence. A moderate placement delay is possible — proactive upskilling is recommended.",
-        tier_2_positive: ["Top-200 University (UT Austin)", "STEM OPT Work Extension Eligible", "EMI within 40% of realistic salary", "Cloud/Software — high demand sector", "Behavioral engagement: HIGH"],
-        tier_2_risk: ["Moderate GRE score (imputed)", "High competition in target sector", "Certifications not yet collected", "Moderate 3-month placement gap"],
-        tier_2_attribution: { base_rate: 0.62, strength_multiplier: 1.08, macro_adjustment: 0.94, tenacity_boost: 0.079 },
-    },
-};
 
-export const PRE_LOAN_ACTIONS = [
-    { id: 1, label: "AWS Cloud Fundamentals", active_hours: 14.2, days: 8, visits: 11, certificate: true, pct: 89 },
-    { id: 2, label: "Resume Improvement", active_hours: 2.5, days: 3, visits: 4, certificate: false, pct: 71 },
-    { id: 3, label: "Mock Interview", active_hours: 1.8, days: 1, visits: 2, certificate: false, pct: 60 },
-];
-
-export const COHORTS = [
-    { id: "US_MSCS_2024_Q1", program: "MS Computer Science", country: "US", size: 43, baseline: 74, current: 70, severity: "AMBER" },
-    { id: "UK_MBA_2024_Q2", program: "MBA", country: "UK", size: 28, baseline: 68, current: 68, severity: "GREEN" },
-    { id: "CA_ENG_2024_Q1", program: "MS Engineering", country: "CA", size: 31, baseline: 71, current: 63, severity: "RED" },
-];
+// ── MOCK DATA (now imported from constants.js) ─────────────────────────────────
 
 // ── FLOATING BLOBS ──────────────────────────────────────────────────────────
-const BLOBS = [
-    { color: "rgba(59, 130, 246, 0.6)",   width: "35vw", height: "30vh", top: "10%",  left: "15%",  anim: "blob1", dur: "22s" },
-    { color: "rgba(253, 164, 175, 0.55)", width: "30vw", height: "40vh", top: "45%",  left: "55%",  anim: "blob2", dur: "26s" },
-    { color: "rgba(14, 165, 233, 0.5)",   width: "25vw", height: "30vh", top: "15%",  left: "65%",  anim: "blob3", dur: "30s" },
-    { color: "rgba(244, 114, 182, 0.45)", width: "35vw", height: "35vh", top: "55%",  left: "15%",  anim: "blob4", dur: "24s" },
-];
+// BLOBS is now imported from constants.js
 
 function FloatingBlobs({ isActive }) {
     return (
@@ -396,6 +355,7 @@ function LoginScreen({ onLogin }) {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     const [loading, setLoad] = useState(false);
+    const [error, setError] = useState("");
     const [ready, setReady] = useState(false);
     const videoRef = useRef(null);
 
@@ -414,15 +374,33 @@ function LoginScreen({ onLogin }) {
         { id: "student", label: "Student", Icon: Ic.Cap },
     ];
     const DEMO = {
-        underwriter: { email: "underwriter@nextst.ep", pass: "demo" },
-        portfolio_manager: { email: "portfolio@nextst.ep", pass: "demo" },
-        student: { email: "priya@nextst.ep", pass: "demo" },
+        underwriter: { email: "underwriter@nextstep.com", pass: "uwpass" },
+        portfolio_manager: { email: "manager@nextstep.com", pass: "pmpass" },
+        student: { email: "priya@example.com", pass: "password123" },
     };
 
-    const submit = (e) => {
+    const submit = async (e) => {
         e.preventDefault();
+        setError("");
         setLoad(true);
-        setTimeout(() => { setLoad(false); onLogin(role); }, 1100);
+        try {
+            const res = await fetch("http://localhost:8000/api/v1/auth/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, password: pass })
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.detail || "Authentication failed");
+            
+            // Artificial delay for premium feel as per original design
+            setTimeout(() => {
+                setLoad(false);
+                onLogin(data);
+            }, 800);
+        } catch (err) {
+            setLoad(false);
+            setError(err.message === "Failed to fetch" ? "Backend unavailable. Ensure server is running on port 8000." : err.message);
+        }
     };
 
     return (
@@ -608,6 +586,17 @@ function LoginScreen({ onLogin }) {
                                         value={pass} onChange={e => setPass(e.target.value)} />
                                 </div>
 
+                                {error && (
+                                    <div style={{
+                                        marginBottom: 16, padding: "10px 12px", borderRadius: 2,
+                                        background: "var(--red-dim)", border: "1px solid rgba(220,38,38,0.2)",
+                                        color: "var(--red)", fontSize: 12, fontFamily: "var(--fb)",
+                                        animation: "fade-in .3s ease"
+                                    }}>
+                                        {error}
+                                    </div>
+                                )}
+
                                 {/* Submit */}
                                 <button type="submit" disabled={loading} style={{
                                     width: "100%", height: 50, border: "none", borderRadius: 2, cursor: "pointer",
@@ -670,10 +659,11 @@ const TABS = {
     student: { label: "Student Dashboard", Icon: Ic.Cap, roles: ["student", "underwriter"] },
 };
 
-function NavBar({ role, view, setView, onLogout }) {
+function NavBar({ user, view, setView, onLogout }) {
+    const role = user.role;
     const tabs = Object.entries(TABS).filter(([, t]) => t.roles.includes(role));
     const inits = { underwriter: "UW", portfolio_manager: "PM", student: "PS" }[role] ?? "??";
-    const name = { underwriter: "Loan Underwriter", portfolio_manager: "Portfolio Manager", student: "Priya Sharma" }[role] ?? role;
+    const name = user.full_name || role;
     return (
         <nav className="ns-nav">
             <div className="ns-logo">
@@ -906,9 +896,28 @@ export default function NextStepApp() {
     const [auth, setAuth] = useState(null);
     const [view, setView] = useState("underwriter");
 
-    const login = (role) => {
-        setAuth({ role });
-        setView(role === "portfolio_manager" ? "portfolio" : role === "student" ? "student" : "underwriter");
+    useEffect(() => {
+        const stored = localStorage.getItem("ns_auth");
+        if (stored) {
+            try {
+                const data = JSON.parse(stored);
+                setAuth(data);
+                setView(data.role === "portfolio_manager" ? "portfolio" : data.role === "student" ? "student" : "underwriter");
+            } catch (e) {
+                localStorage.removeItem("ns_auth");
+            }
+        }
+    }, []);
+
+    const login = (data) => {
+        setAuth(data);
+        localStorage.setItem("ns_auth", JSON.stringify(data));
+        setView(data.role === "portfolio_manager" ? "portfolio" : data.role === "student" ? "student" : "underwriter");
+    };
+
+    const logout = () => {
+        setAuth(null);
+        localStorage.removeItem("ns_auth");
     };
 
     return (
@@ -918,11 +927,11 @@ export default function NextStepApp() {
             {!auth
                 ? <LoginScreen onLogin={login} />
                 : <>
-                    <NavBar role={auth.role} view={view} setView={setView} onLogout={() => setAuth(null)} />
+                    <NavBar user={auth} view={view} setView={setView} onLogout={logout} />
                     <div className="ns-page">
                         {view === "underwriter" && <UnderwriterConsole />}
                         {view === "portfolio" && <PortfolioDashboard />}
-                        {view === "student" && <StudentDashboard />}
+                        {view === "student" && <StudentDashboard auth={auth} />}
                     </div>
                 </>
             }

@@ -33,6 +33,7 @@ class StudentDashboardService:
         )
 
         return StudentDashboardResponse(
+            full_name=student.full_name,
             readiness_score=self.store.get_readiness_score(student_id),
             action_plan=pending_actions + completed_actions,
             completed_actions=completed_actions,
